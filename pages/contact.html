@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Kayla Canfield</title>
+  <meta name="description" content="Get in touch with Kayla Canfield. Open to conversations about instructional design, educational support, writing, research, and graduate study." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/main.css" />
+  <link rel="stylesheet" href="../assets/css/contact.css" />
+</head>
+<body>
+
+<div id="scroll-progress"></div>
+<nav class="mobile-nav">
+  <a href="../index.html">Home</a><a href="about.html">About</a><a href="work.html">Work</a>
+  <a href="writing.html">Writing</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a>
+</nav>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="../index.html" class="site-logo">
+      <span class="site-logo__name">Kayla Canfield</span>
+      <span class="site-logo__tagline">Instructional Designer &middot; Writer &middot; Researcher</span>
+    </a>
+    <nav><ul class="site-nav">
+      <li><a href="../index.html">Home</a></li><li><a href="about.html">About</a></li>
+      <li><a href="work.html">Work</a></li><li><a href="writing.html">Writing</a></li>
+      <li><a href="blog.html">Blog</a></li><li><a href="contact.html" class="active">Contact</a></li>
+    </ul></nav>
+    <div class="header-actions">
+      <a href="../assets/Canfield_CV.pdf" class="btn btn-outline" target="_blank">Download CV</a>
+      <button class="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- PAGE HERO -->
+<section class="page-hero bg-sage-light">
+  <div class="page-hero__gingham pattern-gingham"></div>
+  <div class="container" style="position:relative;z-index:1;">
+    <p class="eyebrow reveal">Get in Touch</p>
+    <h1 class="t-display reveal reveal-delay-1">Let's <em style="color:var(--c-terracotta);">Connect</em></h1>
+    <p class="page-hero__sub reveal reveal-delay-2">Open to conversations about instructional design, educational support work, writing, research, digital humanities, and related graduate study or collaboration.</p>
+  </div>
+  <div class="page-hero__tape"></div>
+</section>
+
+<!-- CONTACT SECTION -->
+<section class="section">
+  <div class="container">
+    <div class="contact-grid">
+
+      <!-- Left: Info cards -->
+      <div class="contact-info reveal">
+        <div class="contact-info-card">
+          <div class="contact-info-card__icon">&#x2709;&#xFE0F;</div>
+          <div>
+            <div class="contact-info-card__label">Email</div>
+            <a href="mailto:k.m.canfield@msmary.edu" class="contact-info-card__value">k.m.canfield@msmary.edu</a>
+          </div>
+        </div>
+        <div class="contact-info-card">
+          <div class="contact-info-card__icon">&#x1F517;</div>
+          <div>
+            <div class="contact-info-card__label">LinkedIn</div>
+            <a href="https://linkedin.com/in/kaylacanfield" target="_blank" rel="noopener" class="contact-info-card__value">linkedin.com/in/kaylacanfield</a>
+          </div>
+        </div>
+        <div class="contact-info-card">
+          <div class="contact-info-card__icon">&#x1F4C4;</div>
+          <div>
+            <div class="contact-info-card__label">Curriculum Vitae</div>
+            <a href="../assets/Canfield_CV.pdf" target="_blank" class="contact-info-card__value">Download PDF</a>
+          </div>
+        </div>
+        <div class="contact-info-card">
+          <div class="contact-info-card__icon">&#x1F4C4;</div>
+          <div>
+            <div class="contact-info-card__label">Resume</div>
+            <a href="../assets/Canfield_Resume.pdf" target="_blank" class="contact-info-card__value">Download PDF</a>
+          </div>
+        </div>
+
+        <div class="contact-note">
+          <div class="contact-note__tape"></div>
+          <p class="contact-note__text">
+            I respond to messages within two to three business days. If you are reaching out about a graduate program, please feel free to include any relevant details about the program or opportunity in your message.
+          </p>
+          <div class="contact-note__sig t-signature">Kayla</div>
+        </div>
+      </div>
+
+      <!-- Right: Form -->
+      <div class="contact-form-wrap reveal reveal-delay-1">
+        <div class="contact-form-card">
+          <div class="contact-form-card__tape"></div>
+          <h2 class="contact-form-card__title">Send a Message</h2>
+          <form id="contact-form" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="name">Your Name</label>
+                <input class="form-input" type="text" id="name" name="name" placeholder="Jane Smith" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="email">Email Address</label>
+                <input class="form-input" type="email" id="email" name="email" placeholder="jane@example.com" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="subject">Subject</label>
+              <input class="form-input" type="text" id="subject" name="subject" placeholder="Instructional design role, PhD inquiry, collaboration..." required />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="context">How did you find this site?</label>
+              <select class="form-select" id="context" name="context">
+                <option value="">Select one</option>
+                <option>LinkedIn</option>
+                <option>Google Search</option>
+                <option>Referral</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="message">Message</label>
+              <textarea class="form-textarea" id="message" name="message" placeholder="Tell me about the opportunity, project, or question you have in mind..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-brand__name">Kayla Canfield</div>
+        <div class="footer-brand__tagline">Instructional Designer &middot; Writer &middot; Researcher</div>
+        <p class="footer-brand__desc">Designing learning materials, systems, and writing projects for education and the humanities.</p>
+      </div>
+      <div class="footer-col"><div class="footer-col__title">Navigate</div>
+        <ul class="footer-links">
+          <li><a href="../index.html">Home</a></li><li><a href="about.html">About</a></li>
+          <li><a href="work.html">Work</a></li><li><a href="writing.html">Writing</a></li>
+          <li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col"><div class="footer-col__title">Connect</div>
+        <ul class="footer-links">
+          <li><a href="https://linkedin.com/in/kaylacanfield" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="mailto:k.m.canfield@msmary.edu">Email</a></li>
+          <li><a href="../assets/Canfield_CV.pdf" target="_blank">Download CV</a></li>
+        </ul>
+      </div>
+      <div class="footer-col"><div class="footer-col__title">Work Areas</div>
+        <ul class="footer-links">
+          <li><a href="work.html">Instructional Design</a></li>
+          <li><a href="writing.html">Academic Writing</a></li>
+          <li><a href="writing.html">Research</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">&copy; 2025 Kayla Canfield</p>
+      <ul class="footer-bottom-links"><li><a href="#">Accessibility</a></li><li><a href="#">Sitemap</a></li></ul>
+    </div>
+  </div>
+</footer>
+
+<button id="back-to-top" aria-label="Back to top" style="position:fixed;bottom:2rem;right:2rem;width:44px;height:44px;border-radius:50%;background:var(--c-terracotta);color:var(--c-warm-white);border:none;cursor:pointer;font-size:1.1rem;box-shadow:var(--shadow-md);opacity:0;transition:opacity 0.3s;z-index:100;">&#x2191;</button>
+<script src="../assets/js/main.js"></script>
+<script>
+  const btt = document.getElementById('back-to-top');
+  window.addEventListener('scroll', () => { btt.style.opacity = window.scrollY > 400 ? '1' : '0'; btt.style.pointerEvents = window.scrollY > 400 ? 'all' : 'none'; });
+  btt.addEventListener('click', () => window.scrollTo({top:0,behavior:'smooth'}));
+</script>
+</body>
+</html>

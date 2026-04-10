@@ -1,0 +1,145 @@
+/* ================================================================
+   CONTACT PAGE — contact.css
+   ================================================================ */
+
+.page-hero {
+  position: relative; padding: 5rem 0 4rem; overflow: hidden;
+}
+.page-hero__gingham { position: absolute; inset: 0; opacity: 0.5; pointer-events: none; }
+.page-hero__tape {
+  position: absolute; bottom: 0; left: 0; right: 0; height: 3px;
+  background: linear-gradient(90deg, transparent, var(--c-gold), transparent); opacity: 0.5;
+}
+.page-hero__sub {
+  font-family: var(--f-body); font-size: 1rem; line-height: 1.85;
+  color: var(--c-warm-gray); max-width: 580px; margin-top: 1rem;
+}
+
+/* ── CONTACT GRID ──────────────────────────────────────────── */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+/* ── INFO CARDS ────────────────────────────────────────────── */
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-info-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.1rem 1.25rem;
+  background: var(--c-cream);
+  border: 1px solid var(--c-light-gray);
+  border-radius: var(--r-md);
+  transition: box-shadow var(--t-fast);
+}
+
+.contact-info-card:hover {
+  box-shadow: var(--shadow-xs);
+}
+
+.contact-info-card__icon {
+  font-size: 1.25rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.contact-info-card__label {
+  font-family: var(--f-sans);
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--c-mid-gray);
+  margin-bottom: 0.2rem;
+}
+
+.contact-info-card__value {
+  font-family: var(--f-sans);
+  font-size: 0.85rem;
+  color: var(--c-terracotta);
+  font-weight: 500;
+  text-decoration: none;
+  transition: color var(--t-fast);
+}
+
+.contact-info-card__value:hover {
+  color: var(--c-mauve);
+}
+
+/* ── CONTACT NOTE ──────────────────────────────────────────── */
+.contact-note {
+  position: relative;
+  background: var(--c-warm-white);
+  border: 1px solid var(--c-light-gray);
+  border-radius: var(--r-md);
+  padding: 1.5rem 1.5rem 1.25rem;
+  margin-top: 0.5rem;
+  background-image:
+    repeating-linear-gradient(0deg, transparent, transparent 22px, rgba(138,158,136,0.07) 22px, rgba(138,158,136,0.07) 23px);
+}
+
+.contact-note__tape {
+  position: absolute;
+  top: -9px; left: 50%;
+  transform: translateX(-50%) rotate(-1deg);
+  width: 55px; height: 16px;
+  background: rgba(184,154,90,0.3);
+  border-radius: 2px;
+}
+
+.contact-note__text {
+  font-family: var(--f-body);
+  font-size: 0.875rem;
+  line-height: 1.8;
+  color: var(--c-warm-gray);
+  margin-bottom: 1rem;
+}
+
+.contact-note__sig {
+  font-size: 1.75rem;
+  color: var(--c-terracotta);
+  line-height: 1;
+}
+
+/* ── FORM CARD ─────────────────────────────────────────────── */
+.contact-form-card {
+  background: var(--c-warm-white);
+  border: 1px solid var(--c-light-gray);
+  border-radius: var(--r-lg);
+  padding: 2.5rem;
+  position: relative;
+  box-shadow: var(--shadow-sm);
+}
+
+.contact-form-card__tape {
+  position: absolute;
+  top: -10px; left: 50%;
+  transform: translateX(-50%) rotate(-1.5deg);
+  width: 65px; height: 18px;
+  background: rgba(184,154,90,0.3);
+  border-radius: 2px;
+}
+
+.contact-form-card__title {
+  font-family: var(--f-serif);
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--c-ink);
+  margin-bottom: 1.75rem;
+}
+
+/* ── RESPONSIVE ────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
