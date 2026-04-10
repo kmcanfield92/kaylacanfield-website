@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 30" fill="none">
+  <!-- Hand-drawn wavy line with flourishes -->
+  <path d="M10 15 Q30 8 50 15 Q70 22 90 15 Q110 8 130 15 Q150 22 170 15 Q190 8 210 15 Q230 22 250 15 Q270 8 290 15 Q310 22 330 15 Q350 8 370 15 Q385 20 390 15" stroke="#C4A265" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <!-- Small leaves along the line -->
+  <ellipse cx="50" cy="12" rx="5" ry="2.5" fill="#8A9E88" opacity="0.5" transform="rotate(-20 50 12)"/>
+  <ellipse cx="130" cy="12" rx="5" ry="2.5" fill="#8A9E88" opacity="0.5" transform="rotate(-20 130 12)"/>
+  <ellipse cx="210" cy="12" rx="5" ry="2.5" fill="#8A9E88" opacity="0.5" transform="rotate(-20 210 12)"/>
+  <ellipse cx="290" cy="12" rx="5" ry="2.5" fill="#8A9E88" opacity="0.5" transform="rotate(-20 290 12)"/>
+  <ellipse cx="370" cy="12" rx="5" ry="2.5" fill="#8A9E88" opacity="0.5" transform="rotate(-20 370 12)"/>
+  <!-- Small dots -->
+  <circle cx="90" cy="15" r="2" fill="#C4A265" opacity="0.5"/>
+  <circle cx="170" cy="15" r="2" fill="#C4A265" opacity="0.5"/>
+  <circle cx="250" cy="15" r="2" fill="#C4A265" opacity="0.5"/>
+  <circle cx="330" cy="15" r="2" fill="#C4A265" opacity="0.5"/>
+</svg>

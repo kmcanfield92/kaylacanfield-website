@@ -1,0 +1,495 @@
+/* ================================================================
+   HOME ENHANCED — home-enhanced.css
+   Additional color, illustrations, stamps, botanicals, portrait,
+   identity ribbon, and embellishment styles layered over home.css
+   ================================================================ */
+
+/* ── HERO PORTRAIT ─────────────────────────────────────────── */
+.hero__portrait-wrap {
+  position: relative;
+  border-radius: var(--r-lg);
+  overflow: visible;
+  max-width: 340px;
+  margin: 0 auto;
+}
+
+.hero__portrait-img {
+  width: 100%;
+  border-radius: var(--r-lg);
+  display: block;
+  box-shadow: var(--shadow-lg);
+  filter: saturate(0.9) brightness(1.02);
+  border: 3px solid var(--c-warm-white);
+}
+
+.hero__portrait-tape {
+  position: absolute;
+  width: 58px;
+  height: 18px;
+  background: rgba(184,154,90,0.38);
+  border-radius: 2px;
+  z-index: 2;
+}
+
+.hero__portrait-tape--tl {
+  top: -8px;
+  left: 18px;
+  transform: rotate(-2deg);
+}
+
+.hero__portrait-tape--tr {
+  top: -8px;
+  right: 18px;
+  transform: rotate(2.5deg);
+}
+
+.hero__portrait-stamp {
+  position: absolute;
+  bottom: 70px;
+  right: -22px;
+  width: 80px;
+  transform: rotate(8deg);
+  opacity: 0.75;
+  z-index: 3;
+}
+
+.hero__portrait-library-stamp {
+  position: absolute;
+  top: 18px;
+  left: -24px;
+  width: 70px;
+  transform: rotate(-12deg);
+  opacity: 0.55;
+  z-index: 3;
+}
+
+.hero__portrait-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(42,34,24,0.78), transparent);
+  padding: 2.5rem 1.25rem 1.1rem;
+  border-radius: 0 0 var(--r-lg) var(--r-lg);
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.hero__portrait-caption-sub {
+  font-family: var(--f-sans);
+  font-size: 0.58rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(248,244,238,0.7);
+}
+
+/* Book float decoration */
+.hero__book-float {
+  position: absolute;
+  bottom: -18px;
+  left: -30px;
+  width: 64px;
+  transform: rotate(-8deg);
+  opacity: 0.65;
+  filter: drop-shadow(0 2px 4px rgba(42,34,24,0.18));
+  pointer-events: none;
+}
+
+/* Botanical floating decorations in hero */
+.hero__botanical {
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero__botanical--tl {
+  top: 80px;
+  left: -10px;
+  width: 180px;
+  opacity: 0.35;
+  transform: rotate(15deg) scaleX(-1);
+}
+
+.hero__botanical--br {
+  bottom: 60px;
+  right: 0;
+  width: 70px;
+  opacity: 0.3;
+  transform: rotate(-10deg);
+}
+
+.hero__flourish {
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero__flourish--tr {
+  top: 20px;
+  right: 20px;
+  width: 80px;
+  opacity: 0.25;
+}
+
+/* Override hero visual to show portrait instead of card */
+.hero__visual {
+  position: relative;
+  padding: 2rem 1rem 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ── IDENTITY RIBBON ────────────────────────────────────────── */
+.identity-ribbon {
+  background: var(--c-dusty-blue, #7A8FA6);
+  overflow: hidden;
+  padding: 0.6rem 0;
+  border-top: 1px solid rgba(255,255,255,0.15);
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+
+.identity-ribbon__inner {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  white-space: nowrap;
+  animation: ribbon-scroll 28s linear infinite;
+  width: max-content;
+}
+
+.identity-ribbon__inner .t-typewriter {
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(248,244,238,0.88);
+  font-family: var(--f-typewriter, 'Courier Prime', monospace);
+}
+
+.identity-ribbon__dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: rgba(248,244,238,0.45);
+  flex-shrink: 0;
+}
+
+@keyframes ribbon-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ── ABOUT TEASER ENHANCEMENTS ──────────────────────────────── */
+.about-teaser__sprig {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  width: 60px;
+  opacity: 0.3;
+  transform: rotate(20deg);
+  pointer-events: none;
+}
+
+.about-teaser__typewriter-panel {
+  background: var(--c-cream);
+  border-radius: var(--r-lg);
+  padding: 2.5rem 2rem;
+  min-height: 340px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--c-light-gray);
+  position: relative;
+  overflow: hidden;
+}
+
+.about-teaser__typewriter-panel::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    repeating-linear-gradient(0deg, transparent, transparent 22px, rgba(138,158,136,0.06) 22px, rgba(138,158,136,0.06) 23px);
+  pointer-events: none;
+}
+
+.about-teaser__typewriter-img {
+  width: 160px;
+  opacity: 0.75;
+  filter: drop-shadow(0 2px 6px rgba(42,34,24,0.12));
+}
+
+.about-teaser__typewriter-text {
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.about-teaser__color-block {
+  position: absolute;
+  border-radius: var(--r-md);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.about-teaser__color-block--blue {
+  bottom: -14px;
+  left: -14px;
+  width: 80px;
+  height: 80px;
+  background: var(--c-dusty-blue, #7A8FA6);
+  opacity: 0.18;
+}
+
+.about-teaser__color-block--rose {
+  top: -10px;
+  right: 40px;
+  width: 60px;
+  height: 60px;
+  background: var(--c-dusty-rose, #C4A0A0);
+  opacity: 0.2;
+  border-radius: 50%;
+}
+
+.about-teaser__glasses {
+  position: absolute;
+  bottom: 10px;
+  right: -20px;
+  width: 100px;
+  opacity: 0.25;
+  transform: rotate(-5deg);
+  pointer-events: none;
+}
+
+/* Color-coded tags */
+.tag--blue {
+  background: rgba(122,143,166,0.15);
+  color: #4a6478;
+  border-color: rgba(122,143,166,0.3);
+}
+
+.tag--rose {
+  background: rgba(196,160,160,0.15);
+  color: #8a5a5a;
+  border-color: rgba(196,160,160,0.3);
+}
+
+.tag--terracotta {
+  background: rgba(139,74,58,0.12);
+  color: var(--c-terracotta);
+  border-color: rgba(139,74,58,0.25);
+}
+
+/* ── DOODLE DIVIDER ─────────────────────────────────────────── */
+.doodle-divider-wrap {
+  padding: 0.5rem 0;
+  overflow: hidden;
+  background: var(--c-warm-white);
+}
+
+.doodle-divider-img {
+  width: 100%;
+  max-height: 30px;
+  display: block;
+}
+
+/* ── WORK SECTION ENHANCEMENTS ──────────────────────────────── */
+.work-section__pen {
+  position: absolute;
+  top: 40px;
+  right: 60px;
+  width: 30px;
+  opacity: 0.2;
+  transform: rotate(15deg);
+  pointer-events: none;
+}
+
+/* Colored card image backgrounds */
+.card__img--blue {
+  background: linear-gradient(135deg, rgba(122,143,166,0.18) 0%, rgba(122,143,166,0.08) 100%);
+}
+
+.card__img--sage {
+  background: linear-gradient(135deg, rgba(138,158,136,0.2) 0%, rgba(138,158,136,0.08) 100%);
+}
+
+.card__img--rose {
+  background: linear-gradient(135deg, rgba(196,160,160,0.2) 0%, rgba(196,160,160,0.08) 100%);
+}
+
+.card__img--gold {
+  background: linear-gradient(135deg, rgba(196,162,101,0.2) 0%, rgba(196,162,101,0.08) 100%);
+}
+
+/* Card color accent left border */
+.card--sage {
+  border-left: 3px solid var(--c-sage) !important;
+}
+
+.card--rose {
+  border-left: 3px solid var(--c-dusty-rose, #C4A0A0) !important;
+}
+
+/* Work card illustration overlay */
+.work-card-illustration {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.work-card-illustration img {
+  width: 80px;
+  opacity: 0.35;
+  filter: drop-shadow(0 1px 3px rgba(42,34,24,0.1));
+}
+
+.work-card-illustration--sm img {
+  width: 55px;
+}
+
+/* Library card stamp on featured card */
+.work-card-library-card {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 70px;
+  opacity: 0.3;
+  transform: rotate(4deg);
+  z-index: 2;
+}
+
+/* ── WRITING TEASER ENHANCEMENTS ────────────────────────────── */
+.writing-teaser__film-reel {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  width: 90px;
+  opacity: 0.12;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.writing-teaser__botanical {
+  position: absolute;
+  bottom: 20px;
+  left: -10px;
+  width: 160px;
+  opacity: 0.2;
+  transform: rotate(-10deg) scaleY(-1);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.writing-award-ribbon {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.writing-award-ribbon img {
+  width: 44px;
+  opacity: 0.8;
+}
+
+.writing-award-ribbon__label {
+  font-family: var(--f-sans);
+  font-size: 0.62rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--c-terracotta);
+  font-weight: 600;
+}
+
+/* Postmark on writing featured card */
+.writing-featured-card__postmark {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 64px;
+  opacity: 0.3;
+  transform: rotate(5deg);
+}
+
+/* ── SKILLS STRIP ENHANCEMENTS ──────────────────────────────── */
+.skills-strip__doodle-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  pointer-events: none;
+}
+
+.skill-group__icon {
+  margin-bottom: 0.75rem;
+}
+
+/* Colored skill group accents */
+.skill-group--blue {
+  border-color: rgba(122,143,166,0.3) !important;
+  border-top: 2px solid rgba(122,143,166,0.5) !important;
+}
+
+.skill-group--sage {
+  border-color: rgba(138,158,136,0.3) !important;
+  border-top: 2px solid rgba(138,158,136,0.5) !important;
+}
+
+.skill-group--rose {
+  border-color: rgba(196,160,160,0.3) !important;
+  border-top: 2px solid rgba(196,160,160,0.5) !important;
+}
+
+.skill-group--gold {
+  border-color: rgba(196,162,101,0.3) !important;
+  border-top: 2px solid rgba(196,162,101,0.5) !important;
+}
+
+/* ── CONTACT CTA ENHANCEMENTS ───────────────────────────────── */
+.contact-cta__botanical {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  width: 140px;
+  opacity: 0.2;
+  transform: rotate(10deg);
+  pointer-events: none;
+}
+
+.contact-cta__flourish {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 70px;
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+.contact-cta__postmark {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+/* ── RESPONSIVE ─────────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .hero__botanical--tl { display: none; }
+  .hero__portrait-stamp { right: -10px; }
+  .hero__portrait-library-stamp { left: -10px; }
+  .writing-teaser__film-reel { width: 60px; }
+  .about-teaser__sprig { display: none; }
+}
+
+@media (max-width: 768px) {
+  .identity-ribbon__inner { animation-duration: 18s; }
+  .hero__book-float { display: none; }
+  .hero__portrait-library-stamp { display: none; }
+  .writing-teaser__botanical { display: none; }
+  .contact-cta__botanical { display: none; }
+  .work-section__pen { display: none; }
+}

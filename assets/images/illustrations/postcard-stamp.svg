@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 96" fill="none">
+  <!-- Stamp perforated border -->
+  <rect x="6" y="6" width="68" height="84" rx="2" fill="#FAF7F2" stroke="#8B4A3A" stroke-width="1.5" stroke-dasharray="3 2.5"/>
+  <!-- Inner frame -->
+  <rect x="10" y="10" width="60" height="76" rx="1.5" fill="none" stroke="#8B4A3A" stroke-width="0.8"/>
+  <!-- Stamp image area - botanical -->
+  <rect x="13" y="13" width="54" height="46" rx="1" fill="#F5EDE4"/>
+  <!-- Simple botanical illustration inside stamp -->
+  <!-- Stem -->
+  <path d="M40 56 L40 35 Q40 28 35 24" stroke="#8A9E88" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <path d="M40 45 Q45 40 50 38" stroke="#8A9E88" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+  <path d="M40 40 Q34 36 30 34" stroke="#8A9E88" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+  <!-- Flower -->
+  <circle cx="35" cy="23" r="5" fill="#C4A265" opacity="0.7"/>
+  <circle cx="35" cy="23" r="2.5" fill="#8B4A3A" opacity="0.8"/>
+  <!-- Small leaves -->
+  <ellipse cx="50" cy="38" rx="4" ry="2.5" fill="#8A9E88" opacity="0.7" transform="rotate(-30 50 38)"/>
+  <ellipse cx="30" cy="34" rx="4" ry="2.5" fill="#8A9E88" opacity="0.7" transform="rotate(20 30 34)"/>
+  <!-- Country label -->
+  <rect x="13" y="62" width="54" height="10" rx="1" fill="#8B4A3A" opacity="0.12"/>
+  <text x="40" y="70" text-anchor="middle" font-family="serif" font-size="6.5" fill="#8B4A3A" letter-spacing="1.5" font-weight="700">WAYNESBORO · PA</text>
+  <!-- Value -->
+  <text x="40" y="82" text-anchor="middle" font-family="serif" font-size="8" fill="#8B4A3A" letter-spacing="1" font-weight="700">FOREVER</text>
+</svg>

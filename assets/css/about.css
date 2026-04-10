@@ -41,15 +41,41 @@
 .about-photo-wrap {
   position: relative;
   border-radius: var(--r-lg);
-  overflow: hidden;
+  overflow: visible;
   box-shadow: var(--shadow-lg);
   margin-bottom: 1.5rem;
+}
+
+.about-photo-wrap img.about-photo {
+  border-radius: var(--r-lg);
 }
 
 .about-photo {
   width: 100%;
   display: block;
   filter: saturate(0.9) brightness(1.02);
+}
+
+.about-photo__stamp {
+  position: absolute;
+  bottom: 60px;
+  right: -14px;
+  width: 64px;
+  transform: rotate(8deg);
+  opacity: 0.65;
+  z-index: 3;
+  overflow: visible;
+}
+
+.about-photo__postmark {
+  position: absolute;
+  top: 14px;
+  left: -14px;
+  width: 58px;
+  transform: rotate(-10deg);
+  opacity: 0.45;
+  z-index: 3;
+  overflow: visible;
 }
 
 .about-photo__tape {

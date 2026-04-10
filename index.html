@@ -16,6 +16,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/main.css" />
   <link rel="stylesheet" href="assets/css/home.css" />
+  <link rel="stylesheet" href="assets/css/home-enhanced.css" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -75,6 +76,11 @@
   <div class="hero__bg-pattern pattern-gingham"></div>
   <div class="hero__tape-top"></div>
 
+  <!-- Floating botanical decorations -->
+  <img src="assets/images/illustrations/botanical-branch.svg" class="hero__botanical hero__botanical--tl" alt="" aria-hidden="true" />
+  <img src="assets/images/illustrations/sprig.svg" class="hero__botanical hero__botanical--br" alt="" aria-hidden="true" />
+  <img src="assets/images/illustrations/flourish-corner.svg" class="hero__flourish hero__flourish--tr" alt="" aria-hidden="true" />
+
   <div class="hero__inner container">
     <div class="hero__content">
       <p class="eyebrow reveal">Instructional Designer &middot; Writer &middot; Researcher</p>
@@ -108,26 +114,30 @@
       </div>
     </div>
 
+    <!-- Hero visual: portrait + floating cards -->
     <div class="hero__visual reveal reveal-delay-2">
-      <!-- Main featured card -->
-      <div class="hero__card">
-        <div class="hero__card-tape"></div>
-        <div class="hero__card-clip">&#x1F4CE;</div>
-        <span class="hero__card-cat">Featured Project</span>
-        <h2 class="hero__card-title">New Faculty Orientation Handbook</h2>
-        <p class="hero__card-meta">Instructional Design &nbsp;&middot;&nbsp; Mount St. Mary's &nbsp;&middot;&nbsp; 2024</p>
-        <p class="hero__card-body">Designed and wrote a comprehensive orientation handbook for incoming faculty, consolidating policies, procedures, and resources from five departments into one navigable document.</p>
-        <div class="tag-row" style="margin-bottom:1.1rem;">
-          <span class="tag">Instructional Design</span>
-          <span class="tag">Technical Writing</span>
-          <span class="tag">Adobe InDesign</span>
+      <!-- Portrait photo frame -->
+      <div class="hero__portrait-wrap">
+        <div class="hero__portrait-tape hero__portrait-tape--tl"></div>
+        <div class="hero__portrait-tape hero__portrait-tape--tr"></div>
+        <img src="assets/images/photos/portrait-campus.jpg"
+             alt="Kayla Canfield, instructional designer and writer, on campus at Mount St. Mary's University"
+             class="hero__portrait-img"
+             loading="eager" />
+        <!-- Postcard stamp overlay -->
+        <div class="hero__portrait-stamp">
+          <img src="assets/images/illustrations/postcard-stamp.svg" alt="" aria-hidden="true" />
         </div>
-        <a href="pages/work.html" class="link-arrow">View Case Study</a>
-        <div class="hero__card-stamp">
-          <span>Portfolio</span>
-          <span style="font-size:0.8rem;font-weight:700;">2024</span>
+        <!-- Library stamp overlay -->
+        <div class="hero__portrait-library-stamp">
+          <img src="assets/images/illustrations/library-stamp.svg" alt="" aria-hidden="true" />
+        </div>
+        <div class="hero__portrait-caption">
+          <span class="t-signature" style="font-size:1.5rem;color:var(--c-warm-white);">Kayla Canfield</span>
+          <span class="hero__portrait-caption-sub">Instructional Designer &middot; Writer</span>
         </div>
       </div>
+
       <!-- Floating mini cards -->
       <div class="hero__mini hero__mini--1">
         <span class="hero__mini-label">Current Program</span>
@@ -139,29 +149,80 @@
         <span class="hero__mini-value">BA Interdisciplinary</span>
         <span class="hero__mini-sub">English &amp; Communications</span>
       </div>
+
+      <!-- Floating book illustration -->
+      <div class="hero__book-float">
+        <img src="assets/images/illustrations/book-stack.svg" alt="" aria-hidden="true" />
+      </div>
     </div>
   </div>
 </section>
 
+<!-- ── IDENTITY RIBBON ───────────────────────────────────────── -->
+<div class="identity-ribbon" aria-hidden="true">
+  <div class="identity-ribbon__inner">
+    <span class="t-typewriter">Instructional Design</span>
+    <span class="identity-ribbon__dot"></span>
+    <span class="t-typewriter">Digital Humanities</span>
+    <span class="identity-ribbon__dot"></span>
+    <span class="t-typewriter">Southern Gothic</span>
+    <span class="identity-ribbon__dot"></span>
+    <span class="t-typewriter">Folklore &amp; Memory</span>
+    <span class="identity-ribbon__dot"></span>
+    <span class="t-typewriter">Academic Writing</span>
+    <span class="identity-ribbon__dot"></span>
+    <span class="t-typewriter">eLearning Design</span>
+    <span class="identity-ribbon__dot"></span>
+    <span class="t-typewriter">Literature &amp; Film</span>
+    <span class="identity-ribbon__dot"></span>
+    <span class="t-typewriter">Curriculum Development</span>
+    <span class="identity-ribbon__dot"></span>
+    <!-- Duplicate for seamless scroll -->
+    <span class="t-typewriter">Instructional Design</span>
+    <span class="identity-ribbon__dot"></span>
+    <span class="t-typewriter">Digital Humanities</span>
+    <span class="identity-ribbon__dot"></span>
+    <span class="t-typewriter">Southern Gothic</span>
+    <span class="identity-ribbon__dot"></span>
+    <span class="t-typewriter">Folklore &amp; Memory</span>
+    <span class="identity-ribbon__dot"></span>
+    <span class="t-typewriter">Academic Writing</span>
+    <span class="identity-ribbon__dot"></span>
+    <span class="t-typewriter">eLearning Design</span>
+    <span class="identity-ribbon__dot"></span>
+    <span class="t-typewriter">Literature &amp; Film</span>
+    <span class="identity-ribbon__dot"></span>
+    <span class="t-typewriter">Curriculum Development</span>
+  </div>
+</div>
+
 <!-- ── ABOUT TEASER ──────────────────────────────────────────── -->
 <section class="about-teaser section bg-cream" aria-label="About teaser">
+  <!-- Botanical corner decoration -->
+  <img src="assets/images/illustrations/sprig.svg" class="about-teaser__sprig" alt="" aria-hidden="true" />
   <div class="container">
     <div class="about-teaser__inner">
       <div class="about-teaser__img-col reveal">
         <div class="about-teaser__frame">
-          <img src="assets/images/photos/portrait-hero.jpg"
-               alt="Kayla Canfield, instructional designer and writer, holding a graduation cap"
-               class="about-teaser__photo"
-               loading="lazy" />
+          <!-- NOTE: About page uses portrait-graduation.jpg. This teaser uses no photo — uses typewriter illustration instead -->
+          <div class="about-teaser__typewriter-panel">
+            <img src="assets/images/illustrations/typewriter.svg" alt="" aria-hidden="true" class="about-teaser__typewriter-img" />
+            <div class="about-teaser__typewriter-text">
+              <p class="t-typewriter" style="font-size:0.75rem;color:var(--c-terracotta);opacity:0.8;">"I believe good design and good writing share the same goal: clarity."</p>
+            </div>
+          </div>
           <div class="about-teaser__frame-tape about-teaser__frame-tape--tl"></div>
           <div class="about-teaser__frame-tape about-teaser__frame-tape--br"></div>
-          <div class="about-teaser__caption">
-            <span class="t-signature" style="font-size:1.6rem;color:var(--c-warm-white);">Kayla Canfield</span>
-            <span style="font-family:var(--f-sans);font-size:0.6rem;letter-spacing:0.16em;text-transform:uppercase;color:rgba(248,244,238,0.75);margin-top:2px;">Instructional Designer &middot; Writer</span>
-          </div>
         </div>
+        <!-- Color accent block -->
+        <div class="about-teaser__color-block about-teaser__color-block--blue"></div>
+        <div class="about-teaser__color-block about-teaser__color-block--rose"></div>
         <!-- Gingham accent block -->
         <div class="about-teaser__gingham-block pattern-gingham"></div>
+        <!-- Reading glasses doodle -->
+        <div class="about-teaser__glasses">
+          <img src="assets/images/illustrations/reading-glasses.svg" alt="" aria-hidden="true" />
+        </div>
       </div>
 
       <div class="about-teaser__content reveal reveal-delay-1">
@@ -193,11 +254,13 @@
 
         <div class="about-teaser__interests">
           <span class="tag tag--sage">Instructional Design</span>
-          <span class="tag tag--sage">Digital Humanities</span>
-          <span class="tag tag--sage">American Literature</span>
+          <span class="tag tag--blue">Digital Humanities</span>
+          <span class="tag tag--rose">American Literature</span>
           <span class="tag tag--sage">Southern Gothic</span>
-          <span class="tag tag--sage">Folklore</span>
-          <span class="tag tag--sage">Higher Education</span>
+          <span class="tag tag--blue">Folklore</span>
+          <span class="tag tag--rose">Higher Education</span>
+          <span class="tag tag--sage">Film Studies</span>
+          <span class="tag tag--blue">Archival Research</span>
         </div>
 
         <div style="margin-top:2rem;display:flex;gap:1rem;flex-wrap:wrap;">
@@ -209,8 +272,16 @@
   </div>
 </section>
 
+<!-- ── DOODLE DIVIDER ────────────────────────────────────────── -->
+<div class="doodle-divider-wrap" aria-hidden="true">
+  <img src="assets/images/illustrations/doodle-divider.svg" alt="" class="doodle-divider-img" />
+</div>
+
 <!-- ── FEATURED WORK ─────────────────────────────────────────── -->
 <section class="featured-work section" aria-label="Featured work">
+  <!-- Floating pen decoration -->
+  <img src="assets/images/illustrations/pen-nib.svg" class="work-section__pen" alt="" aria-hidden="true" />
+
   <div class="container">
     <div class="section-header flex-between" style="margin-bottom:var(--space-md);">
       <div>
@@ -232,16 +303,22 @@
 
       <!-- Featured wide card -->
       <article class="card card--featured reveal" data-category="instructional-design">
-        <div class="card__img">
+        <div class="card__img card__img--blue">
           <div class="work-card-pattern work-card-pattern--lines"></div>
-          <div class="work-card-icon">&#x1F4CB;</div>
+          <div class="work-card-illustration">
+            <img src="assets/images/illustrations/book-stack.svg" alt="" aria-hidden="true" />
+          </div>
+          <!-- Library card stamp on featured card -->
+          <div class="work-card-library-card">
+            <img src="assets/images/illustrations/library-card.svg" alt="" aria-hidden="true" />
+          </div>
         </div>
         <div class="card__body">
           <p class="card__cat">Instructional Design</p>
           <h3 class="card__title">New Faculty Orientation Handbook</h3>
           <p class="card__excerpt">Designed and wrote a comprehensive orientation handbook for incoming faculty, consolidating policies, procedures, and resources from five departments into a single navigable document. Applied UDL principles and clear information architecture throughout.</p>
           <div class="tag-row" style="margin-bottom:1rem;">
-            <span class="tag">Adobe InDesign</span>
+            <span class="tag tag--blue">Adobe InDesign</span>
             <span class="tag">Technical Writing</span>
             <span class="tag">UDL</span>
             <span class="tag">Information Architecture</span>
@@ -251,17 +328,19 @@
       </article>
 
       <!-- Card 2 -->
-      <article class="card card--paper reveal reveal-delay-1" data-category="training-systems">
-        <div class="card__img">
+      <article class="card card--paper card--sage reveal reveal-delay-1" data-category="training-systems">
+        <div class="card__img card__img--sage">
           <div class="work-card-pattern work-card-pattern--dots"></div>
-          <div class="work-card-icon">&#x1F393;</div>
+          <div class="work-card-illustration work-card-illustration--sm">
+            <img src="assets/images/illustrations/library-stamp.svg" alt="" aria-hidden="true" />
+          </div>
         </div>
         <div class="card__body">
           <p class="card__cat">Training &amp; Systems</p>
           <h3 class="card__title">Student Worker Onboarding Module</h3>
           <p class="card__excerpt">Developed a structured onboarding module for student workers, reducing training time and creating a repeatable system for future cohorts.</p>
           <div class="tag-row" style="margin-bottom:1rem;">
-            <span class="tag">Articulate Rise</span>
+            <span class="tag tag--sage">Articulate Rise</span>
             <span class="tag">ADDIE</span>
             <span class="tag">eLearning</span>
           </div>
@@ -270,17 +349,19 @@
       </article>
 
       <!-- Card 3 -->
-      <article class="card card--paper reveal reveal-delay-2" data-category="communication">
-        <div class="card__img">
+      <article class="card card--paper card--rose reveal reveal-delay-2" data-category="communication">
+        <div class="card__img card__img--rose">
           <div class="work-card-pattern work-card-pattern--grid"></div>
-          <div class="work-card-icon">&#x1F4F0;</div>
+          <div class="work-card-illustration work-card-illustration--sm">
+            <img src="assets/images/illustrations/pen-nib.svg" alt="" aria-hidden="true" style="width:40px;" />
+          </div>
         </div>
         <div class="card__body">
           <p class="card__cat">Communication Design</p>
           <h3 class="card__title">Department Newsletter Redesign</h3>
           <p class="card__excerpt">Redesigned the English Department's semesterly newsletter, improving readability and increasing faculty engagement with departmental communications.</p>
           <div class="tag-row" style="margin-bottom:1rem;">
-            <span class="tag">Canva</span>
+            <span class="tag tag--rose">Canva</span>
             <span class="tag">Copywriting</span>
             <span class="tag">Editorial Design</span>
           </div>
@@ -290,9 +371,11 @@
 
       <!-- Card 4 -->
       <article class="card card--paper reveal reveal-delay-3" data-category="coordination">
-        <div class="card__img">
+        <div class="card__img card__img--gold">
           <div class="work-card-pattern work-card-pattern--diagonal"></div>
-          <div class="work-card-icon">&#x1F5C2;&#xFE0F;</div>
+          <div class="work-card-illustration work-card-illustration--sm">
+            <img src="assets/images/illustrations/postmark.svg" alt="" aria-hidden="true" />
+          </div>
         </div>
         <div class="card__body">
           <p class="card__cat">Coordination &amp; Operations</p>
@@ -314,6 +397,11 @@
 <!-- ── WRITING TEASER ────────────────────────────────────────── -->
 <section class="writing-teaser section bg-parchment" aria-label="Writing teaser">
   <div class="writing-teaser__gingham pattern-gingham"></div>
+  <!-- Film reel decoration -->
+  <img src="assets/images/illustrations/film-reel.svg" class="writing-teaser__film-reel" alt="" aria-hidden="true" />
+  <!-- Botanical decoration -->
+  <img src="assets/images/illustrations/botanical-branch.svg" class="writing-teaser__botanical" alt="" aria-hidden="true" />
+
   <div class="container" style="position:relative;z-index:1;">
     <div class="writing-teaser__inner">
       <div class="writing-teaser__left reveal">
@@ -325,13 +413,34 @@
         <p class="body-text">
           Her research interests include Southern Gothic fiction, digital humanities, folklore, and the intersection of media and cultural memory.
         </p>
+
+        <!-- Interest tags with color -->
+        <div class="writing-interests-tags" style="margin:1.25rem 0;">
+          <span class="tag tag--terracotta">Southern Gothic</span>
+          <span class="tag tag--blue">Digital Humanities</span>
+          <span class="tag tag--sage">Folklore</span>
+          <span class="tag tag--rose">Film &amp; Media</span>
+          <span class="tag tag--terracotta">American Studies</span>
+          <span class="tag tag--blue">Cultural Memory</span>
+        </div>
+
         <a href="pages/writing.html" class="btn btn-primary" style="margin-top:0.5rem;">View All Writing</a>
+
+        <!-- Award ribbon decoration -->
+        <div class="writing-award-ribbon">
+          <img src="assets/images/illustrations/award-ribbon.svg" alt="English Department Award" />
+          <span class="writing-award-ribbon__label">Dept. Award Winner</span>
+        </div>
       </div>
 
       <div class="writing-teaser__right">
         <!-- Featured writing piece -->
         <div class="writing-featured-card reveal reveal-delay-1">
           <div class="writing-featured-card__tape"></div>
+          <!-- Postmark stamp -->
+          <div class="writing-featured-card__postmark">
+            <img src="assets/images/illustrations/postmark.svg" alt="" aria-hidden="true" />
+          </div>
           <span class="badge-award">&#x1F3C6; English Department Award</span>
           <h3 class="writing-featured-card__title">The Uncanny Familiar: Gothic Domesticity in Flannery O'Connor's Short Fiction</h3>
           <p class="writing-featured-card__meta">Academic Essay &nbsp;&middot;&nbsp; 2023</p>
@@ -377,13 +486,18 @@
 
 <!-- ── SKILLS STRIP ──────────────────────────────────────────── -->
 <section class="skills-strip section bg-ink" aria-label="Skills and tools">
-  <div class="container">
+  <!-- Doodle divider at top -->
+  <div class="skills-strip__doodle-top" aria-hidden="true">
+    <img src="assets/images/illustrations/doodle-divider.svg" alt="" style="width:100%;opacity:0.25;filter:invert(1);" />
+  </div>
+  <div class="container" style="position:relative;z-index:1;">
     <div class="skills-strip__header reveal" style="text-align:center;margin-bottom:var(--space-lg);">
       <p class="eyebrow" style="justify-content:center;color:var(--c-gold);">Capabilities</p>
       <h2 class="t-h1" style="color:var(--c-warm-white);">Skills &amp; <em style="color:var(--c-dusty-rose);">Tools</em></h2>
     </div>
     <div class="grid-4">
-      <div class="skill-group reveal reveal-delay-1">
+      <div class="skill-group skill-group--blue reveal reveal-delay-1">
+        <div class="skill-group__icon"><img src="assets/images/illustrations/book-stack.svg" alt="" aria-hidden="true" style="width:36px;opacity:0.6;" /></div>
         <div class="skill-group__title">Instructional Design</div>
         <ul class="skill-group__list">
           <li>ADDIE &amp; SAM Models</li>
@@ -394,7 +508,8 @@
           <li>Assessment Design</li>
         </ul>
       </div>
-      <div class="skill-group reveal reveal-delay-2">
+      <div class="skill-group skill-group--sage reveal reveal-delay-2">
+        <div class="skill-group__icon"><img src="assets/images/illustrations/typewriter.svg" alt="" aria-hidden="true" style="width:36px;opacity:0.6;" /></div>
         <div class="skill-group__title">eLearning &amp; Technology</div>
         <ul class="skill-group__list">
           <li>Articulate Rise &amp; Storyline</li>
@@ -405,7 +520,8 @@
           <li>Canva Pro</li>
         </ul>
       </div>
-      <div class="skill-group reveal reveal-delay-3">
+      <div class="skill-group skill-group--rose reveal reveal-delay-3">
+        <div class="skill-group__icon"><img src="assets/images/illustrations/pen-nib.svg" alt="" aria-hidden="true" style="width:20px;opacity:0.6;" /></div>
         <div class="skill-group__title">Writing &amp; Research</div>
         <ul class="skill-group__list">
           <li>Academic Writing</li>
@@ -416,7 +532,8 @@
           <li>Chicago &amp; MLA Style</li>
         </ul>
       </div>
-      <div class="skill-group reveal reveal-delay-4">
+      <div class="skill-group skill-group--gold reveal reveal-delay-4">
+        <div class="skill-group__icon"><img src="assets/images/illustrations/reading-glasses.svg" alt="" aria-hidden="true" style="width:36px;opacity:0.6;" /></div>
         <div class="skill-group__title">Administration</div>
         <ul class="skill-group__list">
           <li>Academic Event Planning</li>
@@ -433,8 +550,14 @@
 
 <!-- ── CONTACT CTA ───────────────────────────────────────────── -->
 <section class="contact-cta section bg-sage-light" aria-label="Contact call to action">
-  <div class="container" style="text-align:center;">
-    <div class="contact-cta__postmark reveal"></div>
+  <!-- Botanical decoration -->
+  <img src="assets/images/illustrations/botanical-branch.svg" class="contact-cta__botanical" alt="" aria-hidden="true" />
+  <img src="assets/images/illustrations/flourish-corner.svg" class="contact-cta__flourish" alt="" aria-hidden="true" />
+
+  <div class="container" style="text-align:center;position:relative;z-index:1;">
+    <div class="contact-cta__postmark reveal">
+      <img src="assets/images/illustrations/postmark.svg" alt="" aria-hidden="true" style="width:80px;opacity:0.5;" />
+    </div>
     <p class="eyebrow reveal" style="justify-content:center;">Get in Touch</p>
     <h2 class="t-h1 reveal reveal-delay-1" style="margin-bottom:1rem;">
       Have a project or<br><em style="color:var(--c-terracotta);">program in mind?</em>
@@ -499,7 +622,7 @@
 </footer>
 
 <!-- Back to top -->
-<button id="back-to-top" aria-label="Back to top" style="position:fixed;bottom:2rem;right:2rem;width:44px;height:44px;border-radius:50%;background:var(--c-terracotta);color:var(--c-warm-white);border:none;cursor:pointer;font-size:1.1rem;box-shadow:var(--shadow-md);opacity:0;transition:opacity 0.3s;z-index:100;" class="">&#x2191;</button>
+<button id="back-to-top" aria-label="Back to top" style="position:fixed;bottom:2rem;right:2rem;width:44px;height:44px;border-radius:50%;background:var(--c-terracotta);color:var(--c-warm-white);border:none;cursor:pointer;font-size:1.1rem;box-shadow:var(--shadow-md);opacity:0;transition:opacity 0.3s;z-index:100;">&#x2191;</button>
 
 <script src="assets/js/main.js"></script>
 <script>

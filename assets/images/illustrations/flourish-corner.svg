@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <!-- Corner flourish - top left style -->
+  <path d="M5 50 Q5 5 50 5" stroke="#C4A265" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <path d="M5 50 Q20 35 35 20 Q50 5 50 5" stroke="#C4A265" stroke-width="0.8" fill="none" stroke-linecap="round" opacity="0.5"/>
+  <!-- Spiral at corner -->
+  <path d="M5 50 Q2 42 6 38 Q10 34 14 38 Q18 42 14 46 Q10 50 8 46" stroke="#C4A265" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+  <!-- Spiral at end -->
+  <path d="M50 5 Q58 2 62 6 Q66 10 62 14 Q58 18 54 14 Q50 10 54 8" stroke="#C4A265" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+  <!-- Small leaves along curve -->
+  <ellipse cx="22" cy="28" rx="5" ry="2.5" fill="#8A9E88" opacity="0.5" transform="rotate(-45 22 28)"/>
+  <ellipse cx="38" cy="16" rx="5" ry="2.5" fill="#8A9E88" opacity="0.5" transform="rotate(-60 38 16)"/>
+  <ellipse cx="14" cy="40" rx="4" ry="2" fill="#8A9E88" opacity="0.4" transform="rotate(-20 14 40)"/>
+  <!-- Dots -->
+  <circle cx="28" cy="22" r="1.5" fill="#C4A265" opacity="0.6"/>
+  <circle cx="44" cy="11" r="1.5" fill="#C4A265" opacity="0.6"/>
+</svg>

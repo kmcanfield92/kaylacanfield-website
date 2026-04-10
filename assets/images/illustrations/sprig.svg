@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" fill="none">
+  <!-- Main stem -->
+  <path d="M10 50 Q20 35 30 20 Q38 10 45 6" stroke="#8A9E88" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+  <!-- Side branches -->
+  <path d="M22 36 Q15 30 12 26" stroke="#8A9E88" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+  <path d="M30 24 Q38 20 42 18" stroke="#8A9E88" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+  <!-- Leaves -->
+  <ellipse cx="16" cy="30" rx="6" ry="3" fill="#8A9E88" opacity="0.7" transform="rotate(-50 16 30)"/>
+  <ellipse cx="36" cy="18" rx="6" ry="3" fill="#8A9E88" opacity="0.7" transform="rotate(-20 36 18)"/>
+  <ellipse cx="26" cy="28" rx="5" ry="2.5" fill="#6a7e68" opacity="0.6" transform="rotate(-35 26 28)"/>
+  <ellipse cx="38" cy="14" rx="5" ry="2.5" fill="#6a7e68" opacity="0.6" transform="rotate(-15 38 14)"/>
+  <!-- Flower bud at tip -->
+  <circle cx="45" cy="6" r="4" fill="#D4A0A0" opacity="0.7"/>
+  <circle cx="45" cy="6" r="2" fill="#8B4A3A" opacity="0.6"/>
+  <!-- Small berry -->
+  <circle cx="12" cy="26" r="2.5" fill="#C4A265" opacity="0.6"/>
+</svg>

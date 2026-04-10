@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 160" fill="none">
+  <!-- Card pocket/envelope -->
+  <rect x="6" y="6" width="108" height="148" rx="4" fill="#FAF7F2" stroke="#c4a265" stroke-width="1.5"/>
+  <!-- Header band -->
+  <rect x="6" y="6" width="108" height="28" rx="4" fill="#C4A265" opacity="0.25"/>
+  <rect x="6" y="28" width="108" height="6" fill="#C4A265" opacity="0.15"/>
+  <!-- Header text -->
+  <text x="60" y="22" text-anchor="middle" font-family="serif" font-size="8" fill="#8B4A3A" font-weight="700" letter-spacing="2">DATE DUE</text>
+  <!-- Column headers -->
+  <line x1="6" y1="44" x2="114" y2="44" stroke="#c4a265" stroke-width="0.8"/>
+  <text x="20" y="41" font-family="serif" font-size="6" fill="#8B4A3A" opacity="0.7">DATE</text>
+  <text x="70" y="41" font-family="serif" font-size="6" fill="#8B4A3A" opacity="0.7">BORROWER</text>
+  <!-- Date rows -->
+  <line x1="6" y1="56" x2="114" y2="56" stroke="#c4a265" stroke-width="0.6" opacity="0.5"/>
+  <text x="14" y="53" font-family="monospace" font-size="6.5" fill="#3D3028" opacity="0.6">Sep 12 1998</text>
+  <line x1="6" y1="68" x2="114" y2="68" stroke="#c4a265" stroke-width="0.6" opacity="0.5"/>
+  <text x="14" y="65" font-family="monospace" font-size="6.5" fill="#3D3028" opacity="0.6">Oct 04 2001</text>
+  <line x1="6" y1="80" x2="114" y2="80" stroke="#c4a265" stroke-width="0.6" opacity="0.5"/>
+  <text x="14" y="77" font-family="monospace" font-size="6.5" fill="#3D3028" opacity="0.6">Mar 17 2005</text>
+  <line x1="6" y1="92" x2="114" y2="92" stroke="#c4a265" stroke-width="0.6" opacity="0.5"/>
+  <text x="14" y="89" font-family="monospace" font-size="6.5" fill="#3D3028" opacity="0.6">Nov 29 2009</text>
+  <line x1="6" y1="104" x2="114" y2="104" stroke="#c4a265" stroke-width="0.6" opacity="0.5"/>
+  <text x="14" y="101" font-family="monospace" font-size="6.5" fill="#3D3028" opacity="0.6">Jan 08 2014</text>
+  <line x1="6" y1="116" x2="114" y2="116" stroke="#c4a265" stroke-width="0.6" opacity="0.5"/>
+  <text x="14" y="113" font-family="monospace" font-size="6.5" fill="#3D3028" opacity="0.6">Aug 22 2019</text>
+  <line x1="6" y1="128" x2="114" y2="128" stroke="#c4a265" stroke-width="0.6" opacity="0.5"/>
+  <!-- Stamp impression -->
+  <rect x="60" y="130" width="46" height="18" rx="2" fill="none" stroke="#8B4A3A" stroke-width="1.2" opacity="0.4"/>
+  <text x="83" y="142" text-anchor="middle" font-family="serif" font-size="7" fill="#8B4A3A" opacity="0.5" letter-spacing="1">RENEWED</text>
+  <!-- Bottom library name -->
+  <text x="60" y="155" text-anchor="middle" font-family="serif" font-size="6" fill="#8B4A3A" opacity="0.5" letter-spacing="1.5">KAYLA CANFIELD · LIBRARY</text>
+</svg>

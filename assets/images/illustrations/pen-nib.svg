@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 120" fill="none">
+  <!-- Pen body -->
+  <rect x="22" y="8" width="16" height="70" rx="4" fill="#3D3028"/>
+  <rect x="24" y="10" width="5" height="66" rx="2" fill="#4a3c32" opacity="0.5"/>
+  <!-- Pen clip -->
+  <rect x="36" y="12" width="4" height="50" rx="2" fill="#C4A265"/>
+  <circle cx="38" cy="62" r="3" fill="#C4A265"/>
+  <!-- Nib section -->
+  <path d="M22 78 L30 110 L38 78 Z" fill="#C4A265" stroke="#a08040" stroke-width="1"/>
+  <!-- Nib slit -->
+  <line x1="30" y1="82" x2="30" y2="108" stroke="#3D3028" stroke-width="1.2"/>
+  <!-- Ink drop -->
+  <path d="M30 112 Q27 118 30 120 Q33 118 30 112 Z" fill="#7A8FA6" opacity="0.8"/>
+  <!-- Pen cap top -->
+  <rect x="22" y="4" width="16" height="8" rx="4" fill="#C4A265"/>
+</svg>

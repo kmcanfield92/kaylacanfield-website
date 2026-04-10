@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 100" fill="none">
+  <!-- Ribbon tails -->
+  <path d="M28 62 L20 90 L40 78 L60 90 L52 62 Z" fill="#8B4A3A" opacity="0.85"/>
+  <!-- Ribbon tail notch -->
+  <path d="M20 90 L30 80 L40 90 L50 80 L60 90" fill="#FAF7F2" opacity="0.3"/>
+  <!-- Outer circle -->
+  <circle cx="40" cy="40" r="34" fill="#C4A265" opacity="0.2" stroke="#C4A265" stroke-width="2"/>
+  <!-- Star points -->
+  <path d="M40 8 L43 30 L65 22 L48 38 L68 50 L46 48 L48 72 L40 54 L32 72 L34 48 L12 50 L32 38 L15 22 L37 30 Z" fill="#C4A265" opacity="0.35"/>
+  <!-- Inner circle -->
+  <circle cx="40" cy="40" r="22" fill="#FAF7F2" stroke="#C4A265" stroke-width="1.5"/>
+  <!-- Center text -->
+  <text x="40" y="36" text-anchor="middle" font-family="serif" font-size="7" fill="#8B4A3A" font-weight="700" letter-spacing="0.5">DEPT.</text>
+  <text x="40" y="46" text-anchor="middle" font-family="serif" font-size="7" fill="#8B4A3A" font-weight="700" letter-spacing="0.5">AWARD</text>
+</svg>

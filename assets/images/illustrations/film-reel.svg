@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <!-- Outer reel ring -->
+  <circle cx="50" cy="50" r="44" fill="none" stroke="#3D3028" stroke-width="3"/>
+  <circle cx="50" cy="50" r="44" fill="#3D3028" opacity="0.08"/>
+  <!-- Film sprocket holes - outer ring -->
+  <circle cx="50" cy="8" r="4" fill="#3D3028" opacity="0.5"/>
+  <circle cx="50" cy="92" r="4" fill="#3D3028" opacity="0.5"/>
+  <circle cx="8" cy="50" r="4" fill="#3D3028" opacity="0.5"/>
+  <circle cx="92" cy="50" r="4" fill="#3D3028" opacity="0.5"/>
+  <circle cx="19" cy="19" r="4" fill="#3D3028" opacity="0.5"/>
+  <circle cx="81" cy="19" r="4" fill="#3D3028" opacity="0.5"/>
+  <circle cx="19" cy="81" r="4" fill="#3D3028" opacity="0.5"/>
+  <circle cx="81" cy="81" r="4" fill="#3D3028" opacity="0.5"/>
+  <!-- Inner spokes -->
+  <path d="M50 50 L50 18" stroke="#3D3028" stroke-width="2.5" opacity="0.4"/>
+  <path d="M50 50 L50 82" stroke="#3D3028" stroke-width="2.5" opacity="0.4"/>
+  <path d="M50 50 L18 50" stroke="#3D3028" stroke-width="2.5" opacity="0.4"/>
+  <path d="M50 50 L82 50" stroke="#3D3028" stroke-width="2.5" opacity="0.4"/>
+  <path d="M50 50 L22 22" stroke="#3D3028" stroke-width="2.5" opacity="0.4"/>
+  <path d="M50 50 L78 78" stroke="#3D3028" stroke-width="2.5" opacity="0.4"/>
+  <path d="M50 50 L78 22" stroke="#3D3028" stroke-width="2.5" opacity="0.4"/>
+  <path d="M50 50 L22 78" stroke="#3D3028" stroke-width="2.5" opacity="0.4"/>
+  <!-- Center hub -->
+  <circle cx="50" cy="50" r="14" fill="#3D3028" opacity="0.15" stroke="#3D3028" stroke-width="2"/>
+  <circle cx="50" cy="50" r="6" fill="#3D3028" opacity="0.4"/>
+  <circle cx="50" cy="50" r="3" fill="#C4A265" opacity="0.8"/>
+</svg>
