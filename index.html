@@ -16,7 +16,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/main.css" />
   <link rel="stylesheet" href="assets/css/home.css" />
-  <link rel="stylesheet" href="assets/css/home-enhanced.css" />
+  <link rel="stylesheet" href="assets/css/home-v3.css" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -76,11 +76,6 @@
   <div class="hero__bg-pattern pattern-gingham"></div>
   <div class="hero__tape-top"></div>
 
-  <!-- Floating botanical decorations -->
-  <img src="assets/images/illustrations/botanical-branch.svg" class="hero__botanical hero__botanical--tl" alt="" aria-hidden="true" />
-  <img src="assets/images/illustrations/sprig.svg" class="hero__botanical hero__botanical--br" alt="" aria-hidden="true" />
-  <img src="assets/images/illustrations/flourish-corner.svg" class="hero__flourish hero__flourish--tr" alt="" aria-hidden="true" />
-
   <div class="hero__inner container">
     <div class="hero__content">
       <p class="eyebrow reveal">Instructional Designer &middot; Writer &middot; Researcher</p>
@@ -114,31 +109,35 @@
       </div>
     </div>
 
-    <!-- Hero visual: portrait + floating cards -->
+    <!-- Hero visual: graduation portrait + library card -->
     <div class="hero__visual reveal reveal-delay-2">
-      <!-- Portrait photo frame -->
+
+      <!-- Portrait photo in photo-album style frame -->
       <div class="hero__portrait-wrap">
-        <div class="hero__portrait-tape hero__portrait-tape--tl"></div>
-        <div class="hero__portrait-tape hero__portrait-tape--tr"></div>
-        <img src="assets/images/photos/portrait-campus.jpg"
-             alt="Kayla Canfield, instructional designer and writer, on campus at Mount St. Mary's University"
+        <!-- Gold tape strips at top corners -->
+        <div class="hero__tape hero__tape--tl"></div>
+        <div class="hero__tape hero__tape--tr"></div>
+        <!-- The graduation portrait -->
+        <img src="assets/images/photos/portrait-graduation.jpg"
+             alt="Kayla Canfield at graduation, Mount St. Mary's University"
              class="hero__portrait-img"
              loading="eager" />
-        <!-- Postcard stamp overlay -->
-        <div class="hero__portrait-stamp">
-          <img src="assets/images/illustrations/postcard-stamp.svg" alt="" aria-hidden="true" />
-        </div>
-        <!-- Library stamp overlay -->
-        <div class="hero__portrait-library-stamp">
-          <img src="assets/images/illustrations/library-stamp.svg" alt="" aria-hidden="true" />
-        </div>
+        <!-- Name caption overlay at bottom -->
         <div class="hero__portrait-caption">
           <span class="t-signature" style="font-size:1.5rem;color:var(--c-warm-white);">Kayla Canfield</span>
           <span class="hero__portrait-caption-sub">Instructional Designer &middot; Writer</span>
         </div>
       </div>
 
-      <!-- Floating mini cards -->
+      <!-- NY Public Library card tucked beside portrait -->
+      <div class="hero__library-card reveal reveal-delay-3">
+        <img src="assets/images/vintage/library-card-nypl.webp"
+             alt="A used library card from the New York Public Library"
+             class="hero__library-card-img"
+             loading="lazy" />
+      </div>
+
+      <!-- Floating mini info cards -->
       <div class="hero__mini hero__mini--1">
         <span class="hero__mini-label">Current Program</span>
         <span class="hero__mini-value">MEd ID&amp;T</span>
@@ -150,10 +149,6 @@
         <span class="hero__mini-sub">English &amp; Communications</span>
       </div>
 
-      <!-- Floating book illustration -->
-      <div class="hero__book-float">
-        <img src="assets/images/illustrations/book-stack.svg" alt="" aria-hidden="true" />
-      </div>
     </div>
   </div>
 </section>
@@ -198,31 +193,29 @@
 
 <!-- ── ABOUT TEASER ──────────────────────────────────────────── -->
 <section class="about-teaser section bg-cream" aria-label="About teaser">
-  <!-- Botanical corner decoration -->
-  <img src="assets/images/illustrations/sprig.svg" class="about-teaser__sprig" alt="" aria-hidden="true" />
   <div class="container">
     <div class="about-teaser__inner">
+
+      <!-- Left: Typewriter diagram panel -->
       <div class="about-teaser__img-col reveal">
         <div class="about-teaser__frame">
-          <!-- NOTE: About page uses portrait-graduation.jpg. This teaser uses no photo — uses typewriter illustration instead -->
-          <div class="about-teaser__typewriter-panel">
-            <img src="assets/images/illustrations/typewriter.svg" alt="" aria-hidden="true" class="about-teaser__typewriter-img" />
-            <div class="about-teaser__typewriter-text">
-              <p class="t-typewriter" style="font-size:0.75rem;color:var(--c-terracotta);opacity:0.8;">"I believe good design and good writing share the same goal: clarity."</p>
+          <div class="about-teaser__diagram-panel">
+            <!-- Typewriter diagram as atmospheric background -->
+            <img src="assets/images/vintage/typewriter-diagram.webp"
+                 alt="Vintage typewriter technical diagram"
+                 class="about-teaser__diagram-img"
+                 loading="lazy" />
+            <!-- Quote overlay on diagram -->
+            <div class="about-teaser__diagram-quote">
+              <p class="t-typewriter">"I believe good design and good writing share the same goal: clarity."</p>
             </div>
           </div>
           <div class="about-teaser__frame-tape about-teaser__frame-tape--tl"></div>
           <div class="about-teaser__frame-tape about-teaser__frame-tape--br"></div>
         </div>
-        <!-- Color accent block -->
+        <!-- Color accent blocks -->
         <div class="about-teaser__color-block about-teaser__color-block--blue"></div>
         <div class="about-teaser__color-block about-teaser__color-block--rose"></div>
-        <!-- Gingham accent block -->
-        <div class="about-teaser__gingham-block pattern-gingham"></div>
-        <!-- Reading glasses doodle -->
-        <div class="about-teaser__glasses">
-          <img src="assets/images/illustrations/reading-glasses.svg" alt="" aria-hidden="true" />
-        </div>
       </div>
 
       <div class="about-teaser__content reveal reveal-delay-1">
@@ -272,15 +265,20 @@
   </div>
 </section>
 
-<!-- ── DOODLE DIVIDER ────────────────────────────────────────── -->
-<div class="doodle-divider-wrap" aria-hidden="true">
-  <img src="assets/images/illustrations/doodle-divider.svg" alt="" class="doodle-divider-img" />
+<!-- ── SECTION DIVIDER: PRESSED LEAF ────────────────────────── -->
+<div class="section-divider-leaf" aria-hidden="true">
+  <div class="section-divider-leaf__inner">
+    <div class="section-divider-leaf__line"></div>
+    <img src="assets/images/vintage/pressed-leaf.webp"
+         alt=""
+         class="section-divider-leaf__img"
+         loading="lazy" />
+    <div class="section-divider-leaf__line"></div>
+  </div>
 </div>
 
 <!-- ── FEATURED WORK ─────────────────────────────────────────── -->
 <section class="featured-work section" aria-label="Featured work">
-  <!-- Floating pen decoration -->
-  <img src="assets/images/illustrations/pen-nib.svg" class="work-section__pen" alt="" aria-hidden="true" />
 
   <div class="container">
     <div class="section-header flex-between" style="margin-bottom:var(--space-md);">
@@ -301,16 +299,20 @@
 
     <div class="work-grid">
 
-      <!-- Featured wide card -->
+      <!-- Featured wide card: Orientation Handbook — Memoranda page background -->
       <article class="card card--featured reveal" data-category="instructional-design">
-        <div class="card__img card__img--blue">
-          <div class="work-card-pattern work-card-pattern--lines"></div>
-          <div class="work-card-illustration">
-            <img src="assets/images/illustrations/book-stack.svg" alt="" aria-hidden="true" />
-          </div>
-          <!-- Library card stamp on featured card -->
-          <div class="work-card-library-card">
-            <img src="assets/images/illustrations/library-card.svg" alt="" aria-hidden="true" />
+        <div class="card__img card__img--memoranda">
+          <img src="assets/images/vintage/memoranda-page.webp"
+               alt=""
+               class="card__img-bg"
+               aria-hidden="true"
+               loading="lazy" />
+          <!-- NY Public Library card as a subtle overlay -->
+          <div class="card__img-overlay-asset card__img-overlay-asset--library">
+            <img src="assets/images/vintage/library-card-nypl.webp"
+                 alt=""
+                 aria-hidden="true"
+                 loading="lazy" />
           </div>
         </div>
         <div class="card__body">
@@ -327,13 +329,14 @@
         </div>
       </article>
 
-      <!-- Card 2 -->
+      <!-- Card 2: Student Onboarding — Composition notebook background -->
       <article class="card card--paper card--sage reveal reveal-delay-1" data-category="training-systems">
-        <div class="card__img card__img--sage">
-          <div class="work-card-pattern work-card-pattern--dots"></div>
-          <div class="work-card-illustration work-card-illustration--sm">
-            <img src="assets/images/illustrations/library-stamp.svg" alt="" aria-hidden="true" />
-          </div>
+        <div class="card__img card__img--notebook">
+          <img src="assets/images/vintage/composition-notebook.webp"
+               alt=""
+               class="card__img-bg"
+               aria-hidden="true"
+               loading="lazy" />
         </div>
         <div class="card__body">
           <p class="card__cat">Training &amp; Systems</p>
@@ -348,10 +351,11 @@
         </div>
       </article>
 
-      <!-- Card 3 -->
+      <!-- Card 3: Newsletter Redesign — keep fountain pen (pen-nib SVG) as requested -->
       <article class="card card--paper card--rose reveal reveal-delay-2" data-category="communication">
         <div class="card__img card__img--rose">
           <div class="work-card-pattern work-card-pattern--grid"></div>
+          <!-- Fountain pen kept as requested -->
           <div class="work-card-illustration work-card-illustration--sm">
             <img src="assets/images/illustrations/pen-nib.svg" alt="" aria-hidden="true" style="width:40px;" />
           </div>
@@ -369,13 +373,14 @@
         </div>
       </article>
 
-      <!-- Card 4 -->
+      <!-- Card 4: Event Planning — Archive folder background -->
       <article class="card card--paper reveal reveal-delay-3" data-category="coordination">
-        <div class="card__img card__img--gold">
-          <div class="work-card-pattern work-card-pattern--diagonal"></div>
-          <div class="work-card-illustration work-card-illustration--sm">
-            <img src="assets/images/illustrations/postmark.svg" alt="" aria-hidden="true" />
-          </div>
+        <div class="card__img card__img--archive">
+          <img src="assets/images/vintage/archive-folder.webp"
+               alt=""
+               class="card__img-bg"
+               aria-hidden="true"
+               loading="lazy" />
         </div>
         <div class="card__body">
           <p class="card__cat">Coordination &amp; Operations</p>
@@ -397,10 +402,13 @@
 <!-- ── WRITING TEASER ────────────────────────────────────────── -->
 <section class="writing-teaser section bg-parchment" aria-label="Writing teaser">
   <div class="writing-teaser__gingham pattern-gingham"></div>
-  <!-- Film reel decoration -->
-  <img src="assets/images/illustrations/film-reel.svg" class="writing-teaser__film-reel" alt="" aria-hidden="true" />
-  <!-- Botanical decoration -->
-  <img src="assets/images/illustrations/botanical-branch.svg" class="writing-teaser__botanical" alt="" aria-hidden="true" />
+
+  <!-- Typography diagram as atmospheric background accent -->
+  <div class="writing-teaser__bg-diagram" aria-hidden="true">
+    <img src="assets/images/vintage/typography-diagram.webp"
+         alt=""
+         loading="lazy" />
+  </div>
 
   <div class="container" style="position:relative;z-index:1;">
     <div class="writing-teaser__inner">
@@ -414,7 +422,6 @@
           Her research interests include Southern Gothic fiction, digital humanities, folklore, and the intersection of media and cultural memory.
         </p>
 
-        <!-- Interest tags with color -->
         <div class="writing-interests-tags" style="margin:1.25rem 0;">
           <span class="tag tag--terracotta">Southern Gothic</span>
           <span class="tag tag--blue">Digital Humanities</span>
@@ -426,33 +433,42 @@
 
         <a href="pages/writing.html" class="btn btn-primary" style="margin-top:0.5rem;">View All Writing</a>
 
-        <!-- Award ribbon decoration -->
-        <div class="writing-award-ribbon">
-          <img src="assets/images/illustrations/award-ribbon.svg" alt="English Department Award" />
-          <span class="writing-award-ribbon__label">Dept. Award Winner</span>
+        <!-- Award label: using Cooper Union stamp paper as award badge background -->
+        <div class="writing-award-block">
+          <div class="writing-award-block__stamp">
+            <img src="assets/images/vintage/cooper-union-stamp.webp"
+                 alt=""
+                 aria-hidden="true"
+                 loading="lazy" />
+          </div>
+          <span class="writing-award-block__label">English Dept. Award Winner</span>
         </div>
       </div>
 
       <div class="writing-teaser__right">
-        <!-- Featured writing piece -->
+        <!-- Featured writing piece: Ex Libris page as card background -->
         <div class="writing-featured-card reveal reveal-delay-1">
           <div class="writing-featured-card__tape"></div>
-          <!-- Postmark stamp -->
-          <div class="writing-featured-card__postmark">
-            <img src="assets/images/illustrations/postmark.svg" alt="" aria-hidden="true" />
+          <!-- Ex Libris book page as atmospheric background -->
+          <div class="writing-featured-card__exlibris" aria-hidden="true">
+            <img src="assets/images/vintage/ex-libris-book.webp"
+                 alt=""
+                 loading="lazy" />
           </div>
-          <span class="badge-award">&#x1F3C6; English Department Award</span>
-          <h3 class="writing-featured-card__title">The Uncanny Familiar: Gothic Domesticity in Flannery O'Connor's Short Fiction</h3>
-          <p class="writing-featured-card__meta">Academic Essay &nbsp;&middot;&nbsp; 2023</p>
-          <p class="writing-featured-card__abstract">
-            This essay examines the domestic space as a site of Gothic disruption in O'Connor's fiction, arguing that the familiar household becomes the primary vehicle for her theological vision of grace and violence.
-          </p>
-          <div class="tag-row" style="margin-bottom:1rem;">
-            <span class="tag tag--sage">Southern Gothic</span>
-            <span class="tag tag--sage">American Literature</span>
-            <span class="tag tag--sage">Theology &amp; Fiction</span>
+          <div class="writing-featured-card__content">
+            <span class="badge-award">&#x1F3C6; English Department Award</span>
+            <h3 class="writing-featured-card__title">The Uncanny Familiar: Gothic Domesticity in Flannery O'Connor's Short Fiction</h3>
+            <p class="writing-featured-card__meta">Academic Essay &nbsp;&middot;&nbsp; 2023</p>
+            <p class="writing-featured-card__abstract">
+              This essay examines the domestic space as a site of Gothic disruption in O'Connor's fiction, arguing that the familiar household becomes the primary vehicle for her theological vision of grace and violence.
+            </p>
+            <div class="tag-row" style="margin-bottom:1rem;">
+              <span class="tag tag--sage">Southern Gothic</span>
+              <span class="tag tag--sage">American Literature</span>
+              <span class="tag tag--sage">Theology &amp; Fiction</span>
+            </div>
+            <a href="pages/writing.html#oconnor-essay" class="link-arrow">Read Essay</a>
           </div>
-          <a href="pages/writing.html#oconnor-essay" class="link-arrow">Read Essay</a>
         </div>
 
         <!-- Writing list -->
@@ -486,10 +502,6 @@
 
 <!-- ── SKILLS STRIP ──────────────────────────────────────────── -->
 <section class="skills-strip section bg-ink" aria-label="Skills and tools">
-  <!-- Doodle divider at top -->
-  <div class="skills-strip__doodle-top" aria-hidden="true">
-    <img src="assets/images/illustrations/doodle-divider.svg" alt="" style="width:100%;opacity:0.25;filter:invert(1);" />
-  </div>
   <div class="container" style="position:relative;z-index:1;">
     <div class="skills-strip__header reveal" style="text-align:center;margin-bottom:var(--space-lg);">
       <p class="eyebrow" style="justify-content:center;color:var(--c-gold);">Capabilities</p>
@@ -550,14 +562,15 @@
 
 <!-- ── CONTACT CTA ───────────────────────────────────────────── -->
 <section class="contact-cta section bg-sage-light" aria-label="Contact call to action">
-  <!-- Botanical decoration -->
-  <img src="assets/images/illustrations/botanical-branch.svg" class="contact-cta__botanical" alt="" aria-hidden="true" />
-  <img src="assets/images/illustrations/flourish-corner.svg" class="contact-cta__flourish" alt="" aria-hidden="true" />
+
+  <!-- Air mail sticker as decorative header element -->
+  <div class="contact-cta__airmail reveal">
+    <img src="assets/images/vintage/airmail-sticker.webp"
+         alt="Air mail sticker decoration"
+         loading="lazy" />
+  </div>
 
   <div class="container" style="text-align:center;position:relative;z-index:1;">
-    <div class="contact-cta__postmark reveal">
-      <img src="assets/images/illustrations/postmark.svg" alt="" aria-hidden="true" style="width:80px;opacity:0.5;" />
-    </div>
     <p class="eyebrow reveal" style="justify-content:center;">Get in Touch</p>
     <h2 class="t-h1 reveal reveal-delay-1" style="margin-bottom:1rem;">
       Have a project or<br><em style="color:var(--c-terracotta);">program in mind?</em>
@@ -626,7 +639,6 @@
 
 <script src="assets/js/main.js"></script>
 <script>
-  // Back to top visibility
   const btt = document.getElementById('back-to-top');
   window.addEventListener('scroll', () => {
     btt.style.opacity = window.scrollY > 500 ? '1' : '0';

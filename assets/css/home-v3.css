@@ -1,0 +1,528 @@
+/* ================================================================
+   HOME V3 — home-v3.css
+   Replaces home-enhanced.css. Uses real vintage image assets
+   instead of SVG illustrations for embellishments.
+   ================================================================ */
+
+/* ── HERO PORTRAIT ─────────────────────────────────────────── */
+.hero__visual {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.25rem;
+  padding: 1.5rem 0;
+}
+
+.hero__portrait-wrap {
+  position: relative;
+  width: 280px;
+  border-radius: var(--r-lg);
+  overflow: visible;
+  flex-shrink: 0;
+}
+
+.hero__portrait-img {
+  width: 100%;
+  border-radius: var(--r-lg);
+  display: block;
+  box-shadow: var(--shadow-lg);
+  filter: saturate(0.92) brightness(1.02);
+  border: 3px solid var(--c-warm-white);
+}
+
+/* Gold tape strips at top corners of portrait */
+.hero__tape {
+  position: absolute;
+  width: 54px;
+  height: 16px;
+  background: rgba(184,154,90,0.42);
+  border-radius: 2px;
+  z-index: 3;
+}
+
+.hero__tape--tl {
+  top: -7px;
+  left: 16px;
+  transform: rotate(-2deg);
+}
+
+.hero__tape--tr {
+  top: -7px;
+  right: 16px;
+  transform: rotate(2.5deg);
+}
+
+/* Name caption gradient at portrait bottom */
+.hero__portrait-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(42,34,24,0.78), transparent);
+  padding: 2.5rem 1.25rem 1rem;
+  border-radius: 0 0 var(--r-lg) var(--r-lg);
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.hero__portrait-caption-sub {
+  font-family: var(--f-sans);
+  font-size: 0.58rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(248,244,238,0.72);
+}
+
+/* ── HERO LIBRARY CARD ──────────────────────────────────────── */
+.hero__library-card {
+  position: absolute;
+  bottom: 30px;
+  right: -20px;
+  width: 90px;
+  transform: rotate(5deg);
+  z-index: 4;
+  filter: drop-shadow(0 4px 12px rgba(42,34,24,0.22));
+  transition: transform 0.3s ease;
+}
+
+.hero__library-card:hover {
+  transform: rotate(2deg) scale(1.06);
+}
+
+.hero__library-card-img {
+  width: 100%;
+  border-radius: 3px;
+  display: block;
+}
+
+/* ── IDENTITY RIBBON ────────────────────────────────────────── */
+.identity-ribbon {
+  background: var(--c-dusty-blue, #7A9BAA);
+  overflow: hidden;
+  padding: 0.65rem 0;
+  border-top: 1px solid rgba(255,255,255,0.15);
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+
+.identity-ribbon__inner {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  white-space: nowrap;
+  animation: ribbon-scroll 30s linear infinite;
+  width: max-content;
+}
+
+.identity-ribbon__inner .t-typewriter {
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(248,244,238,0.9);
+  font-family: var(--f-typewriter, 'Courier Prime', monospace);
+}
+
+.identity-ribbon__dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: rgba(248,244,238,0.4);
+  flex-shrink: 0;
+}
+
+@keyframes ribbon-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ── ABOUT TEASER: TYPEWRITER DIAGRAM PANEL ─────────────────── */
+.about-teaser__diagram-panel {
+  position: relative;
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  background: var(--c-parchment);
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-teaser__diagram-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.18;
+  filter: sepia(0.3);
+}
+
+.about-teaser__diagram-quote {
+  position: relative;
+  z-index: 2;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  background: rgba(242,235,224,0.85);
+  border-radius: var(--r-md);
+  margin: 1.5rem;
+  border: 1px solid rgba(184,154,90,0.2);
+}
+
+.about-teaser__diagram-quote .t-typewriter {
+  font-size: 0.82rem;
+  color: var(--c-terracotta);
+  line-height: 1.7;
+  opacity: 0.9;
+}
+
+/* Color accent blocks behind the diagram panel */
+.about-teaser__color-block {
+  position: absolute;
+  border-radius: var(--r-md);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.about-teaser__color-block--blue {
+  bottom: -14px;
+  left: -14px;
+  width: 80px;
+  height: 80px;
+  background: var(--c-dusty-blue, #7A9BAA);
+  opacity: 0.18;
+}
+
+.about-teaser__color-block--rose {
+  top: -10px;
+  right: 40px;
+  width: 60px;
+  height: 60px;
+  background: var(--c-dusty-rose, #C4887A);
+  opacity: 0.18;
+  border-radius: 50%;
+}
+
+/* ── SECTION DIVIDER: PRESSED LEAF ─────────────────────────── */
+.section-divider-leaf {
+  background: var(--c-warm-white);
+  padding: 1.5rem 0;
+  overflow: hidden;
+}
+
+.section-divider-leaf__inner {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+}
+
+.section-divider-leaf__line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--c-gold), transparent);
+  opacity: 0.5;
+}
+
+.section-divider-leaf__img {
+  width: 44px;
+  height: auto;
+  opacity: 0.35;
+  filter: sepia(0.4) brightness(0.85);
+  flex-shrink: 0;
+}
+
+/* ── WORK CARD IMAGE BACKGROUNDS ────────────────────────────── */
+/* Real vintage image backgrounds for work cards */
+.card__img-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.22;
+  filter: sepia(0.25) brightness(1.05);
+}
+
+.card__img--memoranda {
+  position: relative;
+  overflow: hidden;
+  background: rgba(196,162,101,0.12);
+}
+
+.card__img--notebook {
+  position: relative;
+  overflow: hidden;
+  background: rgba(138,158,136,0.12);
+}
+
+.card__img--archive {
+  position: relative;
+  overflow: hidden;
+  background: rgba(196,162,101,0.1);
+}
+
+/* Library card overlay on featured card */
+.card__img-overlay-asset {
+  position: absolute;
+  z-index: 2;
+}
+
+.card__img-overlay-asset--library {
+  bottom: 8px;
+  right: 8px;
+  width: 55px;
+  transform: rotate(4deg);
+  opacity: 0.55;
+  filter: drop-shadow(0 2px 6px rgba(42,34,24,0.18));
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.card__img-overlay-asset--library:hover {
+  opacity: 0.8;
+  transform: rotate(1deg) scale(1.05);
+}
+
+.card__img-overlay-asset img {
+  width: 100%;
+  display: block;
+  border-radius: 2px;
+}
+
+/* Colored card left-border accents */
+.card--sage {
+  border-left: 3px solid var(--c-sage) !important;
+}
+
+.card--rose {
+  border-left: 3px solid var(--c-dusty-rose, #C4887A) !important;
+}
+
+/* Work card illustration (fountain pen kept) */
+.work-card-pattern {
+  position: absolute;
+  inset: 0;
+}
+
+.work-card-pattern--grid {
+  background-image:
+    repeating-linear-gradient(0deg, transparent, transparent 18px, rgba(196,160,160,0.1) 18px, rgba(196,160,160,0.1) 19px),
+    repeating-linear-gradient(90deg, transparent, transparent 18px, rgba(196,160,160,0.1) 18px, rgba(196,160,160,0.1) 19px);
+}
+
+.work-card-illustration {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.work-card-illustration img {
+  width: 80px;
+  opacity: 0.4;
+  filter: drop-shadow(0 1px 3px rgba(42,34,24,0.1));
+}
+
+.work-card-illustration--sm img {
+  width: 50px;
+}
+
+/* ── WRITING TEASER: TYPOGRAPHY DIAGRAM BG ──────────────────── */
+.writing-teaser__bg-diagram {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 380px;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.writing-teaser__bg-diagram img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left center;
+  opacity: 0.07;
+  filter: sepia(0.3);
+}
+
+/* Award block with Cooper Union stamp */
+.writing-award-block {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1.75rem;
+  padding: 0.75rem 1rem;
+  background: rgba(248,244,238,0.6);
+  border-radius: var(--r-md);
+  border: 1px solid rgba(184,154,90,0.2);
+  max-width: 280px;
+}
+
+.writing-award-block__stamp {
+  width: 44px;
+  height: 44px;
+  overflow: hidden;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+
+.writing-award-block__stamp img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: sepia(0.3) brightness(0.9);
+  opacity: 0.8;
+}
+
+.writing-award-block__label {
+  font-family: var(--f-sans);
+  font-size: 0.62rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--c-terracotta);
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+/* Writing featured card: ex libris background */
+.writing-featured-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.writing-featured-card__exlibris {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.writing-featured-card__exlibris img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  opacity: 0.06;
+  filter: sepia(0.2);
+}
+
+.writing-featured-card__content {
+  position: relative;
+  z-index: 1;
+}
+
+/* ── CONTACT CTA: AIR MAIL STICKER ─────────────────────────── */
+.contact-cta__airmail {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.contact-cta__airmail img {
+  max-width: 260px;
+  height: auto;
+  opacity: 0.65;
+  filter: saturate(0.75) brightness(1.05);
+}
+
+/* ── ABOUT PAGE: EX LIBRIS HERO ACCENT ──────────────────────── */
+.page-hero__exlibris {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 220px;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.page-hero__exlibris img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.08;
+  filter: sepia(0.25);
+}
+
+/* ── ABOUT PHOTO STAMP POSITIONING (cleanup) ────────────────── */
+/* Remove old SVG stamp wrappers — no longer needed */
+.about-photo__stamp,
+.about-photo__postmark {
+  display: none;
+}
+
+/* ── SKILL GROUP COLOR ACCENTS ──────────────────────────────── */
+.skill-group--blue {
+  border-color: rgba(122,155,170,0.3) !important;
+  border-top: 2px solid rgba(122,155,170,0.5) !important;
+}
+
+.skill-group--sage {
+  border-color: rgba(138,158,136,0.3) !important;
+  border-top: 2px solid rgba(138,158,136,0.5) !important;
+}
+
+.skill-group--rose {
+  border-color: rgba(196,136,122,0.3) !important;
+  border-top: 2px solid rgba(196,136,122,0.5) !important;
+}
+
+.skill-group--gold {
+  border-color: rgba(184,154,90,0.3) !important;
+  border-top: 2px solid rgba(184,154,90,0.5) !important;
+}
+
+/* ── RESPONSIVE ─────────────────────────────────────────────── */
+@media (max-width: 1100px) {
+  .hero__library-card {
+    width: 70px;
+    right: -10px;
+    bottom: 20px;
+  }
+  .writing-teaser__bg-diagram {
+    width: 240px;
+  }
+  .page-hero__exlibris {
+    width: 160px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero__library-card {
+    display: none;
+  }
+  .hero__portrait-wrap {
+    width: 220px;
+  }
+  .writing-teaser__bg-diagram {
+    display: none;
+  }
+  .contact-cta__airmail img {
+    max-width: 200px;
+  }
+  .section-divider-leaf__img {
+    width: 32px;
+  }
+  .page-hero__exlibris {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero__portrait-wrap {
+    width: 180px;
+  }
+  .about-teaser__diagram-panel {
+    min-height: 220px;
+  }
+}
