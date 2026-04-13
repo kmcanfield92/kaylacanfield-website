@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About — Kayla Canfield</title>
-  <meta name="description" content="About Kayla Canfield — instructional designer, writer, and researcher. MEd candidate in Instructional Design and Technology at Mount St. Mary's University." />
+  <title>About — Kayla Canfield | Instructional Designer & Researcher</title>
+  <meta name="description" content="About Kayla Canfield — MEd candidate in Instructional Design & Technology at Mount St. Mary's University. Instructional designer, writer, and humanities researcher." />
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -391,10 +391,11 @@
   .memo-header--gold       { background: var(--c-antique-gold, #A08040); }
   .memo-header__from {
     font-family: var(--f-typewriter, 'RustyTypewriter', monospace);
-    font-size: 0.65rem;
+    font-size: 0.68rem;
     letter-spacing: 0.14em;
     text-transform: uppercase;
-    color: rgba(255,255,255,0.9);
+    color: rgba(255,255,255,1);
+    font-weight: 700;
   }
   .memo-header__date {
     font-family: var(--f-typewriter, 'RustyTypewriter', monospace);
@@ -402,12 +403,14 @@
     color: rgba(255,255,255,0.65);
     letter-spacing: 0.1em;
   }
-  /* Paper clip — far right of memo card */
+  /* Push pin — far right of memo card (does not block text) */
   .memo-clip {
     position: absolute;
-    top: 6px;
-    right: -10px;
+    top: -10px;
+    right: 18px;
     z-index: 5;
+    width: 18px;
+    height: 18px;
   }
   .memo-body {
     padding: 1.75rem 3.5rem 1.75rem 1.75rem;
@@ -614,12 +617,14 @@
     position: relative;
     border-radius: 2px;
   }
-  /* Paper clip — far right of timeline card */
+  /* Push pin — far right of timeline card header */
   .timeline-col-card__clip {
     position: absolute;
-    top: 8px;
-    right: -10px;
+    top: -10px;
+    right: 18px;
     z-index: 5;
+    width: 18px;
+    height: 18px;
   }
   .timeline-col-header {
     padding: 1rem 1.5rem;
@@ -892,6 +897,34 @@
     .about-cta .container { padding: 0 1.25rem; }
   }
   </style>
+  <meta name="keywords" content="Kayla Canfield, instructional designer, MEd Instructional Design Technology, Mount St. Mary's University, digital humanities, higher education" />
+  <meta property="og:title" content="About Kayla Canfield — Instructional Designer & Researcher" />
+  <meta property="og:description" content="MEd candidate in Instructional Design & Technology. Designer, writer, and researcher working at the intersection of education and the humanities." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://kaylacanfield.com/about" />
+  <meta property="og:image" content="https://kaylacanfield.com/assets/images/og-image.jpg" />
+  <meta property="og:site_name" content="Kayla Canfield" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="About Kayla Canfield — Instructional Designer & Researcher" />
+  <meta name="twitter:description" content="MEd candidate in Instructional Design & Technology. Designer, writer, and researcher working at the intersection of education and the humanities." />
+  <meta name="twitter:image" content="https://kaylacanfield.com/assets/images/og-image.jpg" />
+  <link rel="canonical" href="https://kaylacanfield.com/about" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    "name": "About Kayla Canfield",
+    "url": "https://kaylacanfield.com/about",
+    "author": {
+      "@type": "Person",
+      "name": "Kayla Canfield",
+      "url": "https://kaylacanfield.com",
+      "jobTitle": "Instructional Designer",
+      "alumniOf": "Mount St. Mary's University",
+      "sameAs": ["https://linkedin.com/in/kaylacanfield"]
+    }
+  }
+  </script>
 </head>
 <body>
 
@@ -912,7 +945,7 @@
 <header class="site-header">
   <div class="header-inner">
     <a href="../index.html" class="site-logo" aria-label="Kayla Canfield home">
-      <span class="site-logo__name">Kayla Canfield</span>
+      <span class="site-logo__name site-logo__name--cursive">Kayla Canfield</span>
       <span class="site-logo__tagline">Instructional Designer &middot; Writer &middot; Researcher</span>
     </a>
     <nav aria-label="Primary navigation">
@@ -1063,11 +1096,12 @@
           <span class="memo-header__from">From the Desk of: Kayla Canfield &nbsp;&mdash;&nbsp; Re: Who I Am</span>
           <span class="memo-header__date">2024</span>
         </div>
-        <!-- Paper clip — far right -->
+        <!-- Push pin — far right, not blocking text -->
         <div class="memo-clip">
-          <svg class="clip-svg" viewBox="0 0 14 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="1" y="1" width="12" height="30" rx="6" stroke="#8A4A3C" stroke-width="2" fill="none"/>
-            <rect x="4" y="4" width="6" height="24" rx="3" stroke="#8A4A3C" stroke-width="1.5" fill="none"/>
+          <svg viewBox="0 0 18 28" fill="none" xmlns="http://www.w3.org/2000/svg" width="18" height="28">
+            <circle cx="9" cy="7" r="6.5" fill="#8A4A3C" stroke="#6B3830" stroke-width="1"/>
+            <circle cx="7.5" cy="5.5" r="1.5" fill="rgba(255,255,255,0.35)"/>
+            <rect x="8" y="13" width="2" height="13" rx="1" fill="#5A4030"/>
           </svg>
         </div>
         <div class="memo-body">
@@ -1108,10 +1142,12 @@
           <span class="memo-header__from">Re: What I Do</span>
           <span class="memo-header__date">Present</span>
         </div>
+        <!-- Push pin blue -->
         <div class="memo-clip">
-          <svg class="clip-svg" viewBox="0 0 14 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="1" y="1" width="12" height="30" rx="6" stroke="#7A9BAA" stroke-width="2" fill="none"/>
-            <rect x="4" y="4" width="6" height="24" rx="3" stroke="#7A9BAA" stroke-width="1.5" fill="none"/>
+          <svg viewBox="0 0 18 28" fill="none" xmlns="http://www.w3.org/2000/svg" width="18" height="28">
+            <circle cx="9" cy="7" r="6.5" fill="#7A9BAA" stroke="#5A7A8A" stroke-width="1"/>
+            <circle cx="7.5" cy="5.5" r="1.5" fill="rgba(255,255,255,0.35)"/>
+            <rect x="8" y="13" width="2" height="13" rx="1" fill="#5A4030"/>
           </svg>
         </div>
         <div class="memo-body">
@@ -1132,10 +1168,12 @@
           <span class="memo-header__from">Re: Where I Am Going</span>
           <span class="memo-header__date">2025 &mdash; Forward</span>
         </div>
+        <!-- Push pin sage -->
         <div class="memo-clip">
-          <svg class="clip-svg" viewBox="0 0 14 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="1" y="1" width="12" height="30" rx="6" stroke="#8A9E88" stroke-width="2" fill="none"/>
-            <rect x="4" y="4" width="6" height="24" rx="3" stroke="#8A9E88" stroke-width="1.5" fill="none"/>
+          <svg viewBox="0 0 18 28" fill="none" xmlns="http://www.w3.org/2000/svg" width="18" height="28">
+            <circle cx="9" cy="7" r="6.5" fill="#8A9E88" stroke="#6A7E68" stroke-width="1"/>
+            <circle cx="7.5" cy="5.5" r="1.5" fill="rgba(255,255,255,0.35)"/>
+            <rect x="8" y="13" width="2" height="13" rx="1" fill="#5A4030"/>
           </svg>
         </div>
         <div class="memo-body">
@@ -1203,9 +1241,11 @@
       <!-- Education -->
       <div class="timeline-col-card">
         <div class="timeline-col-card__clip">
-          <svg class="clip-svg" viewBox="0 0 14 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="1" y="1" width="12" height="30" rx="6" stroke="#B89A5A" stroke-width="2" fill="none"/>
-            <rect x="4" y="4" width="6" height="24" rx="3" stroke="#B89A5A" stroke-width="1.5" fill="none"/>
+          <!-- Push pin -->
+          <svg viewBox="0 0 18 28" fill="none" xmlns="http://www.w3.org/2000/svg" width="18" height="28">
+            <circle cx="9" cy="7" r="6.5" fill="#8A4A3C" stroke="#6B3830" stroke-width="1"/>
+            <circle cx="7.5" cy="5.5" r="1.5" fill="rgba(255,255,255,0.35)"/>
+            <rect x="8" y="13" width="2" height="13" rx="1" fill="#5A4030"/>
           </svg>
         </div>
         <div class="timeline-col-header">
@@ -1237,9 +1277,11 @@
       <!-- Experience -->
       <div class="timeline-col-card">
         <div class="timeline-col-card__clip">
-          <svg class="clip-svg" viewBox="0 0 14 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="1" y="1" width="12" height="30" rx="6" stroke="#7A9BAA" stroke-width="2" fill="none"/>
-            <rect x="4" y="4" width="6" height="24" rx="3" stroke="#7A9BAA" stroke-width="1.5" fill="none"/>
+          <!-- Push pin -->
+          <svg viewBox="0 0 18 28" fill="none" xmlns="http://www.w3.org/2000/svg" width="18" height="28">
+            <circle cx="9" cy="7" r="6.5" fill="#7A9BAA" stroke="#5A7A8A" stroke-width="1"/>
+            <circle cx="7.5" cy="5.5" r="1.5" fill="rgba(255,255,255,0.35)"/>
+            <rect x="8" y="13" width="2" height="13" rx="1" fill="#5A4030"/>
           </svg>
         </div>
         <div class="timeline-col-header">

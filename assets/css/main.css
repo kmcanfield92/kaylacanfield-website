@@ -469,18 +469,6 @@ ul, ol {
   border-color: rgba(160,128,64,0.2);
 }
 
-.tag--rose {
-  color: var(--c-mauve);
-  background: rgba(160,102,90,0.08);
-  border-color: rgba(160,102,90,0.2);
-}
-
-.tag--terracotta {
-  color: var(--c-terracotta);
-  background: rgba(138,74,60,0.1);
-  border-color: rgba(138,74,60,0.22);
-}
-
 .badge-award {
   display: inline-flex;
   align-items: center;
@@ -775,7 +763,18 @@ ul, ol {
 
 .site-logo__name {
   font-family: var(--f-signature);
-  font-size: 2.1rem;
+  font-size: 2.4rem;
+  color: var(--c-ink);
+  line-height: 1;
+  letter-spacing: 0.01em;
+  font-weight: 400;
+}
+
+/* Explicit cursive override — ensures Jullina is used on all pages */
+.site-logo__name--cursive {
+  font-family: 'Jullina', 'Dancing Script', 'Great Vibes', cursive !important;
+  font-size: 2.4rem;
+  font-weight: 400;
   color: var(--c-ink);
   line-height: 1;
   letter-spacing: 0.01em;
