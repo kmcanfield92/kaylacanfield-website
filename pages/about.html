@@ -1,693 +1,1277 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>About — Kayla Canfield</title>
-<meta name="description" content="About Kayla Canfield — instructional designer, writer, and researcher. MEd candidate in Instructional Design and Technology at Mount St. Mary's University." />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600&family=Caveat:wght@400;500;600;700&family=Special+Elite&display=swap" rel="stylesheet" />
-<style>
-:root {
-  --c-ink:#2C2416;--c-ink-light:#4A3F2F;--c-parchment:#F5EFE0;--c-cream:#FAF7F2;
-  --c-warm-white:#FFFEF8;--c-warm-gray:#8B7D6B;--c-terracotta:#8B4A3A;
-  --c-gold:#C4A265;--c-gold-dark:#9B7A3A;--c-sage:#7A8C6E;--c-dusty-blue:#6B7FA3;
-  --c-dusty-rose:#B07A7A;--c-burgundy:#5C1F2E;--c-navy:#2A3550;
-  --font-display:'Playfair Display',Georgia,serif;--font-body:'Lora',Georgia,serif;
-  --font-ui:'Jost',system-ui,sans-serif;--font-cursive:'Caveat',cursive;
-  --font-type:'Special Elite','Courier New',monospace;
-  --shadow-card:0 4px 24px rgba(44,36,22,0.10),0 1px 4px rgba(44,36,22,0.06);
-  --shadow-lift:0 8px 40px rgba(44,36,22,0.16),0 2px 8px rgba(44,36,22,0.08);
-}
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:var(--font-body);color:var(--c-ink);background:var(--c-parchment);overflow-x:hidden;line-height:1.7}
-#scroll-progress{position:fixed;top:0;left:0;height:3px;width:0%;background:linear-gradient(90deg,var(--c-terracotta),var(--c-gold),var(--c-sage));z-index:9999;transition:width .1s linear}
-.site-header{position:sticky;top:0;z-index:900;background:var(--c-cream);border-bottom:1px solid rgba(196,162,101,0.3);box-shadow:0 2px 12px rgba(44,36,22,0.07);transition:transform .3s}
-.site-header.hidden{transform:translateY(-100%)}
-.header-inner{max-width:1200px;margin:0 auto;padding:.75rem 2rem;display:flex;align-items:center;gap:2rem}
-.site-logo{text-decoration:none;display:flex;flex-direction:column;gap:1px;flex-shrink:0}
-.site-logo__name{font-family:var(--font-cursive);font-size:2rem;font-weight:700;color:var(--c-ink);line-height:1}
-.site-logo__tagline{font-family:var(--font-type);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--c-warm-gray)}
-.site-nav{display:flex;list-style:none;gap:.25rem;margin-left:auto}
-.site-nav a{font-family:var(--font-ui);font-size:.72rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--c-ink-light);text-decoration:none;padding:.4rem .75rem;border-radius:2px;transition:all .2s}
-.site-nav a:hover,.site-nav a.active{color:var(--c-terracotta);background:rgba(139,74,58,.06)}
-.header-actions{display:flex;align-items:center;gap:.75rem;flex-shrink:0}
-.btn-cv{font-family:var(--font-ui);font-size:.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:.5rem 1.1rem;border:1.5px solid var(--c-terracotta);color:var(--c-terracotta);text-decoration:none;border-radius:2px;transition:all .2s}
-.btn-cv:hover{background:var(--c-terracotta);color:var(--c-warm-white)}
-.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}
-.hamburger span{display:block;width:22px;height:2px;background:var(--c-ink)}
-/* Color band */
-.color-band{display:flex;width:100%;height:10px}
-.cb-1{flex:2;background:var(--c-terracotta)}.cb-2{flex:1.5;background:var(--c-gold)}
-.cb-3{flex:2;background:var(--c-sage)}.cb-4{flex:2;background:var(--c-dusty-blue)}
-.cb-5{flex:1.5;background:var(--c-dusty-rose)}.cb-6{flex:1;background:var(--c-burgundy)}
-.container{max-width:1200px;margin:0 auto;padding:0 2rem}
-/* Tags */
-.tag{font-family:var(--font-ui);font-size:.65rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;padding:.25rem .65rem;border-radius:2px;display:inline-block}
-.tag--sage{background:rgba(122,140,110,.14);color:#4A6040;border:1px solid rgba(122,140,110,.3)}
-.tag--blue{background:rgba(107,127,163,.12);color:#3A5080;border:1px solid rgba(107,127,163,.3)}
-.tag--rose{background:rgba(176,122,122,.12);color:#7A3A3A;border:1px solid rgba(176,122,122,.3)}
-.tag--terra{background:rgba(139,74,58,.10);color:#6B2A1A;border:1px solid rgba(139,74,58,.25)}
-.tag--gold{background:rgba(196,162,101,.14);color:#7A5A20;border:1px solid rgba(196,162,101,.3)}
-.tag--navy{background:rgba(42,53,80,.10);color:#1A2540;border:1px solid rgba(42,53,80,.25)}
-/* Buttons */
-.btn-primary{font-family:var(--font-ui);font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:.6rem 1.4rem;background:var(--c-terracotta);color:var(--c-warm-white);border:2px solid var(--c-terracotta);border-radius:2px;text-decoration:none;transition:all .2s;display:inline-block}
-.btn-primary:hover{background:transparent;color:var(--c-terracotta)}
-.btn-outline{font-family:var(--font-ui);font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:.6rem 1.4rem;background:transparent;color:var(--c-ink-light);border:2px solid rgba(44,36,22,.25);border-radius:2px;text-decoration:none;transition:all .2s;display:inline-block}
-.btn-outline:hover{border-color:var(--c-ink);color:var(--c-ink)}
-.btn-gold{font-family:var(--font-ui);font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:.6rem 1.4rem;background:var(--c-gold);color:var(--c-ink);border:2px solid var(--c-gold);border-radius:2px;text-decoration:none;transition:all .2s;display:inline-block}
-.btn-gold:hover{background:transparent;color:var(--c-gold-dark)}
-.btn-ghost-w{font-family:var(--font-ui);font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:.6rem 1.4rem;background:transparent;color:rgba(248,244,238,.8);border:2px solid rgba(248,244,238,.3);border-radius:2px;text-decoration:none;transition:all .2s;display:inline-block}
-.btn-ghost-w:hover{border-color:rgba(248,244,238,.8);color:var(--c-warm-white)}
-/* Reveal animations */
-.reveal{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
-.reveal.visible{opacity:1;transform:translateY(0)}
-.reveal-delay-1{transition-delay:.12s}.reveal-delay-2{transition-delay:.24s}.reveal-delay-3{transition-delay:.36s}
-/* Back to top */
-#back-to-top{position:fixed;bottom:2rem;right:2rem;width:42px;height:42px;background:var(--c-terracotta);color:var(--c-warm-white);border:none;border-radius:2px;font-size:1.1rem;cursor:pointer;opacity:0;transform:translateY(10px);transition:all .3s;z-index:800;display:flex;align-items:center;justify-content:center}
-#back-to-top.visible{opacity:1;transform:translateY(0)}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — Kayla Canfield</title>
+  <meta name="description" content="About Kayla Canfield — instructional designer, writer, and researcher. MEd candidate in Instructional Design and Technology at Mount St. Mary's University." />
 
-/* ── PAGE HERO ── */
-.page-hero{background:var(--c-parchment);padding:3rem 0 2.5rem;position:relative;overflow:hidden;text-align:center}
-.page-hero::before{content:'';position:absolute;inset:0;background-image:repeating-linear-gradient(0deg,transparent,transparent 27px,rgba(139,115,85,.04) 27px,rgba(139,115,85,.04) 28px);pointer-events:none}
-.page-hero__breadcrumb{font-family:var(--font-type);font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--c-warm-gray);margin-bottom:.75rem;position:relative;z-index:1}
-.page-hero__breadcrumb a{color:var(--c-terracotta);text-decoration:none}
-.page-hero__title{font-family:var(--font-cursive);font-size:clamp(3rem,7vw,5.5rem);font-weight:700;color:var(--c-ink);line-height:1;margin-bottom:.5rem;position:relative;z-index:1}
-.page-hero__subtitle{font-family:var(--font-type);font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--c-warm-gray);margin-bottom:1.5rem;position:relative;z-index:1}
-.hero-rule{display:flex;align-items:center;gap:1rem;width:100%;max-width:600px;margin:0 auto;position:relative;z-index:1}
-.hero-rule__line{flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--c-gold),transparent)}
-.hero-rule__diamond{width:8px;height:8px;background:var(--c-gold);transform:rotate(45deg);flex-shrink:0}
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600&family=Special+Elite&display=swap" rel="stylesheet" />
 
-/* ── HELLO SECTION ── */
-.hello-section{background:var(--c-cream);padding:3.5rem 0 0;position:relative}
-.hello-section::before{content:'';position:absolute;inset:0;background-image:repeating-linear-gradient(0deg,transparent,transparent 27px,rgba(139,115,85,.04) 27px,rgba(139,115,85,.04) 28px);pointer-events:none}
-.hello-card-wrap{display:flex;justify-content:center;position:relative;z-index:2;margin-bottom:-30px}
-.hello-card{background:var(--c-warm-white);border:1px solid rgba(139,115,85,.18);box-shadow:var(--shadow-lift);max-width:800px;width:100%;position:relative;transform:rotate(-.6deg);transition:transform .35s}
-.hello-card:hover{transform:rotate(0deg)}
-/* Blue washi tape at top */
-.hello-tape{position:absolute;top:-14px;left:50%;transform:translateX(-50%);z-index:10;width:140px;height:28px;background:rgba(107,127,163,.5);border-radius:2px}
-.hello-tape::after{content:'';position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent,transparent 4px,rgba(255,255,255,.18) 4px,rgba(255,255,255,.18) 5px);border-radius:2px}
-/* Paper clip */
-.hello-clip{position:absolute;top:-24px;right:2.5rem;z-index:11}
-.hello-clip svg{width:22px;display:block}
-.hello-card__body{padding:2.5rem 3rem 1.5rem;display:flex;align-items:flex-start;gap:2.5rem;position:relative}
-/* Ruled lines background */
-.hello-card__body::before{content:'';position:absolute;inset:0;background-image:repeating-linear-gradient(transparent,transparent 27px,rgba(139,115,85,.07) 27px,rgba(139,115,85,.07) 28px);pointer-events:none}
-/* Red left margin line */
-.hello-card__body::after{content:'';position:absolute;left:90px;top:0;bottom:0;width:1px;background:rgba(176,122,122,.3);pointer-events:none}
-.hello-img-wrap{flex-shrink:0;width:220px;position:relative;z-index:1;display:flex;align-items:flex-start}
-.hello-img-wrap img{width:100%;display:block;filter:drop-shadow(0 4px 12px rgba(0,0,0,.15))}
-.hello-intro{flex:1;position:relative;z-index:1;padding-top:.5rem}
-.hello-intro__name{font-family:var(--font-cursive);font-size:2.8rem;font-weight:700;color:var(--c-ink);line-height:1;margin-bottom:.35rem}
-.hello-intro__title{font-family:var(--font-type);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--c-terracotta);margin-bottom:1rem;padding-bottom:.6rem;border-bottom:1px solid rgba(139,115,85,.15)}
-.hello-intro__text{font-family:var(--font-body);font-size:.92rem;line-height:1.78;color:var(--c-ink-light)}
-.hello-card__footer{padding:.85rem 3rem 1.75rem;display:flex;flex-wrap:wrap;gap:.45rem;border-top:1px solid rgba(139,115,85,.1);background:rgba(245,239,224,.4);position:relative}
-.hello-card__footer::before{content:'';position:absolute;inset:0;background-image:repeating-linear-gradient(transparent,transparent 27px,rgba(139,115,85,.05) 27px,rgba(139,115,85,.05) 28px);pointer-events:none}
-.hello-card__footer .tag{position:relative;z-index:1}
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../assets/css/main.css" />
+  <link rel="stylesheet" href="../assets/css/about.css" />
 
-/* ── ABOUT MAIN GRID ── */
-.about-main{background:var(--c-cream);padding:5.5rem 0 4rem;position:relative}
-.about-main::before{content:'';position:absolute;inset:0;background-image:repeating-linear-gradient(0deg,transparent,transparent 27px,rgba(139,115,85,.04) 27px,rgba(139,115,85,.04) 28px);pointer-events:none}
-.about-grid{display:grid;grid-template-columns:340px 1fr;gap:3.5rem;align-items:start;position:relative;z-index:1}
+  <style>
+  /* ============================================================
+     ABOUT PAGE — JOURNAL / MEMO STATIONERY AESTHETIC
+     Clips and pins always on the FAR RIGHT of cards
+     Original Jullina cursive logo, gold accents, no color band
+     ============================================================ */
 
-/* ── PORTRAIT ── */
-.portrait-col{display:flex;flex-direction:column;gap:1.75rem}
-.polaroid-frame{background:var(--c-warm-white);padding:12px 12px 60px;box-shadow:var(--shadow-lift);transform:rotate(1.2deg);transition:transform .35s cubic-bezier(.34,1.56,.64,1);position:relative}
-.polaroid-frame:hover{transform:rotate(0deg) scale(1.01)}
-.polaroid-tape{position:absolute;z-index:10;height:22px;border-radius:2px}
-.polaroid-tape::after{content:'';position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent,transparent 3px,rgba(255,255,255,.2) 3px,rgba(255,255,255,.2) 4px);border-radius:2px}
-.polaroid-tape--tl{top:-11px;left:18px;width:80px;background:rgba(176,122,122,.5);transform:rotate(-3deg)}
-.polaroid-tape--tr{top:-11px;right:18px;width:80px;background:rgba(107,127,163,.5);transform:rotate(3deg)}
-.polaroid-frame__img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:top center;display:block}
-.polaroid-frame__caption{position:absolute;bottom:0;left:0;right:0;height:60px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;background:var(--c-warm-white)}
-.polaroid-frame__caption-name{font-family:var(--font-cursive);font-size:1.5rem;font-weight:600;color:var(--c-ink);line-height:1}
-.polaroid-frame__caption-sub{font-family:var(--font-type);font-size:.58rem;letter-spacing:.1em;color:var(--c-warm-gray)}
-.library-card-corner{position:absolute;bottom:-18px;right:-18px;width:100px;transform:rotate(6deg);box-shadow:0 3px 12px rgba(0,0,0,.2);z-index:5;transition:transform .3s}
-.polaroid-frame:hover .library-card-corner{transform:rotate(3deg) scale(1.05)}
-.library-card-corner img{width:100%;display:block}
-/* Stats notecard */
-.stats-card{background:var(--c-warm-white);border:1px solid rgba(139,115,85,.18);padding:1.5rem 1.5rem 1.25rem;box-shadow:var(--shadow-card);position:relative}
-.stats-card::before{content:'';position:absolute;inset:0;background-image:repeating-linear-gradient(transparent,transparent 27px,rgba(139,115,85,.07) 27px,rgba(139,115,85,.07) 28px);pointer-events:none}
-.stats-card__pin{position:absolute;top:-20px;left:50%;transform:translateX(-50%);z-index:5}
-.stats-card__pin svg{width:28px;display:block}
-.stats-card__content{position:relative;z-index:1}
-.stats-card__label{font-family:var(--font-type);font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--c-warm-gray);margin-bottom:.75rem}
-.stat-row{display:flex;align-items:baseline;gap:.6rem;margin-bottom:.5rem}
-.stat-row__num{font-family:var(--font-display);font-size:1.7rem;font-weight:600;color:var(--c-terracotta);line-height:1;flex-shrink:0}
-.stat-row__desc{font-family:var(--font-body);font-size:.8rem;color:var(--c-ink-light);line-height:1.4}
-.stat-divider{height:1px;background:rgba(139,115,85,.15);margin:.55rem 0}
+  /* ── PAGE HERO ─────────────────────────────────────────────── */
+  .about-hero {
+    background: var(--c-parchment, #E8DDD0);
+    padding: 3.5rem 0 2.5rem;
+    border-bottom: 1px solid rgba(196,162,101,0.2);
+    position: relative;
+  }
+  .about-hero__inner {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 3rem;
+    text-align: center;
+  }
+  .about-hero__eyebrow {
+    font-family: var(--f-sans, 'Jost', sans-serif);
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--c-gold, #B89A5A);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-bottom: 0.9rem;
+  }
+  .about-hero__eyebrow::before,
+  .about-hero__eyebrow::after {
+    content: '';
+    flex: 1;
+    max-width: 80px;
+    height: 1px;
+    background: var(--c-gold, #B89A5A);
+    opacity: 0.5;
+  }
+  .about-hero__title {
+    font-family: var(--f-serif, 'Playfair Display', serif);
+    font-size: clamp(2.5rem, 5vw, 3.75rem);
+    font-weight: 400;
+    color: var(--c-ink, #2A2218);
+    margin-bottom: 0.75rem;
+    line-height: 1.1;
+  }
+  .about-hero__sub {
+    font-family: var(--f-sans, 'Jost', sans-serif);
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--c-warm-gray, #6A6055);
+    margin-bottom: 0;
+  }
+  .about-hero__rule {
+    width: 40px;
+    height: 2px;
+    background: var(--c-gold, #B89A5A);
+    margin: 1rem auto 0;
+    opacity: 0.6;
+  }
 
-/* ── BIO COLUMN ── */
-.bio-col{display:flex;flex-direction:column;gap:2rem}
-/* Memo blocks */
-.memo-block{background:var(--c-warm-white);border:1px solid rgba(139,115,85,.15);box-shadow:var(--shadow-card);position:relative;overflow:visible}
-.memo-block__hdr{padding:.65rem 1.5rem;display:flex;align-items:center;justify-content:space-between}
-.memo-block__hdr--terra{background:var(--c-terracotta)}
-.memo-block__hdr--blue{background:var(--c-dusty-blue)}
-.memo-block__hdr--sage{background:var(--c-sage)}
-.memo-block__hdr--navy{background:var(--c-navy)}
-.memo-block__from{font-family:var(--font-type);font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.9)}
-.memo-block__date{font-family:var(--font-type);font-size:.58rem;letter-spacing:.1em;color:rgba(255,255,255,.6)}
-.memo-block__body{padding:1.5rem 1.75rem;position:relative}
-.memo-block__body::before{content:'';position:absolute;inset:0;background-image:repeating-linear-gradient(transparent,transparent 27px,rgba(139,115,85,.08) 27px,rgba(139,115,85,.08) 28px);pointer-events:none}
-.memo-clip{position:absolute;top:-22px;right:1.5rem;z-index:5}
-.memo-clip svg{width:22px;display:block}
-.memo-binder{position:absolute;top:-28px;left:1.5rem;z-index:5}
-.memo-binder svg{width:32px;display:block}
-.memo-eyebrow{font-family:var(--font-type);font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--c-terracotta);margin-bottom:.4rem;position:relative;z-index:1}
-.memo-h{font-family:var(--font-display);font-size:1.4rem;font-weight:500;line-height:1.3;color:var(--c-ink);margin-bottom:.9rem;position:relative;z-index:1}
-.memo-h em{color:var(--c-terracotta);font-style:italic}
-.memo-p{font-family:var(--font-body);font-size:.9rem;line-height:1.78;color:var(--c-ink-light);position:relative;z-index:1}
-.memo-p+.memo-p{margin-top:.75rem}
-/* Index cards row */
-.index-row{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
-.idx-card{background:var(--c-warm-white);border:1px solid rgba(139,115,85,.15);border-top:4px solid var(--c-sage);padding:1.4rem 1rem 1rem;position:relative;box-shadow:var(--shadow-card)}
-.idx-card--blue{border-top-color:var(--c-dusty-blue)}
-.idx-card--rose{border-top-color:var(--c-dusty-rose)}
-.idx-card--gold{border-top-color:var(--c-gold)}
-.idx-card::before{content:'';position:absolute;inset:0;background-image:repeating-linear-gradient(transparent,transparent 22px,rgba(139,115,85,.07) 22px,rgba(139,115,85,.07) 23px);pointer-events:none}
-.idx-card__pin{position:absolute;top:-20px;left:50%;transform:translateX(-50%);z-index:5}
-.idx-card__pin svg{width:26px;display:block}
-.idx-card__content{position:relative;z-index:1}
-.idx-card__lbl{font-family:var(--font-type);font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:var(--c-warm-gray);margin-bottom:.3rem}
-.idx-card__val{font-family:var(--font-display);font-size:1.5rem;font-weight:600;color:var(--c-ink);line-height:1;margin-bottom:.3rem}
-.idx-card__desc{font-family:var(--font-body);font-size:.78rem;line-height:1.5;color:var(--c-ink-light)}
+  /* ── MAIN LAYOUT ───────────────────────────────────────────── */
+  .about-main {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 3.5rem 3rem 5rem;
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 3rem;
+    align-items: start;
+  }
 
-/* ── RESEARCH SECTION ── */
-.research-section{background:var(--c-parchment);padding:4.5rem 0;position:relative;overflow:hidden}
-.research-section::after{content:'';position:absolute;bottom:-40px;right:-40px;width:300px;height:300px;background-image:url('../assets/images/vintage/ExLibrisPage.webp');background-size:contain;background-repeat:no-repeat;opacity:.06;pointer-events:none}
-.research-grid{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:start;position:relative;z-index:1}
-.research-eyebrow{font-family:var(--font-type);font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;color:var(--c-terracotta);margin-bottom:.4rem}
-.research-h{font-family:var(--font-display);font-size:clamp(1.6rem,3vw,2.2rem);font-weight:500;line-height:1.25;color:var(--c-ink);margin-bottom:.9rem}
-.research-h em{color:var(--c-terracotta);font-style:italic}
-.research-body{font-family:var(--font-body);font-size:.9rem;line-height:1.78;color:var(--c-ink-light)}
-.catalog-cards{display:flex;flex-direction:column;gap:.85rem}
-.catalog-card{background:var(--c-warm-white);border:1px solid rgba(139,115,85,.15);border-left:4px solid var(--c-dusty-blue);padding:.9rem 1.1rem .9rem 1.25rem;position:relative;box-shadow:0 1px 6px rgba(0,0,0,.06);transition:all .22s;cursor:default}
-.catalog-card:hover{transform:translateX(5px);border-left-color:var(--c-terracotta)}
-.catalog-card::before{content:'';position:absolute;inset:0;background-image:repeating-linear-gradient(transparent,transparent 22px,rgba(139,115,85,.06) 22px,rgba(139,115,85,.06) 23px);pointer-events:none}
-.catalog-card__title{font-family:var(--font-body);font-size:.88rem;font-weight:500;color:var(--c-ink);margin-bottom:.2rem;position:relative;z-index:1}
-.catalog-card__sub{font-family:var(--font-type);font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--c-warm-gray);position:relative;z-index:1}
+  /* ── LEFT COLUMN: portrait + at-a-glance ───────────────────── */
+  .about-left {
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+    position: sticky;
+    top: 100px;
+  }
 
-/* ── EDU/EXP ── */
-.edu-exp-section{background:var(--c-cream);padding:4.5rem 0;position:relative}
-.edu-exp-section::before{content:'';position:absolute;inset:0;background-image:repeating-linear-gradient(0deg,transparent,transparent 27px,rgba(139,115,85,.04) 27px,rgba(139,115,85,.04) 28px);pointer-events:none}
-.edu-exp-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;position:relative;z-index:1}
-.section-notepad-hdr{background:var(--c-warm-white);border:1px solid rgba(139,115,85,.15);padding:1rem 1.25rem;margin-bottom:2rem;box-shadow:var(--shadow-card);position:relative}
-.section-notepad-hdr__binder{position:absolute;top:-26px;left:1.5rem;z-index:5}
-.section-notepad-hdr__binder svg{width:32px;display:block}
-.section-notepad-hdr__eyebrow{font-family:var(--font-type);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--c-terracotta);margin-bottom:.2rem;position:relative;z-index:1}
-.section-notepad-hdr--blue .section-notepad-hdr__eyebrow{color:var(--c-dusty-blue)}
-.section-notepad-hdr__title{font-family:var(--font-display);font-size:1.2rem;font-weight:500;color:var(--c-ink);position:relative;z-index:1}
-.section-notepad-hdr--blue{border-top:3px solid var(--c-dusty-blue)}
-.section-notepad-hdr--terra{border-top:3px solid var(--c-terracotta)}
-/* Timeline */
-.timeline{display:flex;flex-direction:column;gap:0}
-.tl-entry{display:grid;grid-template-columns:56px 1fr;gap:0;position:relative}
-.tl-entry::before{content:'';position:absolute;left:27px;top:32px;bottom:-1px;width:2px;background:rgba(139,115,85,.15)}
-.tl-entry:last-child::before{display:none}
-.tl-dot-col{display:flex;flex-direction:column;align-items:center;padding-top:6px}
-.tl-dot{width:14px;height:14px;border-radius:50%;background:var(--c-terracotta);border:2px solid var(--c-cream);box-shadow:0 0 0 2px var(--c-terracotta);flex-shrink:0;margin-top:4px}
-.tl-dot--blue{background:var(--c-dusty-blue);box-shadow:0 0 0 2px var(--c-dusty-blue)}
-.tl-dot--sage{background:var(--c-sage);box-shadow:0 0 0 2px var(--c-sage)}
-.tl-dot--gold{background:var(--c-gold);box-shadow:0 0 0 2px var(--c-gold)}
-.tl-content{padding:0 0 2rem .75rem}
-.tl-year{font-family:var(--font-type);font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:var(--c-warm-gray);margin-bottom:.25rem}
-.tl-title{font-family:var(--font-display);font-size:.95rem;font-weight:500;color:var(--c-ink);margin-bottom:.15rem;line-height:1.3}
-.tl-org{font-family:var(--font-body);font-size:.8rem;font-style:italic;color:var(--c-terracotta);margin-bottom:.4rem}
-.tl-desc{font-family:var(--font-body);font-size:.8rem;line-height:1.6;color:var(--c-ink-light)}
+  /* Portrait frame */
+  .about-portrait-frame {
+    position: relative;
+    background: #fff;
+    padding: 10px 10px 42px;
+    box-shadow: 0 4px 24px rgba(42,34,24,0.12), 0 1px 4px rgba(42,34,24,0.06);
+  }
+  .about-portrait-frame img {
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+  }
+  /* Gold tape strips — top corners only, not blocking face */
+  .portrait-tape {
+    position: absolute;
+    width: 48px;
+    height: 14px;
+    background: rgba(196,162,101,0.55);
+    border-radius: 1px;
+    top: -5px;
+  }
+  .portrait-tape--left  { left: 18px;  transform: rotate(-2deg); }
+  .portrait-tape--right { right: 18px; transform: rotate(2deg); }
+  /* Paper clip — far right of frame, not on face */
+  .portrait-clip {
+    position: absolute;
+    top: 8px;
+    right: -10px;
+    z-index: 5;
+  }
+  .portrait-caption {
+    text-align: center;
+    padding-top: 0.5rem;
+  }
+  .portrait-caption__name {
+    font-family: var(--f-signature, 'Jullina', cursive);
+    font-size: 1.5rem;
+    color: var(--c-ink, #2A2218);
+    display: block;
+    line-height: 1.2;
+  }
+  .portrait-caption__sub {
+    font-family: var(--f-sans, 'Jost', sans-serif);
+    font-size: 0.6rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--c-warm-gray, #6A6055);
+    display: block;
+    margin-top: 2px;
+  }
 
-/* ── SKILLS ── */
-.skills-section{background:var(--c-parchment);padding:4.5rem 0;position:relative;overflow:hidden}
-.skills-section::before{content:'';position:absolute;inset:0;background-image:url('../assets/images/vintage/typewriter_vintage.webp');background-size:cover;background-position:center;opacity:.04;pointer-events:none}
-.skills-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem;position:relative;z-index:1}
-.skill-card{background:var(--c-warm-white);border:1px solid rgba(139,115,85,.15);border-top:3px solid var(--c-terracotta);padding:1.4rem 1rem 1rem;position:relative;box-shadow:var(--shadow-card)}
-.skill-card--blue{border-top-color:var(--c-dusty-blue)}
-.skill-card--sage{border-top-color:var(--c-sage)}
-.skill-card--rose{border-top-color:var(--c-dusty-rose)}
-.skill-card--gold{border-top-color:var(--c-gold)}
-.skill-card::before{content:'';position:absolute;inset:0;background-image:repeating-linear-gradient(transparent,transparent 22px,rgba(139,115,85,.07) 22px,rgba(139,115,85,.07) 23px);pointer-events:none}
-.skill-card__clip{position:absolute;top:-22px;left:50%;transform:translateX(-50%);z-index:5}
-.skill-card__clip svg{width:28px;display:block}
-.skill-card__title{font-family:var(--font-type);font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;color:var(--c-terracotta);margin-bottom:.75rem;position:relative;z-index:1}
-.skill-card--blue .skill-card__title{color:var(--c-dusty-blue)}
-.skill-card--sage .skill-card__title{color:var(--c-sage)}
-.skill-card--rose .skill-card__title{color:var(--c-dusty-rose)}
-.skill-card--gold .skill-card__title{color:var(--c-gold-dark)}
-.skill-list{list-style:none;display:flex;flex-direction:column;gap:.4rem;position:relative;z-index:1}
-.skill-list li{font-family:var(--font-body);font-size:.8rem;color:var(--c-ink-light);padding-left:.85rem;position:relative}
-.skill-list li::before{content:'—';position:absolute;left:0;color:rgba(139,115,85,.4);font-size:.7rem}
+  /* At a Glance card — notepad style */
+  .glance-card {
+    background: #fff;
+    border-top: 3px solid var(--c-terracotta, #8A4A3C);
+    padding: 1.25rem 1.5rem 1.25rem 1.25rem;
+    box-shadow: 0 2px 10px rgba(42,34,24,0.08);
+    position: relative;
+    /* Ruled lines background */
+    background-image: repeating-linear-gradient(
+      to bottom,
+      transparent,
+      transparent 27px,
+      rgba(42,34,24,0.06) 27px,
+      rgba(42,34,24,0.06) 28px
+    );
+    background-size: 100% 28px;
+    background-position: 0 36px;
+  }
+  /* Push pin — far right */
+  .glance-card__pin {
+    position: absolute;
+    top: -8px;
+    right: 18px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 35% 35%, #C4887A, #8A4A3C);
+    box-shadow: 0 2px 6px rgba(42,34,24,0.25);
+    z-index: 3;
+  }
+  .glance-card__pin::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 10px;
+    background: #6A5040;
+    border-radius: 0 0 2px 2px;
+  }
+  .glance-card__title {
+    font-family: var(--f-sans, 'Jost', sans-serif);
+    font-size: 0.62rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--c-terracotta, #8A4A3C);
+    margin-bottom: 1rem;
+  }
+  .glance-item {
+    display: flex;
+    align-items: baseline;
+    gap: 0.6rem;
+    margin-bottom: 0.65rem;
+    line-height: 1.4;
+  }
+  .glance-item__num {
+    font-family: var(--f-serif, 'Playfair Display', serif);
+    font-size: 1.35rem;
+    font-weight: 500;
+    color: var(--c-terracotta, #8A4A3C);
+    flex-shrink: 0;
+    min-width: 2.5rem;
+  }
+  .glance-item__lbl {
+    font-family: var(--f-body, 'Lora', serif);
+    font-size: 0.8rem;
+    color: var(--c-warm-gray, #6A6055);
+  }
 
-/* ── CONTACT STRIP ── */
-.contact-strip{background:var(--c-ink);padding:3.5rem 0;text-align:center}
-.contact-strip__h{font-family:var(--font-display);font-size:clamp(1.5rem,3vw,2rem);font-weight:500;color:var(--c-warm-white);margin-bottom:.5rem}
-.contact-strip__h em{color:var(--c-gold);font-style:italic}
-.contact-strip__sub{font-family:var(--font-body);font-size:.88rem;color:rgba(248,244,238,.6);margin-bottom:1.5rem}
-.contact-strip__btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+  /* Action buttons below portrait */
+  .about-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+  .about-actions .btn {
+    text-align: center;
+    font-family: var(--f-sans, 'Jost', sans-serif);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 0.65rem 1.25rem;
+    border-radius: 2px;
+    text-decoration: none;
+    transition: all 0.2s;
+    display: block;
+  }
+  .about-actions .btn-primary {
+    background: var(--c-terracotta, #8A4A3C);
+    color: #fff;
+    border: 2px solid var(--c-terracotta, #8A4A3C);
+  }
+  .about-actions .btn-primary:hover {
+    background: var(--c-mauve, #A0665A);
+    border-color: var(--c-mauve, #A0665A);
+  }
+  .about-actions .btn-outline {
+    background: transparent;
+    color: var(--c-terracotta, #8A4A3C);
+    border: 2px solid var(--c-terracotta, #8A4A3C);
+  }
+  .about-actions .btn-outline:hover {
+    background: rgba(138,74,60,0.06);
+  }
 
-/* ── FOOTER ── */
-.site-footer{background:var(--c-ink);padding:3rem 0 2rem;border-top:1px solid rgba(255,255,255,.06)}
-.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:2.5rem;margin-bottom:2.5rem}
-.footer-brand__name{font-family:var(--font-cursive);font-size:1.8rem;font-weight:700;color:var(--c-warm-white);margin-bottom:.4rem}
-.footer-brand__tagline{font-family:var(--font-type);font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(248,244,238,.45);margin-bottom:.9rem}
-.footer-brand__text{font-family:var(--font-body);font-size:.8rem;line-height:1.65;color:rgba(248,244,238,.55)}
-.footer-col__title{font-family:var(--font-type);font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--c-gold);margin-bottom:.9rem}
-.footer-col__list{list-style:none;display:flex;flex-direction:column;gap:.45rem}
-.footer-col__list a{font-family:var(--font-body);font-size:.8rem;color:rgba(248,244,238,.55);text-decoration:none;transition:color .2s}
-.footer-col__list a:hover{color:var(--c-gold)}
-.footer-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.75rem}
-.footer-bottom__copy{font-family:var(--font-type);font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(248,244,238,.35)}
-.footer-bottom__links{display:flex;gap:1.25rem}
-.footer-bottom__links a{font-family:var(--font-type);font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(248,244,238,.35);text-decoration:none}
-.footer-bottom__links a:hover{color:var(--c-gold)}
+  /* ── RIGHT COLUMN: content sections ───────────────────────── */
+  .about-right {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
 
-/* ── RESPONSIVE ── */
-@media(max-width:1024px){.about-grid{grid-template-columns:1fr}.portrait-col{max-width:360px;margin:0 auto}.skills-grid{grid-template-columns:repeat(2,1fr)}.footer-grid{grid-template-columns:1fr 1fr}}
-@media(max-width:768px){.research-grid,.edu-exp-grid{grid-template-columns:1fr}.index-row{grid-template-columns:1fr}.hello-card__body{flex-direction:column}.hello-img-wrap{width:160px}.site-nav{display:none}.hamburger{display:flex}.skills-grid{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr}}
-@media(max-width:480px){.header-inner{padding:.75rem 1rem}.container{padding:0 1rem}.hello-card__body{padding:2rem 1.5rem 1.25rem}.hello-card__footer{padding:.75rem 1.5rem 1.5rem}}
-</style>
+  /* ── HELLO INTRO CARD ──────────────────────────────────────── */
+  .hello-card {
+    background: #FEFCF5;
+    border-radius: 2px;
+    box-shadow: 0 4px 20px rgba(42,34,24,0.10), 0 1px 4px rgba(42,34,24,0.06);
+    position: relative;
+    padding: 2rem 3.5rem 2rem 2rem;
+    /* Ruled lines */
+    background-image: repeating-linear-gradient(
+      to bottom,
+      transparent,
+      transparent 29px,
+      rgba(42,34,24,0.06) 29px,
+      rgba(42,34,24,0.06) 30px
+    );
+    background-size: 100% 30px;
+    background-position: 0 44px;
+  }
+  /* Blue washi tape — top center */
+  .hello-card::before {
+    content: '';
+    position: absolute;
+    top: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 16px;
+    background: rgba(122,155,170,0.5);
+    border-radius: 1px;
+  }
+  /* Paper clip — far right */
+  .hello-card__clip {
+    position: absolute;
+    top: 10px;
+    right: 14px;
+  }
+  .hello-card__inner {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 1.75rem;
+    align-items: start;
+  }
+  .hello-card__img-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .hello-card__img {
+    width: 140px;
+    height: 140px;
+    object-fit: contain;
+    display: block;
+  }
+  .hello-card__text h2 {
+    font-family: var(--f-signature, 'Jullina', cursive);
+    font-size: 2.25rem;
+    font-weight: 400;
+    color: var(--c-ink, #2A2218);
+    margin-bottom: 0.2rem;
+    line-height: 1.1;
+  }
+  .hello-card__text .hello-title {
+    font-family: var(--f-sans, 'Jost', sans-serif);
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--c-terracotta, #8A4A3C);
+    margin-bottom: 1rem;
+    display: block;
+  }
+  .hello-card__text p {
+    font-family: var(--f-body, 'Lora', serif);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: var(--c-warm-gray, #6A6055);
+    margin-bottom: 0.9rem;
+  }
+  .hello-card__text p:last-child { margin-bottom: 0; }
+  .hello-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 1rem;
+  }
+  .hello-tag {
+    font-family: var(--f-sans, 'Jost', sans-serif);
+    font-size: 0.62rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.2rem 0.65rem;
+    border-radius: 2px;
+    border: 1px solid;
+  }
+  .hello-tag--sage  { color: var(--c-sage-dark, #617A60); border-color: var(--c-sage, #8A9E88); background: rgba(138,158,136,0.08); }
+  .hello-tag--blue  { color: var(--c-steel-blue, #5A7E8E); border-color: var(--c-dusty-blue, #7A9BAA); background: rgba(122,155,170,0.08); }
+  .hello-tag--terra { color: var(--c-terracotta, #8A4A3C); border-color: var(--c-dusty-rose, #C4887A); background: rgba(196,136,122,0.08); }
+
+  /* ── MEMO SECTION CARDS ────────────────────────────────────── */
+  .memo-section {
+    background: #fff;
+    box-shadow: 0 3px 16px rgba(42,34,24,0.09), 0 1px 3px rgba(42,34,24,0.05);
+    position: relative;
+    border-radius: 2px;
+    overflow: visible;
+  }
+  /* Memo header bar */
+  .memo-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.6rem 1.5rem;
+    border-bottom: 1px solid rgba(42,34,24,0.08);
+  }
+  .memo-header--terracotta { background: var(--c-terracotta, #8A4A3C); }
+  .memo-header--blue       { background: var(--c-dusty-blue, #7A9BAA); }
+  .memo-header--sage       { background: var(--c-sage, #8A9E88); }
+  .memo-header--gold       { background: var(--c-antique-gold, #A08040); }
+  .memo-header__from {
+    font-family: var(--f-typewriter, 'RustyTypewriter', monospace);
+    font-size: 0.65rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.9);
+  }
+  .memo-header__date {
+    font-family: var(--f-typewriter, 'RustyTypewriter', monospace);
+    font-size: 0.62rem;
+    color: rgba(255,255,255,0.65);
+    letter-spacing: 0.1em;
+  }
+  /* Paper clip — far right of memo card */
+  .memo-clip {
+    position: absolute;
+    top: 6px;
+    right: -10px;
+    z-index: 5;
+  }
+  .memo-body {
+    padding: 1.75rem 3.5rem 1.75rem 1.75rem;
+    /* Ruled lines */
+    background-image: repeating-linear-gradient(
+      to bottom,
+      transparent,
+      transparent 29px,
+      rgba(42,34,24,0.05) 29px,
+      rgba(42,34,24,0.05) 30px
+    );
+    background-size: 100% 30px;
+    background-position: 0 0;
+  }
+  .memo-body h3 {
+    font-family: var(--f-serif, 'Playfair Display', serif);
+    font-size: 1.35rem;
+    font-weight: 500;
+    color: var(--c-ink, #2A2218);
+    margin-bottom: 0.3rem;
+    line-height: 1.2;
+  }
+  .memo-body h3 em {
+    font-style: italic;
+    color: var(--c-terracotta, #8A4A3C);
+  }
+  .memo-body .memo-label {
+    font-family: var(--f-sans, 'Jost', sans-serif);
+    font-size: 0.62rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--c-gold, #B89A5A);
+    margin-bottom: 0.9rem;
+    display: block;
+  }
+  .memo-body p {
+    font-family: var(--f-body, 'Lora', serif);
+    font-size: 0.93rem;
+    line-height: 1.85;
+    color: var(--c-warm-gray, #6A6055);
+    margin-bottom: 0.9rem;
+  }
+  .memo-body p:last-child { margin-bottom: 0; }
+
+  /* Credential cards inside memo */
+  .cred-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+    margin-top: 1.25rem;
+  }
+  .cred-card {
+    background: var(--c-cream, #F2EBE0);
+    padding: 1rem 1rem 1rem 1rem;
+    border-radius: 2px;
+    position: relative;
+    border-top: 2px solid var(--c-gold, #B89A5A);
+  }
+  /* Push pin — far right of each cred card */
+  .cred-card__pin {
+    position: absolute;
+    top: -7px;
+    right: 12px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 35% 35%, #D4B87A, #A08040);
+    box-shadow: 0 2px 5px rgba(42,34,24,0.2);
+    z-index: 3;
+  }
+  .cred-card__pin::after {
+    content: '';
+    position: absolute;
+    bottom: -7px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 8px;
+    background: #7A6040;
+    border-radius: 0 0 2px 2px;
+  }
+  .cred-card__label {
+    font-family: var(--f-sans, 'Jost', sans-serif);
+    font-size: 0.58rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--c-gold-light, #D4B87A);
+    display: block;
+    margin-bottom: 0.3rem;
+  }
+  .cred-card__degree {
+    font-family: var(--f-serif, 'Playfair Display', serif);
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--c-ink, #2A2218);
+    display: block;
+    line-height: 1;
+    margin-bottom: 0.3rem;
+  }
+  .cred-card__detail {
+    font-family: var(--f-body, 'Lora', serif);
+    font-size: 0.78rem;
+    color: var(--c-warm-gray, #6A6055);
+    line-height: 1.4;
+  }
+
+  /* ── RESEARCH INTERESTS ────────────────────────────────────── */
+  .research-section {
+    padding: 3rem 0;
+    background: var(--c-parchment, #E8DDD0);
+  }
+  .research-section .container {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 3rem;
+  }
+  .research-header {
+    margin-bottom: 2rem;
+  }
+  .research-header .eyebrow {
+    font-family: var(--f-sans, 'Jost', sans-serif);
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--c-gold, #B89A5A);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.5rem;
+  }
+  .research-header .eyebrow::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--c-gold, #B89A5A);
+    opacity: 0.4;
+  }
+  .research-header h2 {
+    font-family: var(--f-serif, 'Playfair Display', serif);
+    font-size: clamp(1.75rem, 3vw, 2.5rem);
+    font-weight: 400;
+    color: var(--c-ink, #2A2218);
+    margin-bottom: 0.75rem;
+  }
+  .research-header p {
+    font-family: var(--f-body, 'Lora', serif);
+    font-size: 0.93rem;
+    line-height: 1.8;
+    color: var(--c-warm-gray, #6A6055);
+    max-width: 580px;
+  }
+  .research-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.6rem;
+  }
+  .research-item {
+    background: #fff;
+    padding: 1rem 1.25rem;
+    border-left: 3px solid var(--c-dusty-blue, #7A9BAA);
+    box-shadow: 0 1px 6px rgba(42,34,24,0.06);
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  .research-item:hover {
+    border-left-color: var(--c-terracotta, #8A4A3C);
+    box-shadow: 0 3px 12px rgba(42,34,24,0.10);
+  }
+  .research-item__title {
+    font-family: var(--f-serif, 'Playfair Display', serif);
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--c-ink, #2A2218);
+    margin-bottom: 0.2rem;
+  }
+  .research-item__tags {
+    font-family: var(--f-sans, 'Jost', sans-serif);
+    font-size: 0.62rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--c-mid-gray, #9A9088);
+  }
+
+  /* ── TIMELINE (Education + Experience) ─────────────────────── */
+  .timeline-section {
+    padding: 3.5rem 0;
+    background: var(--c-warm-white, #F8F4EE);
+  }
+  .timeline-section .container {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 3rem;
+  }
+  .timeline-cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+  .timeline-col-card {
+    background: #fff;
+    box-shadow: 0 3px 16px rgba(42,34,24,0.08);
+    position: relative;
+    border-radius: 2px;
+  }
+  /* Paper clip — far right of timeline card */
+  .timeline-col-card__clip {
+    position: absolute;
+    top: 8px;
+    right: -10px;
+    z-index: 5;
+  }
+  .timeline-col-header {
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid rgba(42,34,24,0.07);
+    background: var(--c-cream, #F2EBE0);
+  }
+  .timeline-col-header .eyebrow {
+    font-family: var(--f-sans, 'Jost', sans-serif);
+    font-size: 0.6rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--c-gold, #B89A5A);
+    margin-bottom: 0.2rem;
+  }
+  .timeline-col-header h3 {
+    font-family: var(--f-serif, 'Playfair Display', serif);
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--c-ink, #2A2218);
+  }
+  .timeline-col-body {
+    padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+  }
+  .timeline-entry {
+    display: grid;
+    grid-template-columns: 14px 1fr;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+  }
+  .timeline-entry:last-child { margin-bottom: 0; }
+  .timeline-entry__dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-top: 4px;
+    flex-shrink: 0;
+  }
+  .timeline-entry__dot--terra { background: var(--c-terracotta, #8A4A3C); }
+  .timeline-entry__dot--blue  { background: var(--c-dusty-blue, #7A9BAA); }
+  /* Vertical line between dots */
+  .timeline-entry:not(:last-child) .timeline-entry__dot::after {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 16px;
+    width: 1px;
+    height: calc(100% + 4px);
+    background: rgba(42,34,24,0.12);
+  }
+  .timeline-entry__date {
+    font-family: var(--f-sans, 'Jost', sans-serif);
+    font-size: 0.6rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--c-gold, #B89A5A);
+    margin-bottom: 0.2rem;
+  }
+  .timeline-entry__title {
+    font-family: var(--f-serif, 'Playfair Display', serif);
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--c-ink, #2A2218);
+    margin-bottom: 0.15rem;
+  }
+  .timeline-entry__org {
+    font-family: var(--f-body, 'Lora', serif);
+    font-size: 0.8rem;
+    font-style: italic;
+    color: var(--c-terracotta, #8A4A3C);
+    margin-bottom: 0.4rem;
+  }
+  .timeline-entry__desc {
+    font-family: var(--f-body, 'Lora', serif);
+    font-size: 0.82rem;
+    line-height: 1.7;
+    color: var(--c-warm-gray, #6A6055);
+  }
+
+  /* ── SKILLS SECTION ────────────────────────────────────────── */
+  .skills-section {
+    background: var(--c-ink, #2A2218);
+    padding: 3.5rem 0;
+  }
+  .skills-section .container {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 3rem;
+  }
+  .skills-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+  .skills-header .eyebrow {
+    font-family: var(--f-sans, 'Jost', sans-serif);
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--c-gold, #B89A5A);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-bottom: 0.5rem;
+  }
+  .skills-header .eyebrow::before,
+  .skills-header .eyebrow::after {
+    content: '';
+    width: 50px;
+    height: 1px;
+    background: var(--c-gold, #B89A5A);
+    opacity: 0.4;
+  }
+  .skills-header h2 {
+    font-family: var(--f-serif, 'Playfair Display', serif);
+    font-size: clamp(1.75rem, 3vw, 2.5rem);
+    font-weight: 400;
+    color: var(--c-warm-white, #F8F4EE);
+  }
+  .skills-header h2 em { color: var(--c-dusty-rose, #C4887A); font-style: italic; }
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem;
+  }
+  .skill-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08);
+    padding: 1.5rem 1.25rem;
+    border-radius: 2px;
+    position: relative;
+  }
+  /* Push pin — far right of skill card */
+  .skill-card__pin {
+    position: absolute;
+    top: -7px;
+    right: 14px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 35% 35%, #C4887A, #8A4A3C);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    z-index: 3;
+  }
+  .skill-card__pin::after {
+    content: '';
+    position: absolute;
+    bottom: -7px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 8px;
+    background: #6A3A28;
+    border-radius: 0 0 2px 2px;
+  }
+  .skill-card__title {
+    font-family: var(--f-sans, 'Jost', sans-serif);
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--c-gold, #B89A5A);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(196,162,101,0.2);
+  }
+  .skill-card ul {
+    list-style: none;
+    padding: 0;
+  }
+  .skill-card li {
+    font-family: var(--f-body, 'Lora', serif);
+    font-size: 0.82rem;
+    color: rgba(248,244,238,0.75);
+    padding: 0.3rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+    line-height: 1.4;
+  }
+  .skill-card li:last-child { border-bottom: none; }
+
+  /* ── CONTACT CTA ───────────────────────────────────────────── */
+  .about-cta {
+    background: var(--c-sage-light, #C8D4C0);
+    padding: 3rem 0;
+    text-align: center;
+  }
+  .about-cta .container {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 3rem;
+  }
+  .about-cta h2 {
+    font-family: var(--f-serif, 'Playfair Display', serif);
+    font-size: clamp(1.5rem, 2.5vw, 2.25rem);
+    font-weight: 400;
+    color: var(--c-ink, #2A2218);
+    margin-bottom: 0.75rem;
+  }
+  .about-cta h2 em { color: var(--c-terracotta, #8A4A3C); font-style: italic; }
+  .about-cta p {
+    font-family: var(--f-body, 'Lora', serif);
+    font-size: 0.93rem;
+    color: var(--c-ink-soft, #3C3228);
+    max-width: 480px;
+    margin: 0 auto 1.75rem;
+    line-height: 1.8;
+  }
+  .about-cta__btns {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .about-cta__btns a {
+    font-family: var(--f-sans, 'Jost', sans-serif);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 0.65rem 1.5rem;
+    border-radius: 2px;
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+  .about-cta__btns .btn-primary {
+    background: var(--c-terracotta, #8A4A3C);
+    color: #fff;
+    border: 2px solid var(--c-terracotta, #8A4A3C);
+  }
+  .about-cta__btns .btn-primary:hover { background: var(--c-mauve, #A0665A); border-color: var(--c-mauve, #A0665A); }
+  .about-cta__btns .btn-outline {
+    background: transparent;
+    color: var(--c-ink, #2A2218);
+    border: 2px solid var(--c-ink, #2A2218);
+  }
+  .about-cta__btns .btn-outline:hover { background: rgba(42,34,24,0.06); }
+
+  /* ── SVG CLIP COMPONENT ────────────────────────────────────── */
+  .clip-svg {
+    display: block;
+    width: 14px;
+    height: 32px;
+  }
+
+  /* ── RESPONSIVE ────────────────────────────────────────────── */
+  @media (max-width: 900px) {
+    .about-main {
+      grid-template-columns: 1fr;
+      padding: 2rem 1.5rem 3rem;
+    }
+    .about-left { position: static; }
+    .hello-card__inner { grid-template-columns: 1fr; }
+    .hello-card__img-wrap { flex-direction: row; align-items: center; }
+    .cred-cards { grid-template-columns: 1fr 1fr; }
+    .research-grid { grid-template-columns: 1fr; }
+    .timeline-cols { grid-template-columns: 1fr; }
+    .skills-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 600px) {
+    .about-hero__inner { padding: 0 1.25rem; }
+    .about-main { padding: 1.5rem 1.25rem 2.5rem; }
+    .cred-cards { grid-template-columns: 1fr; }
+    .skills-grid { grid-template-columns: 1fr; }
+    .research-section .container,
+    .timeline-section .container,
+    .skills-section .container,
+    .about-cta .container { padding: 0 1.25rem; }
+  }
+  </style>
 </head>
 <body>
+
+<!-- Scroll Progress Bar -->
 <div id="scroll-progress"></div>
 
-<!-- Mobile nav overlay -->
-<nav id="mobile-nav" style="display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:var(--c-cream);z-index:950;flex-direction:column;align-items:center;justify-content:center;gap:1.5rem;">
-  <a href="../index.html" style="font-family:var(--font-cursive);font-size:1.5rem;color:var(--c-ink);text-decoration:none;">Home</a>
-  <a href="about.html" style="font-family:var(--font-cursive);font-size:1.5rem;color:var(--c-terracotta);text-decoration:none;">About</a>
-  <a href="work.html" style="font-family:var(--font-cursive);font-size:1.5rem;color:var(--c-ink);text-decoration:none;">Work</a>
-  <a href="writing.html" style="font-family:var(--font-cursive);font-size:1.5rem;color:var(--c-ink);text-decoration:none;">Writing</a>
-  <a href="blog.html" style="font-family:var(--font-cursive);font-size:1.5rem;color:var(--c-ink);text-decoration:none;">Blog</a>
-  <a href="contact.html" style="font-family:var(--font-cursive);font-size:1.5rem;color:var(--c-ink);text-decoration:none;">Contact</a>
-  <button onclick="document.getElementById('mobile-nav').style.display='none'" style="margin-top:1rem;background:none;border:1px solid var(--c-ink);padding:.5rem 1.5rem;font-family:var(--font-ui);cursor:pointer;border-radius:2px;">Close</button>
+<!-- Mobile Nav Overlay -->
+<nav class="mobile-nav" aria-label="Mobile navigation">
+  <a href="../index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="work.html">Work</a>
+  <a href="writing.html">Writing</a>
+  <a href="blog.html">Blog</a>
+  <a href="contact.html">Contact</a>
 </nav>
 
-<!-- HEADER -->
-<header class="site-header" id="site-header">
+<!-- ── SITE HEADER ──────────────────────────────────────────── -->
+<header class="site-header">
   <div class="header-inner">
-    <a href="../index.html" class="site-logo">
+    <a href="../index.html" class="site-logo" aria-label="Kayla Canfield home">
       <span class="site-logo__name">Kayla Canfield</span>
       <span class="site-logo__tagline">Instructional Designer &middot; Writer &middot; Researcher</span>
     </a>
-    <nav><ul class="site-nav">
-      <li><a href="../index.html">Home</a></li>
-      <li><a href="about.html" class="active">About</a></li>
-      <li><a href="work.html">Work</a></li>
-      <li><a href="writing.html">Writing</a></li>
-      <li><a href="blog.html">Blog</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul></nav>
+    <nav aria-label="Primary navigation">
+      <ul class="site-nav">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="work.html">Work</a></li>
+        <li><a href="writing.html">Writing</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
     <div class="header-actions">
-      <a href="../assets/Canfield_CV.pdf" class="btn-cv" target="_blank">Download CV</a>
-      <button class="hamburger" aria-label="Toggle menu" onclick="document.getElementById('mobile-nav').style.display='flex'">
+      <a href="../assets/Canfield_CV.pdf" class="btn btn-outline btn-cv" target="_blank" rel="noopener">Download CV</a>
+      <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </div>
   </div>
 </header>
 
-<!-- COLOR BAND -->
-<div class="color-band" aria-hidden="true">
-  <div class="cb-1"></div><div class="cb-2"></div><div class="cb-3"></div>
-  <div class="cb-4"></div><div class="cb-5"></div><div class="cb-6"></div>
-</div>
+<!-- ── BREADCRUMB ───────────────────────────────────────────── -->
+<nav class="breadcrumb" aria-label="Breadcrumb" style="background:var(--c-cream,#F2EBE0);border-bottom:1px solid rgba(196,162,101,0.15);padding:0.5rem 0;">
+  <div style="max-width:1180px;margin:0 auto;padding:0 3rem;font-family:var(--f-sans,'Jost',sans-serif);font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--c-warm-gray,#6A6055);">
+    <a href="../index.html" style="color:var(--c-terracotta,#8A4A3C);text-decoration:none;">Home</a>
+    <span style="margin:0 0.5rem;opacity:0.5;">/</span>
+    <span>About</span>
+  </div>
+</nav>
 
-<!-- PAGE HERO -->
-<section class="page-hero">
-  <div class="container">
-    <p class="page-hero__breadcrumb"><a href="../index.html">Home</a> &nbsp;/&nbsp; About</p>
-    <h1 class="page-hero__title">About Me</h1>
-    <p class="page-hero__subtitle">Instructional Designer &middot; Writer &middot; Researcher &middot; MEd Candidate</p>
-    <div class="hero-rule">
-      <div class="hero-rule__line"></div>
-      <div class="hero-rule__diamond"></div>
-      <div class="hero-rule__line"></div>
-    </div>
+<!-- ── PAGE HERO ─────────────────────────────────────────────── -->
+<section class="about-hero">
+  <div class="about-hero__inner">
+    <p class="about-hero__eyebrow">About Me</p>
+    <h1 class="about-hero__title">Kayla Canfield</h1>
+    <p class="about-hero__sub">Instructional Designer &middot; Writer &middot; Researcher &middot; MEd Candidate</p>
+    <div class="about-hero__rule"></div>
   </div>
 </section>
 
-<!-- ══════════════════════════════════════════════════════════════ -->
-<!-- HELLO! NOTE CARD SECTION                                      -->
-<!-- ══════════════════════════════════════════════════════════════ -->
-<section class="hello-section">
-  <div class="container">
-    <div class="hello-card-wrap">
-      <div class="hello-card reveal">
-        <!-- Blue washi tape at top center -->
-        <div class="hello-tape"></div>
-        <!-- Paper clip at upper right -->
-        <div class="hello-clip">
-          <svg viewBox="0 0 20 60" xmlns="http://www.w3.org/2000/svg">
-            <path d="M10 2 C5 2 2 6 2 10 L2 50 C2 54 5 58 10 58 C15 58 18 54 18 50 L18 14 C18 10 15 7 11 7 C7 7 5 10 5 14 L5 46 C5 48 7 50 10 50 C13 50 15 48 15 46 L15 18" fill="none" stroke="#8B7D6B" stroke-width="2" stroke-linecap="round"/>
+<!-- ── MAIN CONTENT ─────────────────────────────────────────── -->
+<div style="background:var(--c-warm-white,#F8F4EE);">
+  <div class="about-main">
+
+    <!-- ── LEFT: portrait + glance ──────────────────────────── -->
+    <aside class="about-left">
+
+      <!-- Portrait -->
+      <div class="about-portrait-frame">
+        <div class="portrait-tape portrait-tape--left"></div>
+        <div class="portrait-tape portrait-tape--right"></div>
+        <!-- Paper clip on far right -->
+        <div class="portrait-clip">
+          <svg class="clip-svg" viewBox="0 0 14 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="1" y="1" width="12" height="30" rx="6" stroke="#B89A5A" stroke-width="2" fill="none"/>
+            <rect x="4" y="4" width="6" height="24" rx="3" stroke="#B89A5A" stroke-width="1.5" fill="none"/>
           </svg>
         </div>
-        <div class="hello-card__body">
-          <!-- Hello! image -->
-          <div class="hello-img-wrap">
-            <img src="../assets/images/ui/hello.jpg" alt="Hello!" loading="eager"
-                 onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
-            <!-- Fallback if image not found -->
-            <div style="display:none;font-family:'Special Elite',monospace;font-size:4.5rem;color:#8B4A3A;line-height:1;padding:.5rem 0;">Hello!</div>
+        <img
+          src="../assets/images/photos/portrait-campus.jpg"
+          alt="Kayla Canfield on the Mount St. Mary's University campus"
+          loading="eager"
+        />
+        <div class="portrait-caption">
+          <span class="portrait-caption__name">Kayla Canfield</span>
+          <span class="portrait-caption__sub">Mount St. Mary's University &middot; 2023</span>
+        </div>
+      </div>
+
+      <!-- At a Glance notepad card -->
+      <div class="glance-card">
+        <div class="glance-card__pin"></div>
+        <div class="glance-card__title">At a Glance</div>
+        <div class="glance-item">
+          <span class="glance-item__num">5+</span>
+          <span class="glance-item__lbl">Academic departments supported at MSMU</span>
+        </div>
+        <div class="glance-item">
+          <span class="glance-item__num">3+</span>
+          <span class="glance-item__lbl">Years in higher education administration</span>
+        </div>
+        <div class="glance-item">
+          <span class="glance-item__num">MEd</span>
+          <span class="glance-item__lbl">Instructional Design &amp; Technology, in progress</span>
+        </div>
+        <div class="glance-item">
+          <span class="glance-item__num">BA</span>
+          <span class="glance-item__lbl">English &amp; Communications, History minor</span>
+        </div>
+      </div>
+
+      <!-- Action buttons -->
+      <div class="about-actions">
+        <a href="../assets/Canfield_CV.pdf" class="btn btn-primary" target="_blank">Download CV</a>
+        <a href="contact.html" class="btn btn-outline">Get in Touch</a>
+      </div>
+
+    </aside>
+
+    <!-- ── RIGHT: content sections ──────────────────────────── -->
+    <div class="about-right">
+
+      <!-- Hello! Introduction card -->
+      <div class="hello-card">
+        <!-- Paper clip — far right -->
+        <div class="hello-card__clip">
+          <svg class="clip-svg" viewBox="0 0 14 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="1" y="1" width="12" height="30" rx="6" stroke="#7A9BAA" stroke-width="2" fill="none"/>
+            <rect x="4" y="4" width="6" height="24" rx="3" stroke="#7A9BAA" stroke-width="1.5" fill="none"/>
+          </svg>
+        </div>
+        <div class="hello-card__inner">
+          <div class="hello-card__img-wrap">
+            <img
+              src="../assets/images/ui/hello.jpg"
+              alt="Hello!"
+              class="hello-card__img"
+              loading="lazy"
+              onerror="this.style.display='none'"
+            />
           </div>
-          <!-- Intro text -->
-          <div class="hello-intro">
-            <p class="hello-intro__name">Kayla Canfield</p>
-            <p class="hello-intro__title">Instructional Designer &middot; Writer &middot; Researcher &middot; MEd Candidate</p>
-            <p class="hello-intro__text">
+          <div class="hello-card__text">
+            <h2>Kayla Canfield</h2>
+            <span class="hello-title">Instructional Designer &middot; Writer &middot; Researcher &middot; MEd Candidate</span>
+            <p>
               I am a master's student in Instructional Design and Technology at Mount St. Mary's University, where I also work as an Administrative Assistant II. I design learning materials, build workplace systems, and write about culture, history, and education. My work sits at the intersection of instructional design and the humanities, and I bring the same care to both.
             </p>
-            <p class="hello-intro__text" style="margin-top:.65rem;">
+            <p>
               I grew up reading everything I could find and writing about what I read. That habit shapes how I approach every project. I am drawn to work that asks me to think carefully about what someone needs to understand and how to help them get there.
             </p>
+            <div class="hello-tags">
+              <span class="hello-tag hello-tag--sage">Instructional Design</span>
+              <span class="hello-tag hello-tag--blue">Digital Humanities</span>
+              <span class="hello-tag hello-tag--sage">Higher Education</span>
+              <span class="hello-tag hello-tag--terra">Academic Writing</span>
+              <span class="hello-tag hello-tag--blue">eLearning</span>
+              <span class="hello-tag hello-tag--terra">Southern Gothic</span>
+              <span class="hello-tag hello-tag--sage">Film &amp; Media Studies</span>
+              <span class="hello-tag hello-tag--blue">Archival Research</span>
+            </div>
           </div>
-        </div>
-        <div class="hello-card__footer">
-          <span class="tag tag--terra">Instructional Design</span>
-          <span class="tag tag--blue">Digital Humanities</span>
-          <span class="tag tag--sage">Higher Education</span>
-          <span class="tag tag--rose">Academic Writing</span>
-          <span class="tag tag--gold">eLearning</span>
-          <span class="tag tag--navy">Southern Gothic</span>
-          <span class="tag tag--sage">Film &amp; Media Studies</span>
-          <span class="tag tag--blue">Archival Research</span>
         </div>
       </div>
-    </div>
-  </div>
-</section>
 
-<!-- ══════════════════════════════════════════════════════════════ -->
-<!-- MAIN ABOUT GRID                                               -->
-<!-- ══════════════════════════════════════════════════════════════ -->
-<section class="about-main">
-  <div class="container">
-    <div class="about-grid">
-
-      <!-- ── LEFT: Portrait + stats ── -->
-      <div class="portrait-col">
-
-        <!-- Polaroid portrait -->
-        <div class="polaroid-frame reveal">
-          <div class="polaroid-tape polaroid-tape--tl"></div>
-          <div class="polaroid-tape polaroid-tape--tr"></div>
-          <img src="../assets/images/photos/portrait-campus.jpg"
-               alt="Kayla Canfield on the Mount St. Mary's University campus"
-               class="polaroid-frame__img" loading="eager" />
-          <div class="library-card-corner">
-            <img src="../assets/images/vintage/library-card-nypl.webp" alt="NY Public Library card"
-                 loading="lazy" onerror="this.parentElement.style.display='none'" />
-          </div>
-          <div class="polaroid-frame__caption">
-            <span class="polaroid-frame__caption-name">Kayla Canfield</span>
-            <span class="polaroid-frame__caption-sub">Mount St. Mary's University &middot; 2023</span>
-          </div>
+      <!-- Background memo card -->
+      <div class="memo-section">
+        <div class="memo-header memo-header--terracotta">
+          <span class="memo-header__from">From the Desk of: Kayla Canfield &nbsp;&mdash;&nbsp; Re: Who I Am</span>
+          <span class="memo-header__date">2024</span>
         </div>
-
-        <!-- Stats notecard with push pin -->
-        <div class="stats-card reveal reveal-delay-1">
-          <div class="stats-card__pin">
-            <svg viewBox="0 0 28 40" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="14" cy="12" r="10" fill="#8B4A3A" stroke="#6B2A1A" stroke-width="1.5"/>
-              <circle cx="14" cy="12" r="5" fill="rgba(255,255,255,0.3)"/>
-              <rect x="12.5" y="20" width="3" height="18" rx="1.5" fill="#6B2A1A"/>
-            </svg>
-          </div>
-          <div class="stats-card__content">
-            <p class="stats-card__label">At a Glance</p>
-            <div class="stat-row">
-              <span class="stat-row__num">5+</span>
-              <span class="stat-row__desc">Academic departments supported at MSMU</span>
+        <!-- Paper clip — far right -->
+        <div class="memo-clip">
+          <svg class="clip-svg" viewBox="0 0 14 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="1" y="1" width="12" height="30" rx="6" stroke="#8A4A3C" stroke-width="2" fill="none"/>
+            <rect x="4" y="4" width="6" height="24" rx="3" stroke="#8A4A3C" stroke-width="1.5" fill="none"/>
+          </svg>
+        </div>
+        <div class="memo-body">
+          <span class="memo-label">Background</span>
+          <h3>A designer with a <em>humanities core</em></h3>
+          <p>
+            I am completing my master's degree in Instructional Design and Technology while working in higher education administration at Mount St. Mary's University. My undergraduate degree combined English, Communications, and History, and that background shapes how I approach every project I take on.
+          </p>
+          <p>
+            At MSMU, I support faculty and staff across multiple departments. The combination of graduate study and full-time work has given me a practical education in how institutions function, what learners need, and where communication tends to break down.
+          </p>
+          <div class="cred-cards">
+            <div class="cred-card">
+              <div class="cred-card__pin"></div>
+              <span class="cred-card__label">Current Program</span>
+              <span class="cred-card__degree">MEd</span>
+              <span class="cred-card__detail">Instructional Design &amp; Technology, Mount St. Mary's University</span>
             </div>
-            <div class="stat-divider"></div>
-            <div class="stat-row">
-              <span class="stat-row__num">3+</span>
-              <span class="stat-row__desc">Years in higher education administration</span>
+            <div class="cred-card">
+              <div class="cred-card__pin"></div>
+              <span class="cred-card__label">Undergraduate</span>
+              <span class="cred-card__degree">BA</span>
+              <span class="cred-card__detail">English &amp; Communications, History minor, MSMU</span>
             </div>
-            <div class="stat-divider"></div>
-            <div class="stat-row">
-              <span class="stat-row__num">MEd</span>
-              <span class="stat-row__desc">Instructional Design &amp; Technology, in progress</span>
-            </div>
-            <div class="stat-divider"></div>
-            <div class="stat-row">
-              <span class="stat-row__num">BA</span>
-              <span class="stat-row__desc">English &amp; Communications, History minor, MSMU</span>
+            <div class="cred-card">
+              <div class="cred-card__pin"></div>
+              <span class="cred-card__label">Recognition</span>
+              <span class="cred-card__degree" style="font-size:1.1rem;">Award</span>
+              <span class="cred-card__detail">English Department Award, MSMU, for academic writing excellence</span>
             </div>
           </div>
         </div>
-
-        <!-- Action buttons -->
-        <div style="display:flex;flex-direction:column;gap:.65rem;" class="reveal reveal-delay-2">
-          <a href="../assets/Canfield_CV.pdf" class="btn-primary" target="_blank" style="text-align:center;">Download CV</a>
-          <a href="contact.html" class="btn-outline" style="text-align:center;">Get in Touch</a>
-        </div>
-
       </div>
 
-      <!-- ── RIGHT: Bio column ── -->
-      <div class="bio-col">
-
-        <!-- Memo 1: Who I Am -->
-        <div class="memo-block reveal">
-          <div class="memo-block__hdr memo-block__hdr--terra">
-            <span class="memo-block__from">FROM THE DESK OF: Kayla Canfield &nbsp;&mdash;&nbsp; RE: Who I Am</span>
-            <span class="memo-block__date">2024</span>
-          </div>
-          <div class="memo-block__body">
-            <div class="memo-clip">
-              <svg viewBox="0 0 20 60" xmlns="http://www.w3.org/2000/svg">
-                <path d="M10 2 C5 2 2 6 2 10 L2 50 C2 54 5 58 10 58 C15 58 18 54 18 50 L18 14 C18 10 15 7 11 7 C7 7 5 10 5 14 L5 46 C5 48 7 50 10 50 C13 50 15 48 15 46 L15 18" fill="none" stroke="#8B7D6B" stroke-width="2" stroke-linecap="round"/>
-              </svg>
-            </div>
-            <p class="memo-eyebrow">Background</p>
-            <h2 class="memo-h">A designer with a <em>humanities core</em></h2>
-            <p class="memo-p">I am completing my master's degree in Instructional Design and Technology while working in higher education administration at Mount St. Mary's University. My undergraduate degree combined English, Communications, and History, and that background shapes how I approach every project I take on.</p>
-            <p class="memo-p">At MSMU, I support faculty and staff across multiple departments. The combination of graduate study and full-time work has given me a practical education in how institutions function, what learners need, and where communication tends to break down.</p>
-          </div>
+      <!-- What I Do memo card -->
+      <div class="memo-section">
+        <div class="memo-header memo-header--blue">
+          <span class="memo-header__from">Re: What I Do</span>
+          <span class="memo-header__date">Present</span>
         </div>
-
-        <!-- Index card row -->
-        <div class="index-row reveal reveal-delay-1">
-          <div class="idx-card idx-card--blue">
-            <div class="idx-card__pin">
-              <svg viewBox="0 0 28 40" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="14" cy="12" r="10" fill="#6B7FA3" stroke="#3A5080" stroke-width="1.5"/>
-                <circle cx="14" cy="12" r="5" fill="rgba(255,255,255,0.3)"/>
-                <rect x="12.5" y="20" width="3" height="18" rx="1.5" fill="#3A5080"/>
-              </svg>
-            </div>
-            <div class="idx-card__content">
-              <p class="idx-card__lbl">Current Program</p>
-              <p class="idx-card__val">MEd</p>
-              <p class="idx-card__desc">Instructional Design &amp; Technology, Mount St. Mary's University</p>
-            </div>
-          </div>
-          <div class="idx-card idx-card--rose">
-            <div class="idx-card__pin">
-              <svg viewBox="0 0 28 40" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="14" cy="12" r="10" fill="#B07A7A" stroke="#7A3A3A" stroke-width="1.5"/>
-                <circle cx="14" cy="12" r="5" fill="rgba(255,255,255,0.3)"/>
-                <rect x="12.5" y="20" width="3" height="18" rx="1.5" fill="#7A3A3A"/>
-              </svg>
-            </div>
-            <div class="idx-card__content">
-              <p class="idx-card__lbl">Undergraduate</p>
-              <p class="idx-card__val">BA</p>
-              <p class="idx-card__desc">English &amp; Communications, History minor, MSMU</p>
-            </div>
-          </div>
-          <div class="idx-card idx-card--gold">
-            <div class="idx-card__pin">
-              <svg viewBox="0 0 28 40" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="14" cy="12" r="10" fill="#C4A265" stroke="#9B7A3A" stroke-width="1.5"/>
-                <circle cx="14" cy="12" r="5" fill="rgba(255,255,255,0.3)"/>
-                <rect x="12.5" y="20" width="3" height="18" rx="1.5" fill="#9B7A3A"/>
-              </svg>
-            </div>
-            <div class="idx-card__content">
-              <p class="idx-card__lbl">Recognition</p>
-              <p class="idx-card__val">Award</p>
-              <p class="idx-card__desc">English Department Award, MSMU, for academic writing excellence</p>
-            </div>
-          </div>
+        <div class="memo-clip">
+          <svg class="clip-svg" viewBox="0 0 14 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="1" y="1" width="12" height="30" rx="6" stroke="#7A9BAA" stroke-width="2" fill="none"/>
+            <rect x="4" y="4" width="6" height="24" rx="3" stroke="#7A9BAA" stroke-width="1.5" fill="none"/>
+          </svg>
         </div>
-
-        <!-- Memo 2: What I Do -->
-        <div class="memo-block reveal">
-          <div class="memo-block__hdr memo-block__hdr--blue">
-            <span class="memo-block__from">RE: What I Do</span>
-            <span class="memo-block__date">Present</span>
-          </div>
-          <div class="memo-block__body">
-            <div class="memo-binder">
-              <svg viewBox="0 0 32 50" xmlns="http://www.w3.org/2000/svg">
-                <rect x="8" y="0" width="16" height="50" rx="8" fill="none" stroke="#8B7D6B" stroke-width="2.5"/>
-                <rect x="11" y="4" width="10" height="42" rx="5" fill="rgba(139,115,85,0.12)"/>
-                <rect x="12" y="20" width="8" height="10" rx="2" fill="#8B7D6B" opacity="0.4"/>
-              </svg>
-            </div>
-            <p class="memo-eyebrow">Practice</p>
-            <h3 class="memo-h">Design, writing, and <em>administration</em></h3>
-            <p class="memo-p">My day-to-day work includes designing instructional materials, managing faculty support across departments, coordinating academic events, and maintaining records systems. I also write, both for academic purposes and for my own research interests in American literature and cultural history.</p>
-            <p class="memo-p">I approach instructional design the same way I approach writing: with attention to structure, clarity, and the reader's experience. I am interested in how people learn, how institutions communicate, and how good design can make both easier.</p>
-          </div>
+        <div class="memo-body">
+          <span class="memo-label">Practice</span>
+          <h3>Design, writing, and <em>administration</em></h3>
+          <p>
+            My day-to-day work includes designing instructional materials, managing faculty support across departments, coordinating academic events, and maintaining records systems. I also write, both for academic purposes and for my own research interests in American literature and cultural history.
+          </p>
+          <p>
+            I approach instructional design the same way I approach writing: with attention to structure, clarity, and the reader's experience. I am interested in how people learn, how institutions communicate, and how good design can make both easier.
+          </p>
         </div>
-
-        <!-- Memo 3: Where I Am Going -->
-        <div class="memo-block reveal reveal-delay-1">
-          <div class="memo-block__hdr memo-block__hdr--sage">
-            <span class="memo-block__from">RE: Where I Am Going</span>
-            <span class="memo-block__date">2025 &mdash; Forward</span>
-          </div>
-          <div class="memo-block__body">
-            <div class="memo-clip">
-              <svg viewBox="0 0 20 60" xmlns="http://www.w3.org/2000/svg">
-                <path d="M10 2 C5 2 2 6 2 10 L2 50 C2 54 5 58 10 58 C15 58 18 54 18 50 L18 14 C18 10 15 7 11 7 C7 7 5 10 5 14 L5 46 C5 48 7 50 10 50 C13 50 15 48 15 46 L15 18" fill="none" stroke="#8B7D6B" stroke-width="2" stroke-linecap="round"/>
-              </svg>
-            </div>
-            <p class="memo-eyebrow">Goals</p>
-            <h3 class="memo-h">Instructional design roles and <em>doctoral study</em></h3>
-            <p class="memo-p">I am currently seeking instructional design positions in higher education, nonprofit, or corporate learning contexts. I am also applying to doctoral programs in humanities, education, and information science, where I hope to continue research on digital humanities, archival pedagogy, and the intersection of media and cultural memory.</p>
-            <p class="memo-p">I am drawn to programs and organizations that take both design and the humanities seriously, and that see them as complementary rather than competing.</p>
-            <div style="display:flex;gap:.75rem;flex-wrap:wrap;margin-top:1.25rem;position:relative;z-index:1;">
-              <a href="work.html" class="btn-primary">View My Work</a>
-              <a href="writing.html" class="btn-outline">Read My Writing</a>
-            </div>
-          </div>
-        </div>
-
       </div>
-    </div>
-  </div>
-</section>
 
-<!-- ══════════════════════════════════════════════════════════════ -->
-<!-- RESEARCH INTERESTS                                            -->
-<!-- ══════════════════════════════════════════════════════════════ -->
+      <!-- Goals memo card -->
+      <div class="memo-section">
+        <div class="memo-header memo-header--sage">
+          <span class="memo-header__from">Re: Where I Am Going</span>
+          <span class="memo-header__date">2025 &mdash; Forward</span>
+        </div>
+        <div class="memo-clip">
+          <svg class="clip-svg" viewBox="0 0 14 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="1" y="1" width="12" height="30" rx="6" stroke="#8A9E88" stroke-width="2" fill="none"/>
+            <rect x="4" y="4" width="6" height="24" rx="3" stroke="#8A9E88" stroke-width="1.5" fill="none"/>
+          </svg>
+        </div>
+        <div class="memo-body">
+          <span class="memo-label">Goals</span>
+          <h3>Instructional design roles and <em>doctoral study</em></h3>
+          <p>
+            I am currently seeking instructional design positions in higher education, nonprofit, or corporate learning contexts. I am also applying to doctoral programs in humanities, education, and information science, where I hope to continue research on digital humanities, archival pedagogy, and the intersection of media and cultural memory.
+          </p>
+          <p>
+            I am drawn to programs and organizations that take both design and the humanities seriously, and that see them as complementary rather than competing.
+          </p>
+          <div style="margin-top:1.25rem;display:flex;gap:0.75rem;flex-wrap:wrap;">
+            <a href="work.html" class="about-actions btn btn-primary" style="display:inline-block;padding:0.55rem 1.25rem;">View My Work</a>
+            <a href="writing.html" class="about-actions btn btn-outline" style="display:inline-block;padding:0.55rem 1.25rem;">Read My Writing</a>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /about-right -->
+  </div><!-- /about-main -->
+</div>
+
+<!-- ── RESEARCH INTERESTS ────────────────────────────────────── -->
 <section class="research-section">
   <div class="container">
+    <div class="research-header">
+      <p class="eyebrow">Scholarship</p>
+      <h2>Research <em style="font-style:italic;color:var(--c-terracotta,#8A4A3C);">Interests</em></h2>
+      <p>My research sits at the intersection of American literature, cultural history, and digital humanities. I am particularly interested in how communities preserve and transmit memory, and how those processes are shaped by media, technology, and institutional structures.</p>
+    </div>
     <div class="research-grid">
-      <div class="reveal">
-        <p class="research-eyebrow">Scholarship</p>
-        <h2 class="research-h">Research <em>Interests</em></h2>
-        <p class="research-body">My research sits at the intersection of American literature, cultural history, and digital humanities. I am particularly interested in how communities preserve and transmit memory, and how those processes are shaped by media, technology, and institutional structures.</p>
-        <p class="research-body" style="margin-top:.75rem;">I am also interested in the pedagogy of writing and reading, and in how instructional design can draw on humanistic methods to create more meaningful learning experiences.</p>
-        <div style="margin-top:1.5rem;display:flex;gap:.75rem;flex-wrap:wrap;">
-          <a href="writing.html" class="btn-primary">Read My Writing</a>
-          <a href="work.html" class="btn-outline">View My Work</a>
-        </div>
+      <div class="research-item">
+        <div class="research-item__title">Southern Gothic Fiction &amp; American Literature</div>
+        <div class="research-item__tags">American Literature &nbsp;&middot;&nbsp; Cultural Studies &nbsp;&middot;&nbsp; Flannery O'Connor</div>
       </div>
-      <div class="catalog-cards reveal reveal-delay-1">
-        <div class="catalog-card">
-          <div class="catalog-card__title">Southern Gothic Fiction &amp; American Literature</div>
-          <div class="catalog-card__sub">American Literature &middot; Cultural Studies &middot; Flannery O'Connor</div>
-        </div>
-        <div class="catalog-card">
-          <div class="catalog-card__title">Digital Humanities &amp; Archival Pedagogy</div>
-          <div class="catalog-card__sub">Digital Methods &middot; Archival Studies &middot; Preservation</div>
-        </div>
-        <div class="catalog-card">
-          <div class="catalog-card__title">Folklore, Memory, and Cultural Transmission</div>
-          <div class="catalog-card__sub">Folklore Studies &middot; Cultural Memory &middot; Oral History</div>
-        </div>
-        <div class="catalog-card">
-          <div class="catalog-card__title">Film, Media, and Cultural History</div>
-          <div class="catalog-card__sub">Film Studies &middot; Media History &middot; Mid-Century Culture</div>
-        </div>
-        <div class="catalog-card">
-          <div class="catalog-card__title">Instructional Design &amp; Learning Theory</div>
-          <div class="catalog-card__sub">ID&amp;T &middot; Pedagogy &middot; Universal Design for Learning</div>
-        </div>
-        <div class="catalog-card">
-          <div class="catalog-card__title">Writing Pedagogy &amp; Annotation as Practice</div>
-          <div class="catalog-card__sub">Composition &middot; Reading &amp; Writing Studies &middot; Rhetoric</div>
-        </div>
+      <div class="research-item">
+        <div class="research-item__title">Digital Humanities &amp; Archival Pedagogy</div>
+        <div class="research-item__tags">Digital Methods &nbsp;&middot;&nbsp; Archival Studies &nbsp;&middot;&nbsp; Preservation</div>
+      </div>
+      <div class="research-item">
+        <div class="research-item__title">Folklore, Memory, and Cultural Transmission</div>
+        <div class="research-item__tags">Folklore Studies &nbsp;&middot;&nbsp; Cultural Memory &nbsp;&middot;&nbsp; Oral History</div>
+      </div>
+      <div class="research-item">
+        <div class="research-item__title">Film, Media, and Cultural History</div>
+        <div class="research-item__tags">Film Studies &nbsp;&middot;&nbsp; Media History &nbsp;&middot;&nbsp; Mid-Century Culture</div>
+      </div>
+      <div class="research-item">
+        <div class="research-item__title">Instructional Design &amp; Learning Theory</div>
+        <div class="research-item__tags">ID&amp;T &nbsp;&middot;&nbsp; Pedagogy &nbsp;&middot;&nbsp; Universal Design for Learning</div>
+      </div>
+      <div class="research-item">
+        <div class="research-item__title">Writing Pedagogy &amp; Annotation as Practice</div>
+        <div class="research-item__tags">Composition &nbsp;&middot;&nbsp; Reading &amp; Writing Studies &nbsp;&middot;&nbsp; Rhetoric</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ══════════════════════════════════════════════════════════════ -->
-<!-- EDUCATION + EXPERIENCE                                        -->
-<!-- ══════════════════════════════════════════════════════════════ -->
-<section class="edu-exp-section">
+<!-- ── TIMELINE: Education + Experience ─────────────────────── -->
+<section class="timeline-section">
   <div class="container">
-    <div class="edu-exp-grid">
+    <div class="timeline-cols">
 
       <!-- Education -->
-      <div class="reveal">
-        <div class="section-notepad-hdr section-notepad-hdr--terra">
-          <div class="section-notepad-hdr__binder">
-            <svg viewBox="0 0 32 50" xmlns="http://www.w3.org/2000/svg">
-              <rect x="8" y="0" width="16" height="50" rx="8" fill="none" stroke="#8B7D6B" stroke-width="2.5"/>
-              <rect x="11" y="4" width="10" height="42" rx="5" fill="rgba(139,115,85,0.12)"/>
-              <rect x="12" y="20" width="8" height="10" rx="2" fill="#8B7D6B" opacity="0.4"/>
-            </svg>
-          </div>
-          <p class="section-notepad-hdr__eyebrow">Academic Record</p>
-          <h3 class="section-notepad-hdr__title">Education</h3>
+      <div class="timeline-col-card">
+        <div class="timeline-col-card__clip">
+          <svg class="clip-svg" viewBox="0 0 14 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="1" y="1" width="12" height="30" rx="6" stroke="#B89A5A" stroke-width="2" fill="none"/>
+            <rect x="4" y="4" width="6" height="24" rx="3" stroke="#B89A5A" stroke-width="1.5" fill="none"/>
+          </svg>
         </div>
-        <div class="timeline">
-          <div class="tl-entry">
-            <div class="tl-dot-col"><div class="tl-dot"></div></div>
-            <div class="tl-content">
-              <p class="tl-year">2023 &mdash; Present</p>
-              <p class="tl-title">Master of Education, Instructional Design &amp; Technology</p>
-              <p class="tl-org">Mount St. Mary's University, Emmitsburg, MD</p>
-              <p class="tl-desc">Focus on learning design, eLearning development, needs analysis, and curriculum development for higher education and professional contexts.</p>
+        <div class="timeline-col-header">
+          <div class="eyebrow">Academic Record</div>
+          <h3>Education</h3>
+        </div>
+        <div class="timeline-col-body">
+          <div class="timeline-entry">
+            <div class="timeline-entry__dot timeline-entry__dot--terra"></div>
+            <div>
+              <div class="timeline-entry__date">2023 &mdash; Present</div>
+              <div class="timeline-entry__title">Master of Education, Instructional Design &amp; Technology</div>
+              <div class="timeline-entry__org">Mount St. Mary's University, Emmitsburg, MD</div>
+              <div class="timeline-entry__desc">Focus on learning design, eLearning development, needs analysis, and curriculum development for higher education and professional contexts.</div>
             </div>
           </div>
-          <div class="tl-entry">
-            <div class="tl-dot-col"><div class="tl-dot tl-dot--blue"></div></div>
-            <div class="tl-content">
-              <p class="tl-year">2019 &mdash; 2023</p>
-              <p class="tl-title">Bachelor of Arts, English &amp; Communications</p>
-              <p class="tl-org">Mount St. Mary's University, Emmitsburg, MD</p>
-              <p class="tl-desc">Interdisciplinary major with a minor in History. Recipient of the English Department Award. Coursework in rhetoric, American literature, cultural history, and media studies.</p>
+          <div class="timeline-entry">
+            <div class="timeline-entry__dot timeline-entry__dot--terra"></div>
+            <div>
+              <div class="timeline-entry__date">2019 &mdash; 2023</div>
+              <div class="timeline-entry__title">Bachelor of Arts, English &amp; Communications</div>
+              <div class="timeline-entry__org">Mount St. Mary's University, Emmitsburg, MD</div>
+              <div class="timeline-entry__desc">Interdisciplinary major with a minor in History. Recipient of the English Department Award. Coursework in rhetoric, American literature, cultural history, and media studies.</div>
             </div>
           </div>
         </div>
       </div>
 
       <!-- Experience -->
-      <div class="reveal reveal-delay-1">
-        <div class="section-notepad-hdr section-notepad-hdr--blue">
-          <div class="section-notepad-hdr__binder">
-            <svg viewBox="0 0 32 50" xmlns="http://www.w3.org/2000/svg">
-              <rect x="8" y="0" width="16" height="50" rx="8" fill="none" stroke="#8B7D6B" stroke-width="2.5"/>
-              <rect x="11" y="4" width="10" height="42" rx="5" fill="rgba(139,115,85,0.12)"/>
-              <rect x="12" y="20" width="8" height="10" rx="2" fill="#8B7D6B" opacity="0.4"/>
-            </svg>
-          </div>
-          <p class="section-notepad-hdr__eyebrow">Professional Record</p>
-          <h3 class="section-notepad-hdr__title">Experience</h3>
+      <div class="timeline-col-card">
+        <div class="timeline-col-card__clip">
+          <svg class="clip-svg" viewBox="0 0 14 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="1" y="1" width="12" height="30" rx="6" stroke="#7A9BAA" stroke-width="2" fill="none"/>
+            <rect x="4" y="4" width="6" height="24" rx="3" stroke="#7A9BAA" stroke-width="1.5" fill="none"/>
+          </svg>
         </div>
-        <div class="timeline">
-          <div class="tl-entry">
-            <div class="tl-dot-col"><div class="tl-dot tl-dot--blue"></div></div>
-            <div class="tl-content">
-              <p class="tl-year">2023 &mdash; Present</p>
-              <p class="tl-title">Administrative Assistant II</p>
-              <p class="tl-org">Mount St. Mary's University, Emmitsburg, MD</p>
-              <p class="tl-desc">Support faculty and staff across English, History, Communications, Political Science, and Sociology. Manage event coordination, records, communications, and departmental operations.</p>
+        <div class="timeline-col-header">
+          <div class="eyebrow">Professional Record</div>
+          <h3>Experience</h3>
+        </div>
+        <div class="timeline-col-body">
+          <div class="timeline-entry">
+            <div class="timeline-entry__dot timeline-entry__dot--blue"></div>
+            <div>
+              <div class="timeline-entry__date">2023 &mdash; Present</div>
+              <div class="timeline-entry__title">Administrative Assistant II</div>
+              <div class="timeline-entry__org">Mount St. Mary's University, Emmitsburg, MD</div>
+              <div class="timeline-entry__desc">Support faculty and staff across English, History, Communications, Political Science, and Sociology. Manage event coordination, records, communications, and departmental operations.</div>
             </div>
           </div>
-          <div class="tl-entry">
-            <div class="tl-dot-col"><div class="tl-dot tl-dot--sage"></div></div>
-            <div class="tl-content">
-              <p class="tl-year">2022 &mdash; 2023</p>
-              <p class="tl-title">Student Worker, Academic Affairs</p>
-              <p class="tl-org">Mount St. Mary's University, Emmitsburg, MD</p>
-              <p class="tl-desc">Assisted with administrative tasks, event support, and communications for academic departments. Developed onboarding materials and documentation for student worker positions.</p>
+          <div class="timeline-entry">
+            <div class="timeline-entry__dot timeline-entry__dot--blue"></div>
+            <div>
+              <div class="timeline-entry__date">2022 &mdash; 2023</div>
+              <div class="timeline-entry__title">Student Worker, Academic Affairs</div>
+              <div class="timeline-entry__org">Mount St. Mary's University, Emmitsburg, MD</div>
+              <div class="timeline-entry__desc">Assisted with administrative tasks, event support, and communications for academic departments. Developed onboarding materials and documentation for student worker positions.</div>
             </div>
           </div>
-          <div class="tl-entry">
-            <div class="tl-dot-col"><div class="tl-dot tl-dot--gold"></div></div>
-            <div class="tl-content">
-              <p class="tl-year">2021 &mdash; 2022</p>
-              <p class="tl-title">Writing Center Tutor</p>
-              <p class="tl-org">Mount St. Mary's University, Emmitsburg, MD</p>
-              <p class="tl-desc">Provided one-on-one writing support to undergraduate students across disciplines. Developed familiarity with diverse writing contexts and learner needs.</p>
+          <div class="timeline-entry">
+            <div class="timeline-entry__dot timeline-entry__dot--blue"></div>
+            <div>
+              <div class="timeline-entry__date">2021 &mdash; 2022</div>
+              <div class="timeline-entry__title">Writing Center Tutor</div>
+              <div class="timeline-entry__org">Mount St. Mary's University, Emmitsburg, MD</div>
+              <div class="timeline-entry__desc">Provided one-on-one writing support to undergraduate students across disciplines. Developed familiarity with diverse writing contexts and learner needs.</div>
             </div>
           </div>
         </div>
@@ -697,35 +1281,18 @@ body{font-family:var(--font-body);color:var(--c-ink);background:var(--c-parchmen
   </div>
 </section>
 
-<!-- ══════════════════════════════════════════════════════════════ -->
-<!-- SKILLS                                                        -->
-<!-- ══════════════════════════════════════════════════════════════ -->
+<!-- ── SKILLS ────────────────────────────────────────────────── -->
 <section class="skills-section">
   <div class="container">
-    <!-- Section header notepad -->
-    <div style="background:var(--c-warm-white);border:1px solid rgba(139,115,85,.15);border-top:3px solid var(--c-gold);padding:1.25rem 1.75rem;box-shadow:var(--shadow-card);display:flex;align-items:center;justify-content:space-between;gap:1.5rem;position:relative;margin-bottom:2.5rem;" class="reveal">
-      <div style="position:absolute;top:-26px;left:2rem;z-index:5;">
-        <svg viewBox="0 0 32 50" width="34" xmlns="http://www.w3.org/2000/svg">
-          <rect x="8" y="0" width="16" height="50" rx="8" fill="none" stroke="#8B7D6B" stroke-width="2.5"/>
-          <rect x="11" y="4" width="10" height="42" rx="5" fill="rgba(139,115,85,0.12)"/>
-          <rect x="12" y="20" width="8" height="10" rx="2" fill="#8B7D6B" opacity="0.4"/>
-        </svg>
-      </div>
-      <div style="position:relative;z-index:1;">
-        <p style="font-family:var(--font-type);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--c-gold-dark);margin-bottom:.2rem;">Capabilities</p>
-        <h2 style="font-family:var(--font-display);font-size:1.4rem;font-weight:500;color:var(--c-ink);">Skills &amp; <em style="color:var(--c-terracotta);font-style:italic;">Tools</em></h2>
-      </div>
-      <a href="work.html" style="font-family:var(--font-ui);font-size:.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--c-terracotta);text-decoration:none;border-bottom:1px solid var(--c-terracotta);padding-bottom:1px;position:relative;z-index:1;white-space:nowrap;">See Work Examples &rarr;</a>
+    <div class="skills-header">
+      <p class="eyebrow">Capabilities</p>
+      <h2>Skills &amp; <em>Tools</em></h2>
     </div>
     <div class="skills-grid">
-      <div class="skill-card skill-card--blue reveal">
-        <div class="skill-card__clip">
-          <svg viewBox="0 0 20 60" width="28" xmlns="http://www.w3.org/2000/svg">
-            <path d="M10 2 C5 2 2 6 2 10 L2 50 C2 54 5 58 10 58 C15 58 18 54 18 50 L18 14 C18 10 15 7 11 7 C7 7 5 10 5 14 L5 46 C5 48 7 50 10 50 C13 50 15 48 15 46 L15 18" fill="none" stroke="#8B7D6B" stroke-width="2" stroke-linecap="round"/>
-          </svg>
-        </div>
+      <div class="skill-card">
+        <div class="skill-card__pin"></div>
         <div class="skill-card__title">Instructional Design</div>
-        <ul class="skill-list">
+        <ul>
           <li>ADDIE &amp; SAM Models</li>
           <li>Universal Design for Learning</li>
           <li>Needs Analysis</li>
@@ -734,14 +1301,10 @@ body{font-family:var(--font-body);color:var(--c-ink);background:var(--c-parchmen
           <li>Assessment Design</li>
         </ul>
       </div>
-      <div class="skill-card skill-card--sage reveal reveal-delay-1">
-        <div class="skill-card__clip">
-          <svg viewBox="0 0 20 60" width="28" xmlns="http://www.w3.org/2000/svg">
-            <path d="M10 2 C5 2 2 6 2 10 L2 50 C2 54 5 58 10 58 C15 58 18 54 18 50 L18 14 C18 10 15 7 11 7 C7 7 5 10 5 14 L5 46 C5 48 7 50 10 50 C13 50 15 48 15 46 L15 18" fill="none" stroke="#8B7D6B" stroke-width="2" stroke-linecap="round"/>
-          </svg>
-        </div>
+      <div class="skill-card">
+        <div class="skill-card__pin"></div>
         <div class="skill-card__title">eLearning &amp; Technology</div>
-        <ul class="skill-list">
+        <ul>
           <li>Articulate Rise &amp; Storyline</li>
           <li>Canvas LMS</li>
           <li>Google Workspace</li>
@@ -750,14 +1313,10 @@ body{font-family:var(--font-body);color:var(--c-ink);background:var(--c-parchmen
           <li>Canva Pro</li>
         </ul>
       </div>
-      <div class="skill-card skill-card--rose reveal">
-        <div class="skill-card__clip">
-          <svg viewBox="0 0 20 60" width="28" xmlns="http://www.w3.org/2000/svg">
-            <path d="M10 2 C5 2 2 6 2 10 L2 50 C2 54 5 58 10 58 C15 58 18 54 18 50 L18 14 C18 10 15 7 11 7 C7 7 5 10 5 14 L5 46 C5 48 7 50 10 50 C13 50 15 48 15 46 L15 18" fill="none" stroke="#8B7D6B" stroke-width="2" stroke-linecap="round"/>
-          </svg>
-        </div>
+      <div class="skill-card">
+        <div class="skill-card__pin"></div>
         <div class="skill-card__title">Writing &amp; Research</div>
-        <ul class="skill-list">
+        <ul>
           <li>Academic Writing</li>
           <li>Technical Writing</li>
           <li>Copywriting &amp; Editing</li>
@@ -766,14 +1325,10 @@ body{font-family:var(--font-body);color:var(--c-ink);background:var(--c-parchmen
           <li>Chicago &amp; MLA Style</li>
         </ul>
       </div>
-      <div class="skill-card skill-card--gold reveal reveal-delay-1">
-        <div class="skill-card__clip">
-          <svg viewBox="0 0 20 60" width="28" xmlns="http://www.w3.org/2000/svg">
-            <path d="M10 2 C5 2 2 6 2 10 L2 50 C2 54 5 58 10 58 C15 58 18 54 18 50 L18 14 C18 10 15 7 11 7 C7 7 5 10 5 14 L5 46 C5 48 7 50 10 50 C13 50 15 48 15 46 L15 18" fill="none" stroke="#8B7D6B" stroke-width="2" stroke-linecap="round"/>
-          </svg>
-        </div>
+      <div class="skill-card">
+        <div class="skill-card__pin"></div>
         <div class="skill-card__title">Administration</div>
-        <ul class="skill-list">
+        <ul>
           <li>Academic Event Planning</li>
           <li>Faculty &amp; Staff Support</li>
           <li>Records Management</li>
@@ -783,98 +1338,71 @@ body{font-family:var(--font-body);color:var(--c-ink);background:var(--c-parchmen
         </ul>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- CONTACT STRIP -->
-<section class="contact-strip">
-  <div class="container">
-    <h2 class="contact-strip__h">Want to work together or <em>learn more?</em></h2>
-    <p class="contact-strip__sub">I am open to conversations about instructional design, writing, research, and graduate study.</p>
-    <div class="contact-strip__btns">
-      <a href="contact.html" class="btn-gold">Send a Message</a>
-      <a href="work.html" class="btn-ghost-w">View My Work</a>
-      <a href="../assets/Canfield_CV.pdf" class="btn-ghost-w" target="_blank">Download CV</a>
+    <div style="text-align:center;margin-top:2rem;">
+      <a href="work.html" style="font-family:var(--f-sans,'Jost',sans-serif);font-size:0.7rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--c-gold-light,#D4B87A);text-decoration:none;border-bottom:1px solid rgba(196,162,101,0.4);padding-bottom:2px;">See Work Examples &rarr;</a>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
+<!-- ── CONTACT CTA ───────────────────────────────────────────── -->
+<section class="about-cta">
+  <div class="container">
+    <p style="font-family:var(--f-sans,'Jost',sans-serif);font-size:0.68rem;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--c-sage-dark,#617A60);margin-bottom:0.5rem;">Get in Touch</p>
+    <h2>I am open to <em>conversations</em></h2>
+    <p>I am open to conversations about instructional design, writing, research, and graduate study. I would be glad to hear from you.</p>
+    <div class="about-cta__btns">
+      <a href="contact.html" class="btn-primary">Send a Message</a>
+      <a href="work.html" class="btn-outline">View My Work</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ────────────────────────────────────────────────── -->
 <footer class="site-footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div>
-        <p class="footer-brand__name">Kayla Canfield</p>
-        <p class="footer-brand__tagline">Instructional Designer &middot; Writer &middot; Researcher</p>
-        <p class="footer-brand__text">MEd candidate in Instructional Design and Technology at Mount St. Mary's University. Open to ID roles and PhD programs in humanities, education, and information science.</p>
-      </div>
-      <div>
-        <p class="footer-col__title">Navigate</p>
-        <ul class="footer-col__list">
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="work.html">Work</a></li>
-          <li><a href="writing.html">Writing</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-      <div>
-        <p class="footer-col__title">Work Areas</p>
-        <ul class="footer-col__list">
-          <li><a href="work.html">Instructional Design</a></li>
-          <li><a href="work.html">Training &amp; Systems</a></li>
-          <li><a href="work.html">Communication</a></li>
-          <li><a href="work.html">Academic Operations</a></li>
-        </ul>
-      </div>
-      <div>
-        <p class="footer-col__title">Connect</p>
-        <ul class="footer-col__list">
-          <li><a href="https://linkedin.com" target="_blank">LinkedIn</a></li>
-          <li><a href="mailto:k.m.canfield@msmary.edu">Email</a></li>
-          <li><a href="../assets/Canfield_CV.pdf" target="_blank">Download CV</a></li>
-          <li><a href="https://kaylacanfield.com">kaylacanfield.com</a></li>
-        </ul>
+  <div class="footer__top">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="../index.html" class="footer__logo">
+            <span class="t-signature" style="font-size:2.2rem;color:var(--c-gold-light,#D4B87A);">Kayla Canfield</span>
+          </a>
+          <p class="footer__tagline">Instructional Designer &middot; Writer &middot; Researcher</p>
+          <p class="footer__bio">MEd Candidate in Instructional Design &amp; Technology at Mount St. Mary's University. Open to instructional design roles and doctoral programs.</p>
+        </div>
+        <div class="footer__col">
+          <div class="footer__col-title">Navigate</div>
+          <ul class="footer__links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="work.html">Work</a></li>
+            <li><a href="writing.html">Writing</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <div class="footer__col-title">Connect</div>
+          <ul class="footer__links">
+            <li><a href="https://linkedin.com/in/kaylacanfield" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a href="mailto:k.m.canfield@msmary.edu">Email</a></li>
+            <li><a href="../assets/Canfield_CV.pdf" target="_blank">Download CV</a></li>
+          </ul>
+        </div>
       </div>
     </div>
-    <div class="footer-bottom">
-      <p class="footer-bottom__copy">&copy; 2025 Kayla Canfield. All rights reserved.</p>
-      <div class="footer-bottom__links">
+  </div>
+  <div class="footer__bottom">
+    <div class="container">
+      <span>&copy; 2025 <a href="../index.html">kaylacanfield.com</a></span>
+      <span style="display:flex;gap:1.5rem;">
         <a href="#">Accessibility</a>
         <a href="#">Sitemap</a>
-      </div>
+      </span>
     </div>
   </div>
 </footer>
 
-<button id="back-to-top" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#8593;</button>
-
-<script>
-// Scroll progress bar
-const progressBar = document.getElementById('scroll-progress');
-window.addEventListener('scroll', () => {
-  const scrolled = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
-  progressBar.style.width = scrolled + '%';
-});
-// Hide/show header on scroll
-let lastScroll = 0;
-const header = document.getElementById('site-header');
-window.addEventListener('scroll', () => {
-  const current = window.scrollY;
-  if (current > lastScroll && current > 80) header.classList.add('hidden');
-  else header.classList.remove('hidden');
-  lastScroll = current;
-});
-// Back to top
-const btt = document.getElementById('back-to-top');
-window.addEventListener('scroll', () => { btt.classList.toggle('visible', window.scrollY > 400); });
-// Scroll reveal
-const reveals = document.querySelectorAll('.reveal');
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-}, { threshold: 0.1 });
-reveals.forEach(el => observer.observe(el));
-</script>
+<button class="back-to-top" id="back-to-top" aria-label="Back to top">&#8593;</button>
+<script src="../assets/js/main.js"></script>
 </body>
 </html>
