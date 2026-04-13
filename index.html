@@ -4,38 +4,27 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kayla Canfield — Instructional Designer &amp; Writer</title>
-  <meta name="description" content="Kayla Canfield is an instructional designer, writer, and researcher. She designs learning materials, workplace systems, and academic writing projects for education and the humanities." />
+  <meta name="description" content="Kayla Canfield is an instructional designer, writer, and researcher designing learning materials, workplace systems, and writing projects for education and the humanities." />
   <meta name="keywords" content="instructional design, educational technology, learning design, higher education, digital humanities, portfolio, Kayla Canfield" />
   <meta property="og:title" content="Kayla Canfield — Instructional Designer &amp; Writer" />
   <meta property="og:description" content="Portfolio of Kayla Canfield: instructional design, writing, and research for education and the humanities." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://kaylacanfield.com" />
-  <meta name="twitter:card" content="summary_large_image" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600&family=Caveat:wght@400;500;600;700&family=Special+Elite&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/main.css" />
   <link rel="stylesheet" href="assets/css/home.css" />
-  <link rel="stylesheet" href="assets/css/home-v3.css" />
+  <link rel="stylesheet" href="assets/css/home-v4.css" />
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Kayla Canfield",
-    "url": "https://kaylacanfield.com",
-    "jobTitle": "Instructional Designer",
-    "description": "Instructional designer, writer, and researcher specializing in education and the humanities.",
-    "alumniOf": "Mount St. Mary's University",
-    "knowsAbout": ["Instructional Design", "Educational Technology", "Digital Humanities", "American Literature", "Higher Education"]
-  }
+  {"@context":"https://schema.org","@type":"Person","name":"Kayla Canfield","url":"https://kaylacanfield.com","jobTitle":"Instructional Designer","alumniOf":"Mount St. Mary's University","knowsAbout":["Instructional Design","Educational Technology","Digital Humanities","American Literature","Higher Education"]}
   </script>
 </head>
 <body>
 
-<!-- Scroll Progress -->
 <div id="scroll-progress"></div>
 
-<!-- Mobile Nav Overlay -->
+<!-- Mobile Nav -->
 <nav class="mobile-nav" aria-label="Mobile navigation">
   <a href="index.html">Home</a>
   <a href="pages/about.html">About</a>
@@ -49,7 +38,8 @@
 <header class="site-header">
   <div class="header-inner">
     <a href="index.html" class="site-logo" aria-label="Kayla Canfield home">
-      <span class="site-logo__name">Kayla Canfield</span>
+      <!-- Handwritten cursive name as SVG text -->
+      <span class="site-logo__name site-logo__name--cursive">Kayla Canfield</span>
       <span class="site-logo__tagline">Instructional Designer &middot; Writer &middot; Researcher</span>
     </a>
     <nav aria-label="Primary navigation">
@@ -71,84 +61,50 @@
   </div>
 </header>
 
-<!-- ── HERO ─────────────────────────────────────────────────── -->
-<section class="hero" aria-label="Introduction">
-  <div class="hero__bg-pattern pattern-gingham"></div>
-  <div class="hero__tape-top"></div>
+<!-- ── DECORATIVE COLOR BAND (under header) ─────────────────── -->
+<div class="color-band" aria-hidden="true">
+  <div class="color-band__stripe color-band__stripe--terracotta"></div>
+  <div class="color-band__stripe color-band__stripe--gold"></div>
+  <div class="color-band__stripe color-band__stripe--sage"></div>
+  <div class="color-band__stripe color-band__stripe--blue"></div>
+  <div class="color-band__stripe color-band__stripe--rose"></div>
+  <div class="color-band__stripe color-band__stripe--cream"></div>
+</div>
 
-  <div class="hero__inner container">
-    <div class="hero__content">
-      <p class="eyebrow reveal">Instructional Designer &middot; Writer &middot; Researcher</p>
-      <h1 class="hero__headline reveal reveal-delay-1">
-        I design learning<br>
-        <em>materials, systems,</em><br>
-        and writing projects.
-      </h1>
-      <p class="hero__sub reveal reveal-delay-2">
-        My work sits at the intersection of instructional design, research, and writing. I build clear materials people can use and I write about culture, history, and education.
-      </p>
-      <div class="hero__actions reveal reveal-delay-3">
-        <a href="pages/work.html" class="btn btn-primary">View My Work</a>
-        <a href="pages/writing.html" class="btn btn-outline">Read Writing</a>
-      </div>
-      <div class="hero__credentials reveal reveal-delay-4">
-        <div class="hero__cred-item">
-          <span class="hero__cred-label">Program</span>
-          <span class="hero__cred-value">MEd Instructional Design &amp; Technology</span>
-        </div>
-        <div class="hero__cred-divider"></div>
-        <div class="hero__cred-item">
-          <span class="hero__cred-label">Institution</span>
-          <span class="hero__cred-value">Mount St. Mary's University</span>
-        </div>
-        <div class="hero__cred-divider"></div>
-        <div class="hero__cred-item">
-          <span class="hero__cred-label">Open To</span>
-          <span class="hero__cred-value">ID Roles &amp; PhD Programs</span>
-        </div>
-      </div>
+<!-- ── FLORAL BURGUNDY BANNER ───────────────────────────────── -->
+<section class="floral-banner" aria-label="Introduction banner">
+  <!-- Floral border frame (CSS-rendered with vintage floral image) -->
+  <div class="floral-banner__frame">
+    <div class="floral-banner__floral-tl floral-corner" aria-hidden="true">
+      <img src="assets/images/vintage/floral-vintage.avif" alt="" loading="eager" />
+    </div>
+    <div class="floral-banner__floral-tr floral-corner floral-corner--flip" aria-hidden="true">
+      <img src="assets/images/vintage/floral-vintage.avif" alt="" loading="eager" />
+    </div>
+    <div class="floral-banner__floral-bl floral-corner floral-corner--flipv" aria-hidden="true">
+      <img src="assets/images/vintage/floral-vintage.avif" alt="" loading="eager" />
+    </div>
+    <div class="floral-banner__floral-br floral-corner floral-corner--flipboth" aria-hidden="true">
+      <img src="assets/images/vintage/floral-vintage.avif" alt="" loading="eager" />
     </div>
 
-    <!-- Hero visual: graduation portrait + library card -->
-    <div class="hero__visual reveal reveal-delay-2">
-
-      <!-- Portrait photo in photo-album style frame -->
-      <div class="hero__portrait-wrap">
-        <!-- Gold tape strips at top corners -->
-        <div class="hero__tape hero__tape--tl"></div>
-        <div class="hero__tape hero__tape--tr"></div>
-        <!-- The graduation portrait -->
-        <img src="assets/images/photos/portrait-graduation.jpg"
-             alt="Kayla Canfield at graduation, Mount St. Mary's University"
-             class="hero__portrait-img"
-             loading="eager" />
-        <!-- Name caption overlay at bottom -->
-        <div class="hero__portrait-caption">
-          <span class="t-signature" style="font-size:1.5rem;color:var(--c-warm-white);">Kayla Canfield</span>
-          <span class="hero__portrait-caption-sub">Instructional Designer &middot; Writer</span>
-        </div>
+    <!-- Burgundy center panel -->
+    <div class="floral-banner__center">
+      <p class="floral-banner__eyebrow">Portfolio &mdash; Instructional Design &amp; Humanities</p>
+      <h1 class="floral-banner__name">Kayla Canfield</h1>
+      <div class="floral-banner__rule"></div>
+      <p class="floral-banner__title">Instructional Designer &nbsp;&bull;&nbsp; Writer &nbsp;&bull;&nbsp; Researcher</p>
+      <p class="floral-banner__sub">MEd Instructional Design &amp; Technology &nbsp;&middot;&nbsp; Mount St. Mary's University</p>
+      <div class="floral-banner__tags">
+        <span>Higher Education</span>
+        <span>Digital Humanities</span>
+        <span>Academic Writing</span>
+        <span>eLearning Design</span>
       </div>
-
-      <!-- NY Public Library card tucked beside portrait -->
-      <div class="hero__library-card reveal reveal-delay-3">
-        <img src="assets/images/vintage/library-card-nypl.webp"
-             alt="A used library card from the New York Public Library"
-             class="hero__library-card-img"
-             loading="lazy" />
+      <div class="floral-banner__actions">
+        <a href="pages/work.html" class="floral-banner__btn">View My Work</a>
+        <a href="pages/about.html" class="floral-banner__btn floral-banner__btn--ghost">About Me</a>
       </div>
-
-      <!-- Floating mini info cards -->
-      <div class="hero__mini hero__mini--1">
-        <span class="hero__mini-label">Current Program</span>
-        <span class="hero__mini-value">MEd ID&amp;T</span>
-        <span class="hero__mini-sub">Mount St. Mary's University</span>
-      </div>
-      <div class="hero__mini hero__mini--2">
-        <span class="hero__mini-label">Background</span>
-        <span class="hero__mini-value">BA Interdisciplinary</span>
-        <span class="hero__mini-sub">English &amp; Communications</span>
-      </div>
-
     </div>
   </div>
 </section>
@@ -172,7 +128,6 @@
     <span class="identity-ribbon__dot"></span>
     <span class="t-typewriter">Curriculum Development</span>
     <span class="identity-ribbon__dot"></span>
-    <!-- Duplicate for seamless scroll -->
     <span class="t-typewriter">Instructional Design</span>
     <span class="identity-ribbon__dot"></span>
     <span class="t-typewriter">Digital Humanities</span>
@@ -191,102 +146,172 @@
   </div>
 </div>
 
-<!-- ── ABOUT TEASER ──────────────────────────────────────────── -->
-<section class="about-teaser section bg-cream" aria-label="About teaser">
+<!-- ── HERO: PORTRAIT + APOTHECARY DRAWERS ──────────────────── -->
+<section class="hero-portrait-section section bg-parchment" aria-label="Portrait and credentials">
+  <div class="hero-portrait-section__bg pattern-grid" aria-hidden="true"></div>
   <div class="container">
-    <div class="about-teaser__inner">
+    <div class="hero-portrait-layout">
 
-      <!-- Left: Typewriter diagram panel -->
-      <div class="about-teaser__img-col reveal">
-        <div class="about-teaser__frame">
-          <div class="about-teaser__diagram-panel">
-            <!-- Typewriter diagram as atmospheric background -->
-            <img src="assets/images/vintage/typewriter-diagram.webp"
-                 alt="Vintage typewriter technical diagram"
-                 class="about-teaser__diagram-img"
-                 loading="lazy" />
-            <!-- Quote overlay on diagram -->
-            <div class="about-teaser__diagram-quote">
-              <p class="t-typewriter">"I believe good design and good writing share the same goal: clarity."</p>
-            </div>
-          </div>
-          <div class="about-teaser__frame-tape about-teaser__frame-tape--tl"></div>
-          <div class="about-teaser__frame-tape about-teaser__frame-tape--br"></div>
+      <!-- LEFT: Graduation portrait as taped polaroid -->
+      <div class="portrait-polaroid reveal">
+        <!-- Top tape strip -->
+        <div class="portrait-polaroid__tape portrait-polaroid__tape--top">
+          <img src="assets/images/illustrations/tape-strip-gold.svg" alt="" aria-hidden="true" />
         </div>
-        <!-- Color accent blocks -->
-        <div class="about-teaser__color-block about-teaser__color-block--blue"></div>
-        <div class="about-teaser__color-block about-teaser__color-block--rose"></div>
+        <!-- Portrait frame -->
+        <div class="portrait-polaroid__frame">
+          <img src="assets/images/photos/portrait-graduation.jpg"
+               alt="Kayla Canfield at graduation, Mount St. Mary's University"
+               class="portrait-polaroid__img"
+               loading="eager" />
+          <!-- NYPL library card tucked at corner -->
+          <div class="portrait-polaroid__library-card">
+            <img src="assets/images/vintage/library-card-nypl.webp"
+                 alt="A used library card from the New York Public Library"
+                 loading="lazy" />
+          </div>
+        </div>
+        <!-- Polaroid caption area -->
+        <div class="portrait-polaroid__caption">
+          <span class="t-caveat" style="font-size:1.4rem;color:var(--c-ink);">Kayla Canfield</span>
+          <span class="portrait-polaroid__caption-sub">Mount St. Mary's University, 2024</span>
+        </div>
+        <!-- Side paper clip -->
+        <div class="portrait-polaroid__clip">
+          <img src="assets/images/illustrations/paper-clip.svg" alt="" aria-hidden="true" />
+        </div>
       </div>
 
-      <div class="about-teaser__content reveal reveal-delay-1">
-        <p class="eyebrow">About</p>
-        <h2 class="t-h1" style="margin-bottom:1.25rem;">
-          The person<br><em style="color:var(--c-terracotta);">behind the work</em>
-        </h2>
-        <p class="body-text">
-          Kayla Canfield is an Administrative Assistant II at Mount St. Mary's University and a master's student in Instructional Design and Technology. Her work brings together learning design, writing, communication, and systems improvement.
-        </p>
-        <p class="body-text">
-          She has developed training materials, organized academic workflows, created communication pieces, and supported projects across English, History, Communications, Political Science, and Sociology. She also continues her work as a writer and researcher with interests in literature, media, culture, American studies, Southern Gothic, digital humanities, and folklore.
-        </p>
+      <!-- RIGHT: Apothecary card catalogue drawers + intro note card -->
+      <div class="drawers-column reveal reveal-delay-1">
 
-        <div class="about-teaser__stats">
-          <div class="about-teaser__stat">
-            <span class="about-teaser__stat-num">5+</span>
-            <span class="about-teaser__stat-lbl">Departments Supported</span>
+        <!-- Intro note card (index card style, pinned with push pin) -->
+        <div class="index-card index-card--intro">
+          <div class="index-card__pin">
+            <img src="assets/images/illustrations/push-pin.svg" alt="" aria-hidden="true" />
           </div>
-          <div class="about-teaser__stat">
-            <span class="about-teaser__stat-num">MEd</span>
-            <span class="about-teaser__stat-lbl">ID&amp;T Candidate</span>
-          </div>
-          <div class="about-teaser__stat">
-            <span class="about-teaser__stat-num">BA</span>
-            <span class="about-teaser__stat-lbl">English &amp; Communications</span>
+          <div class="index-card__lines"></div>
+          <div class="index-card__content">
+            <p class="eyebrow" style="margin-bottom:0.5rem;">About Kayla</p>
+            <p class="body-text" style="font-size:0.92rem;line-height:1.65;">
+              Kayla Canfield is an Administrative Assistant II at Mount St. Mary's University and a master's student in Instructional Design and Technology. She designs learning materials, builds workplace systems, and writes about culture, history, and education.
+            </p>
+            <div style="margin-top:0.75rem;display:flex;gap:0.5rem;flex-wrap:wrap;">
+              <a href="pages/about.html" class="btn btn-primary" style="font-size:0.78rem;padding:0.45rem 1rem;">Read More</a>
+              <a href="pages/work.html" class="btn btn-outline" style="font-size:0.78rem;padding:0.45rem 1rem;">View Work</a>
+            </div>
           </div>
         </div>
 
-        <div class="about-teaser__interests">
-          <span class="tag tag--sage">Instructional Design</span>
-          <span class="tag tag--blue">Digital Humanities</span>
-          <span class="tag tag--rose">American Literature</span>
-          <span class="tag tag--sage">Southern Gothic</span>
-          <span class="tag tag--blue">Folklore</span>
-          <span class="tag tag--rose">Higher Education</span>
-          <span class="tag tag--sage">Film Studies</span>
-          <span class="tag tag--blue">Archival Research</span>
+        <!-- Apothecary / card catalogue drawers -->
+        <div class="apothecary-unit" aria-label="Key credentials and facts">
+          <div class="apothecary-unit__top-rail"></div>
+          <div class="apothecary-unit__body">
+
+            <div class="drawer" tabindex="0" role="button" aria-expanded="false" aria-label="MEd Instructional Design and Technology">
+              <div class="drawer__face">
+                <div class="drawer__handle"></div>
+                <div class="drawer__label">
+                  <span class="drawer__label-text">MEd Candidate</span>
+                  <span class="drawer__label-sub">Instructional Design &amp; Technology</span>
+                </div>
+              </div>
+              <div class="drawer__content" aria-hidden="true">
+                <p>Currently completing a Master of Education in Instructional Design &amp; Technology at Mount St. Mary's University, Emmitsburg, MD. Expected graduation: 2025.</p>
+              </div>
+            </div>
+
+            <div class="drawer" tabindex="0" role="button" aria-expanded="false" aria-label="BA English and Communications">
+              <div class="drawer__face">
+                <div class="drawer__handle"></div>
+                <div class="drawer__label">
+                  <span class="drawer__label-text">BA Interdisciplinary</span>
+                  <span class="drawer__label-sub">English &amp; Communications</span>
+                </div>
+              </div>
+              <div class="drawer__content" aria-hidden="true">
+                <p>Bachelor of Arts with an interdisciplinary focus in English and Communications. Strong foundation in writing, rhetoric, media studies, and literary analysis.</p>
+              </div>
+            </div>
+
+            <div class="drawer" tabindex="0" role="button" aria-expanded="false" aria-label="Five departments supported">
+              <div class="drawer__face">
+                <div class="drawer__handle"></div>
+                <div class="drawer__label">
+                  <span class="drawer__label-text">5+ Departments</span>
+                  <span class="drawer__label-sub">Higher Education Administration</span>
+                </div>
+              </div>
+              <div class="drawer__content" aria-hidden="true">
+                <p>Supported academic operations across English, History, Communications, Political Science, and Sociology at Mount St. Mary's University.</p>
+              </div>
+            </div>
+
+            <div class="drawer" tabindex="0" role="button" aria-expanded="false" aria-label="Instructional Design and Humanities">
+              <div class="drawer__face">
+                <div class="drawer__handle"></div>
+                <div class="drawer__label">
+                  <span class="drawer__label-text">ID + Humanities</span>
+                  <span class="drawer__label-sub">Interdisciplinary Practice</span>
+                </div>
+              </div>
+              <div class="drawer__content" aria-hidden="true">
+                <p>Uniquely positioned at the intersection of instructional design and the humanities. Applies literary and cultural analysis to learning design and educational communication.</p>
+              </div>
+            </div>
+
+            <div class="drawer" tabindex="0" role="button" aria-expanded="false" aria-label="English Department Award Winner">
+              <div class="drawer__face">
+                <div class="drawer__handle"></div>
+                <div class="drawer__label">
+                  <span class="drawer__label-text">Award Winner</span>
+                  <span class="drawer__label-sub">English Department, MSMU</span>
+                </div>
+              </div>
+              <div class="drawer__content" aria-hidden="true">
+                <p>Recipient of the English Department Award at Mount St. Mary's University for academic writing. Recognized for the essay "The Uncanny Familiar: Gothic Domesticity in Flannery O'Connor's Short Fiction."</p>
+              </div>
+            </div>
+
+            <div class="drawer" tabindex="0" role="button" aria-expanded="false" aria-label="Open to ID roles and PhD programs">
+              <div class="drawer__face">
+                <div class="drawer__handle"></div>
+                <div class="drawer__label">
+                  <span class="drawer__label-text">Open To</span>
+                  <span class="drawer__label-sub">ID Roles &amp; PhD Programs</span>
+                </div>
+              </div>
+              <div class="drawer__content" aria-hidden="true">
+                <p>Seeking instructional design positions in higher education, nonprofit, or corporate learning environments. Also applying to PhD programs in education, digital humanities, and related fields.</p>
+              </div>
+            </div>
+
+          </div>
+          <div class="apothecary-unit__bottom-rail"></div>
+          <p class="apothecary-unit__hint t-typewriter">Click any drawer to open</p>
         </div>
 
-        <div style="margin-top:2rem;display:flex;gap:1rem;flex-wrap:wrap;">
-          <a href="pages/about.html" class="btn btn-primary">Read More About Me</a>
-          <a href="assets/Canfield_CV.pdf" class="btn btn-ghost" target="_blank">Download CV</a>
-        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ── SECTION DIVIDER: PRESSED LEAF ────────────────────────── -->
-<div class="section-divider-leaf" aria-hidden="true">
-  <div class="section-divider-leaf__inner">
-    <div class="section-divider-leaf__line"></div>
-    <img src="assets/images/vintage/pressed-leaf.webp"
-         alt=""
-         class="section-divider-leaf__img"
-         loading="lazy" />
-    <div class="section-divider-leaf__line"></div>
-  </div>
-</div>
-
 <!-- ── FEATURED WORK ─────────────────────────────────────────── -->
-<section class="featured-work section" aria-label="Featured work">
+<section class="featured-work section bg-cream" aria-label="Featured work">
+  <div class="featured-work__grid-bg pattern-grid" aria-hidden="true"></div>
+  <div class="container" style="position:relative;z-index:1;">
 
-  <div class="container">
-    <div class="section-header flex-between" style="margin-bottom:var(--space-md);">
-      <div>
-        <p class="eyebrow reveal">Portfolio</p>
-        <h2 class="t-h1 reveal reveal-delay-1">Selected <em style="color:var(--c-terracotta);">Work</em></h2>
+    <!-- Section header on a notepad-style panel -->
+    <div class="notepad-header reveal">
+      <div class="notepad-header__clip">
+        <img src="assets/images/illustrations/binder-clip.svg" alt="" aria-hidden="true" />
       </div>
-      <a href="pages/work.html" class="link-arrow reveal">View All Projects</a>
+      <div class="notepad-header__lines" aria-hidden="true"></div>
+      <div class="notepad-header__content">
+        <p class="eyebrow">Portfolio</p>
+        <h2 class="t-h1">Selected <em style="color:var(--c-terracotta);">Work</em></h2>
+      </div>
+      <a href="pages/work.html" class="link-arrow notepad-header__link">View All Projects</a>
     </div>
 
     <div class="filter-tabs reveal">
@@ -301,18 +326,14 @@
 
       <!-- Featured wide card: Orientation Handbook — Memoranda page background -->
       <article class="card card--featured reveal" data-category="instructional-design">
+        <!-- Tape strip at top -->
+        <div class="card__tape card__tape--top">
+          <img src="assets/images/illustrations/tape-strip-blue.svg" alt="" aria-hidden="true" />
+        </div>
         <div class="card__img card__img--memoranda">
-          <img src="assets/images/vintage/memoranda-page.webp"
-               alt=""
-               class="card__img-bg"
-               aria-hidden="true"
-               loading="lazy" />
-          <!-- NY Public Library card as a subtle overlay -->
+          <img src="assets/images/vintage/memoranda-page.webp" alt="" class="card__img-bg" aria-hidden="true" loading="lazy" />
           <div class="card__img-overlay-asset card__img-overlay-asset--library">
-            <img src="assets/images/vintage/library-card-nypl.webp"
-                 alt=""
-                 aria-hidden="true"
-                 loading="lazy" />
+            <img src="assets/images/vintage/library-card-nypl.webp" alt="" aria-hidden="true" loading="lazy" />
           </div>
         </div>
         <div class="card__body">
@@ -331,12 +352,11 @@
 
       <!-- Card 2: Student Onboarding — Composition notebook background -->
       <article class="card card--paper card--sage reveal reveal-delay-1" data-category="training-systems">
+        <div class="card__tape card__tape--corner">
+          <img src="assets/images/illustrations/tape-strip-gold.svg" alt="" aria-hidden="true" />
+        </div>
         <div class="card__img card__img--notebook">
-          <img src="assets/images/vintage/composition-notebook.webp"
-               alt=""
-               class="card__img-bg"
-               aria-hidden="true"
-               loading="lazy" />
+          <img src="assets/images/vintage/composition-notebook.webp" alt="" class="card__img-bg" aria-hidden="true" loading="lazy" />
         </div>
         <div class="card__body">
           <p class="card__cat">Training &amp; Systems</p>
@@ -351,13 +371,12 @@
         </div>
       </article>
 
-      <!-- Card 3: Newsletter Redesign — keep fountain pen (pen-nib SVG) as requested -->
+      <!-- Card 3: Newsletter Redesign — fountain pen kept -->
       <article class="card card--paper card--rose reveal reveal-delay-2" data-category="communication">
         <div class="card__img card__img--rose">
           <div class="work-card-pattern work-card-pattern--grid"></div>
-          <!-- Fountain pen kept as requested -->
-          <div class="work-card-illustration work-card-illustration--sm">
-            <img src="assets/images/illustrations/pen-nib.svg" alt="" aria-hidden="true" style="width:40px;" />
+          <div class="work-card-illustration">
+            <img src="assets/images/illustrations/pen-nib.svg" alt="" aria-hidden="true" style="width:48px;" />
           </div>
         </div>
         <div class="card__body">
@@ -375,12 +394,11 @@
 
       <!-- Card 4: Event Planning — Archive folder background -->
       <article class="card card--paper reveal reveal-delay-3" data-category="coordination">
+        <div class="card__tape card__tape--corner card__tape--rose">
+          <img src="assets/images/illustrations/tape-strip-rose.svg" alt="" aria-hidden="true" />
+        </div>
         <div class="card__img card__img--archive">
-          <img src="assets/images/vintage/archive-folder.webp"
-               alt=""
-               class="card__img-bg"
-               aria-hidden="true"
-               loading="lazy" />
+          <img src="assets/images/vintage/archive-folder.webp" alt="" class="card__img-bg" aria-hidden="true" loading="lazy" />
         </div>
         <div class="card__body">
           <p class="card__cat">Coordination &amp; Operations</p>
@@ -399,28 +417,44 @@
   </div>
 </section>
 
+<!-- ── SECTION DIVIDER: PRESSED LEAF ────────────────────────── -->
+<div class="section-divider-leaf" aria-hidden="true">
+  <div class="section-divider-leaf__inner">
+    <div class="section-divider-leaf__line"></div>
+    <img src="assets/images/vintage/pressed-leaf.webp" alt="" class="section-divider-leaf__img" loading="lazy" />
+    <div class="section-divider-leaf__line"></div>
+  </div>
+</div>
+
 <!-- ── WRITING TEASER ────────────────────────────────────────── -->
 <section class="writing-teaser section bg-parchment" aria-label="Writing teaser">
   <div class="writing-teaser__gingham pattern-gingham"></div>
-
-  <!-- Typography diagram as atmospheric background accent -->
   <div class="writing-teaser__bg-diagram" aria-hidden="true">
-    <img src="assets/images/vintage/typography-diagram.webp"
-         alt=""
-         loading="lazy" />
+    <img src="assets/images/vintage/typography-diagram.webp" alt="" loading="lazy" />
   </div>
 
   <div class="container" style="position:relative;z-index:1;">
     <div class="writing-teaser__inner">
       <div class="writing-teaser__left reveal">
-        <p class="eyebrow">Essays &amp; Research</p>
-        <h2 class="t-h1" style="margin-bottom:1.25rem;">Writing &amp; <em style="color:var(--c-terracotta);">Research</em></h2>
-        <p class="body-text">
-          Alongside her design work, Kayla writes about literature, culture, and education. Her academic writing has been recognized by the English Department at Mount St. Mary's University.
-        </p>
-        <p class="body-text">
-          Her research interests include Southern Gothic fiction, digital humanities, folklore, and the intersection of media and cultural memory.
-        </p>
+
+        <!-- Writing intro on a notepad/memo card -->
+        <div class="memo-card">
+          <div class="memo-card__header">
+            <span class="memo-card__from t-typewriter">FROM THE DESK OF: Kayla Canfield</span>
+            <span class="memo-card__re t-typewriter">RE: Essays &amp; Research</span>
+          </div>
+          <div class="memo-card__body">
+            <p class="body-text">
+              Alongside her design work, Kayla writes about literature, culture, and education. Her academic writing has been recognized by the English Department at Mount St. Mary's University.
+            </p>
+            <p class="body-text">
+              Her research interests include Southern Gothic fiction, digital humanities, folklore, and the intersection of media and cultural memory.
+            </p>
+          </div>
+          <div class="memo-card__clip">
+            <img src="assets/images/illustrations/paper-clip.svg" alt="" aria-hidden="true" />
+          </div>
+        </div>
 
         <div class="writing-interests-tags" style="margin:1.25rem 0;">
           <span class="tag tag--terracotta">Southern Gothic</span>
@@ -433,27 +467,22 @@
 
         <a href="pages/writing.html" class="btn btn-primary" style="margin-top:0.5rem;">View All Writing</a>
 
-        <!-- Award label: using Cooper Union stamp paper as award badge background -->
         <div class="writing-award-block">
           <div class="writing-award-block__stamp">
-            <img src="assets/images/vintage/cooper-union-stamp.webp"
-                 alt=""
-                 aria-hidden="true"
-                 loading="lazy" />
+            <img src="assets/images/vintage/cooper-union-stamp.webp" alt="" aria-hidden="true" loading="lazy" />
           </div>
           <span class="writing-award-block__label">English Dept. Award Winner</span>
         </div>
       </div>
 
       <div class="writing-teaser__right">
-        <!-- Featured writing piece: Ex Libris page as card background -->
+        <!-- Featured writing piece with ex libris background -->
         <div class="writing-featured-card reveal reveal-delay-1">
-          <div class="writing-featured-card__tape"></div>
-          <!-- Ex Libris book page as atmospheric background -->
+          <div class="writing-featured-card__tape">
+            <img src="assets/images/illustrations/tape-strip-blue.svg" alt="" aria-hidden="true" />
+          </div>
           <div class="writing-featured-card__exlibris" aria-hidden="true">
-            <img src="assets/images/vintage/ex-libris-book.webp"
-                 alt=""
-                 loading="lazy" />
+            <img src="assets/images/vintage/ex-libris-book.webp" alt="" loading="lazy" />
           </div>
           <div class="writing-featured-card__content">
             <span class="badge-award">&#x1F3C6; English Department Award</span>
@@ -471,28 +500,37 @@
           </div>
         </div>
 
-        <!-- Writing list -->
-        <div class="writing-list reveal reveal-delay-2">
-          <a href="pages/writing.html" class="writing-list-item">
-            <div>
-              <div class="writing-list-item__title">Designing for Belonging: UDL and First-Generation Students</div>
-              <div class="writing-list-item__meta">Academic Essay &nbsp;&middot;&nbsp; ID&amp;T Program &nbsp;&middot;&nbsp; 2024</div>
+        <!-- Writing list as index cards -->
+        <div class="writing-index-cards reveal reveal-delay-2">
+          <a href="pages/writing.html" class="writing-index-card">
+            <div class="writing-index-card__pin">
+              <img src="assets/images/illustrations/push-pin.svg" alt="" aria-hidden="true" />
             </div>
-            <span class="link-arrow" style="flex-shrink:0;"></span>
+            <div class="writing-index-card__lines" aria-hidden="true"></div>
+            <div class="writing-index-card__content">
+              <div class="writing-index-card__title">Designing for Belonging: UDL and First-Generation Students</div>
+              <div class="writing-index-card__meta">Academic Essay &nbsp;&middot;&nbsp; ID&amp;T Program &nbsp;&middot;&nbsp; 2024</div>
+            </div>
           </a>
-          <a href="pages/writing.html" class="writing-list-item">
-            <div>
-              <div class="writing-list-item__title">Haunted Archives: Folklore, Memory, and Digital Preservation</div>
-              <div class="writing-list-item__meta">Conference Paper &nbsp;&middot;&nbsp; Digital Humanities &nbsp;&middot;&nbsp; 2023</div>
+          <a href="pages/writing.html" class="writing-index-card">
+            <div class="writing-index-card__pin">
+              <img src="assets/images/illustrations/push-pin.svg" alt="" aria-hidden="true" />
             </div>
-            <span class="link-arrow" style="flex-shrink:0;"></span>
+            <div class="writing-index-card__lines" aria-hidden="true"></div>
+            <div class="writing-index-card__content">
+              <div class="writing-index-card__title">Haunted Archives: Folklore, Memory, and Digital Preservation</div>
+              <div class="writing-index-card__meta">Conference Paper &nbsp;&middot;&nbsp; Digital Humanities &nbsp;&middot;&nbsp; 2023</div>
+            </div>
           </a>
-          <a href="pages/writing.html" class="writing-list-item">
-            <div>
-              <div class="writing-list-item__title">Reading the Margins: Annotation as Pedagogy</div>
-              <div class="writing-list-item__meta">Essay &nbsp;&middot;&nbsp; English Education &nbsp;&middot;&nbsp; 2023</div>
+          <a href="pages/writing.html" class="writing-index-card">
+            <div class="writing-index-card__pin">
+              <img src="assets/images/illustrations/push-pin.svg" alt="" aria-hidden="true" />
             </div>
-            <span class="link-arrow" style="flex-shrink:0;"></span>
+            <div class="writing-index-card__lines" aria-hidden="true"></div>
+            <div class="writing-index-card__content">
+              <div class="writing-index-card__title">Reading the Margins: Annotation as Pedagogy</div>
+              <div class="writing-index-card__meta">Essay &nbsp;&middot;&nbsp; English Education &nbsp;&middot;&nbsp; 2023</div>
+            </div>
           </a>
         </div>
       </div>
@@ -562,14 +600,9 @@
 
 <!-- ── CONTACT CTA ───────────────────────────────────────────── -->
 <section class="contact-cta section bg-sage-light" aria-label="Contact call to action">
-
-  <!-- Air mail sticker as decorative header element -->
   <div class="contact-cta__airmail reveal">
-    <img src="assets/images/vintage/airmail-sticker.webp"
-         alt="Air mail sticker decoration"
-         loading="lazy" />
+    <img src="assets/images/vintage/airmail-sticker.webp" alt="Air mail sticker decoration" loading="lazy" />
   </div>
-
   <div class="container" style="text-align:center;position:relative;z-index:1;">
     <p class="eyebrow reveal" style="justify-content:center;">Get in Touch</p>
     <h2 class="t-h1 reveal reveal-delay-1" style="margin-bottom:1rem;">
@@ -634,17 +667,39 @@
   </div>
 </footer>
 
-<!-- Back to top -->
 <button id="back-to-top" aria-label="Back to top" style="position:fixed;bottom:2rem;right:2rem;width:44px;height:44px;border-radius:50%;background:var(--c-terracotta);color:var(--c-warm-white);border:none;cursor:pointer;font-size:1.1rem;box-shadow:var(--shadow-md);opacity:0;transition:opacity 0.3s;z-index:100;">&#x2191;</button>
 
 <script src="assets/js/main.js"></script>
 <script>
+  // Back to top
   const btt = document.getElementById('back-to-top');
   window.addEventListener('scroll', () => {
     btt.style.opacity = window.scrollY > 500 ? '1' : '0';
     btt.style.pointerEvents = window.scrollY > 500 ? 'all' : 'none';
   });
   btt.addEventListener('click', () => window.scrollTo({top:0,behavior:'smooth'}));
+
+  // Apothecary drawer interaction
+  document.querySelectorAll('.drawer').forEach(drawer => {
+    drawer.addEventListener('click', () => {
+      const isOpen = drawer.classList.contains('drawer--open');
+      document.querySelectorAll('.drawer').forEach(d => {
+        d.classList.remove('drawer--open');
+        d.setAttribute('aria-expanded', 'false');
+        const c = d.querySelector('.drawer__content');
+        if (c) { c.style.maxHeight = '0'; c.setAttribute('aria-hidden','true'); }
+      });
+      if (!isOpen) {
+        drawer.classList.add('drawer--open');
+        drawer.setAttribute('aria-expanded', 'true');
+        const content = drawer.querySelector('.drawer__content');
+        if (content) { content.style.maxHeight = content.scrollHeight + 'px'; content.setAttribute('aria-hidden','false'); }
+      }
+    });
+    drawer.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); drawer.click(); }
+    });
+  });
 </script>
 </body>
 </html>

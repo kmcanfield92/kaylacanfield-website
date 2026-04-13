@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 28" fill="none">
+  <rect x="0" y="0" width="120" height="28" rx="2" fill="rgba(196,136,122,0.42)"/>
+  <line x1="0" y1="9" x2="120" y2="9" stroke="rgba(255,255,255,0.18)" stroke-width="1"/>
+  <line x1="0" y1="19" x2="120" y2="19" stroke="rgba(255,255,255,0.18)" stroke-width="1"/>
+  <path d="M0 0 L4 3 L0 6 L4 9 L0 12 L4 15 L0 18 L4 21 L0 24 L4 27 L0 28" fill="rgba(248,244,238,0.3)"/>
+  <path d="M120 0 L116 3 L120 6 L116 9 L120 12 L116 15 L120 18 L116 21 L120 24 L116 27 L120 28" fill="rgba(248,244,238,0.3)"/>
+</svg>
