@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="infographic" class="infographic" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 1980" preserveAspectRatio="xMidYMid meet" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+  <foreignObject x="0" y="0" width="1100" height="1980">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+
+      <style>
+        @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&amp;amp;family=Bungee+Inline&amp;amp;family=Bungee+Shade&amp;amp;family=Special+Elite&amp;amp;family=Bowlby+One&amp;amp;family=Kalam:wght@400;700&amp;amp;display=swap');
+
+        .ig {
+          width: 1100px;
+          font-family: 'Special Elite', monospace;
+          color: #1f1812;
+          background: #f1e6c8;
+          position: relative;
+          box-sizing: border-box;
+        }
+        .ig *, .ig *::before, .ig *::after { box-sizing: border-box; }
+
+        .grain {
+          position: absolute;
+          inset: 0;
+          pointer-events: none;
+          z-index: 100;
+          background-image: url("data:image/svg+xml;utf8,&lt;svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'&gt;&lt;filter id='n'&gt;&lt;feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/&gt;&lt;feColorMatrix values='0 0 0 0 0.4  0 0 0 0 0.3  0 0 0 0 0.15  0 0 0 0.4 0'/&gt;&lt;/filter&gt;&lt;rect width='100%' height='100%' filter='url(%23n)' opacity='0.45'/&gt;&lt;/svg&gt;");
+          mix-blend-mode: multiply;
+          opacity: 0.5;
+        }
+
+        .stains {
+          position: absolute;
+          inset: 0;
+          pointer-events: none;
+          z-index: 99;
+          background:
+            radial-gradient(circle at 0% 0%, rgba(120, 80, 40, 0.25), transparent 25%),
+            radial-gradient(circle at 100% 0%, rgba(120, 80, 40, 0.2), transparent 22%),
+            radial-gradient(circle at 100% 100%, rgba(120, 80, 40, 0.28), transparent 28%),
+            radial-gradient(circle at 0% 100%, rgba(120, 80, 40, 0.18), transparent 20%);
+          mix-blend-mode: multiply;
+        }
+
+        .ig .header { background: #1c2f54; color: #f1e6c8; border-bottom: 6px double #d9a72b; }
+        .ig .scoreboard-frame {
+          padding: 36px 50px 30px;
+          border-top: 8px solid #1f1812;
+          border-bottom: 4px solid #1f1812;
+          position: relative;
+          background: linear-gradient(180deg, #243e6e 0%, #14223e 100%);
+        }
+        .ig .bulbs {
+          position: absolute; top: -8px; left: 0; right: 0; height: 8px;
+          background-image: radial-gradient(circle, #d9a72b 2px, transparent 2.5px);
+          background-size: 16px 8px; background-repeat: repeat-x; background-position: center;
+        }
+        .ig .bulbs.bottom { top: auto; bottom: -4px; }
+
+        .ig .program-tag {
+          text-align: center; font-family: 'Special Elite', monospace; font-size: 11px;
+          letter-spacing: 0.4em; color: #d9a72b; margin-bottom: 8px; text-transform: uppercase;
+        }
+        .ig .program-tag span {
+          border-top: 1px solid #d9a72b; border-bottom: 1px solid #d9a72b;
+          padding: 4px 16px; display: inline-block;
+        }
+        .ig .main-title {
+          text-align: center; font-family: 'Bungee Inline', cursive; font-size: 64px;
+          line-height: 0.95; color: #f1e6c8;
+          text-shadow: 4px 4px 0 #b53030, 8px 8px 0 #1f1812;
+          letter-spacing: 0.02em; margin: 12px 0 8px;
+        }
+        .ig .subtitle {
+          text-align: center; font-family: 'Alfa Slab One', serif; font-size: 22px;
+          color: #d9a72b; letter-spacing: 0.08em; margin-bottom: 14px;
+        }
+        .ig .est-tag {
+          text-align: center; font-family: 'Special Elite', monospace; font-size: 13px;
+          color: #f1e6c8; opacity: 0.75; letter-spacing: 0.3em;
+        }
+        .ig .pennant-row {
+          display: flex; justify-content: space-between; align-items: center;
+          padding: 0 30px; margin-top: 18px;
+        }
+        .ig .pennant { width: 130px; height: 50px; }
+
+        .ig .matchup {
+          display: grid; grid-template-columns: 1fr auto 1fr; gap: 0;
+          background: #e8d9b3; border-bottom: 4px solid #1f1812;
+        }
+        .ig .team-card { padding: 32px 30px; text-align: center; position: relative; }
+        .ig .team-card.home { background: #e8d9b3; }
+        .ig .team-card.away { background: #f1e6c8; }
+        .ig .team-label {
+          font-family: 'Special Elite', monospace; font-size: 11px; letter-spacing: 0.35em;
+          color: #1f1812; opacity: 0.6; text-transform: uppercase; margin-bottom: 12px;
+        }
+        .ig .team-name {
+          font-family: 'Bowlby One', sans-serif; font-size: 38px; line-height: 1;
+          color: #1c2f54; letter-spacing: 0.02em;
+        }
+        .ig .team-card.away .team-name { color: #b53030; }
+        .ig .vs-circle {
+          background: #1f1812; color: #d9a72b; width: 110px;
+          display: flex; align-items: center; justify-content: center;
+          font-family: 'Bungee Shade', cursive; font-size: 36px;
+          border-left: 4px solid #1f1812; border-right: 4px solid #1f1812; position: relative;
+        }
+        .ig .vs-circle::before, .ig .vs-circle::after {
+          content: '★'; position: absolute; color: #d9a72b; font-size: 14px;
+        }
+        .ig .vs-circle::before { top: 8px; left: 50%; transform: translateX(-50%); }
+        .ig .vs-circle::after { bottom: 8px; left: 50%; transform: translateX(-50%); }
+
+        .ig .intro { padding: 30px 60px 10px; text-align: center; }
+        .ig .intro-text {
+          font-family: 'Special Elite', monospace; font-size: 16px; line-height: 1.7;
+          color: #1f1812; max-width: 720px; margin: 0 auto;
+        }
+        .ig .intro-text em { color: #8e1f24; font-style: normal; font-weight: bold; }
+
+        .ig .flowchart-section { padding: 30px 50px 40px; position: relative; }
+        .ig .section-banner { text-align: center; margin: 10px 0 30px; }
+        .ig .section-banner h2 {
+          display: inline-block; font-family: 'Alfa Slab One', serif; font-size: 28px;
+          color: #f1e6c8; background: #b53030; padding: 10px 40px; letter-spacing: 0.05em;
+          transform: rotate(-1.5deg); box-shadow: 6px 6px 0 #1f1812;
+          border: 3px solid #1f1812; text-transform: uppercase; margin: 0;
+        }
+
+        .ig .question-box {
+          background: #d9a72b; border: 4px solid #1f1812; padding: 18px 30px;
+          text-align: center; max-width: 480px; margin: 0 auto; box-shadow: 6px 6px 0 #1c2f54;
+          position: relative; z-index: 5; transform: rotate(-1deg);
+        }
+        .ig .question-box .step-number {
+          position: absolute; top: -18px; left: -18px; background: #1c2f54; color: #d9a72b;
+          width: 42px; height: 42px; border-radius: 50%;
+          display: flex; align-items: center; justify-content: center;
+          font-family: 'Bowlby One', sans-serif; font-size: 22px; border: 3px solid #1f1812;
+        }
+        .ig .question-box h3 {
+          font-family: 'Bowlby One', sans-serif; font-size: 26px; color: #1f1812;
+          line-height: 1.1; margin: 0;
+        }
+        .ig .question-box .small {
+          font-family: 'Special Elite', monospace; font-size: 12px; color: #1f1812;
+          opacity: 0.7; margin-top: 6px; letter-spacing: 0.2em; text-transform: uppercase;
+        }
+
+        .ig .branches {
+          display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 90px;
+        }
+        .ig .branch-label {
+          text-align: center; font-family: 'Bungee Inline', cursive; font-size: 38px;
+          margin-bottom: 16px; letter-spacing: 0.05em;
+        }
+        .ig .branch-yes .branch-label { color: #b53030; }
+        .ig .branch-no .branch-label { color: #1c2f54; }
+
+        .ig .branch-card {
+          background: #f1e6c8; border: 3px solid #1f1812; padding: 18px 22px;
+          margin-bottom: 22px; position: relative; box-shadow: 5px 5px 0 #1c2f54;
+        }
+        .ig .branch-yes .branch-card { transform: rotate(0.8deg); }
+        .ig .branch-no .branch-card { transform: rotate(-0.8deg); box-shadow: 5px 5px 0 #b53030; }
+
+        .ig .branch-card h4 {
+          font-family: 'Alfa Slab One', serif; font-size: 17px; color: #1c2f54;
+          margin: 0 0 8px; line-height: 1.2;
+        }
+        .ig .branch-no .branch-card h4 { color: #8e1f24; }
+        .ig .branch-card p {
+          font-family: 'Special Elite', monospace; font-size: 13.5px; line-height: 1.55;
+          color: #1f1812; margin: 0;
+        }
+        .ig .branch-card .source {
+          display: block; margin-top: 8px; font-size: 11px; color: #1f1812; opacity: 0.6;
+          letter-spacing: 0.15em; text-transform: uppercase;
+        }
+
+        .ig .cube-rule {
+          margin: 30px auto 0; background: #1c2f54; color: #f1e6c8;
+          padding: 26px 30px 22px; max-width: 760px; border: 3px solid #1f1812;
+          box-shadow: 8px 8px 0 #d9a72b; position: relative;
+        }
+        .ig .cube-rule h3 {
+          font-family: 'Bowlby One', sans-serif; font-size: 20px; color: #d9a72b;
+          text-align: center; margin: 0 0 14px; letter-spacing: 0.06em;
+        }
+        .ig .cube-explainer {
+          font-family: 'Special Elite', monospace; font-size: 13.5px; line-height: 1.6;
+          text-align: center; margin: 0 0 14px;
+        }
+        .ig .cube-grid {
+          display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 6px;
+        }
+        .ig .cube-cell { text-align: center; padding: 8px 4px; border: 1px dashed #d9a72b; }
+        .ig .cube-num {
+          font-family: 'Bowlby One', sans-serif; font-size: 18px; color: #d9a72b; display: block;
+        }
+        .ig .cube-name {
+          font-family: 'Special Elite', monospace; font-size: 11px; letter-spacing: 0.1em;
+          color: #f1e6c8; text-transform: uppercase;
+        }
+        .ig .cube-cell.highlight { background: #b53030; border: 2px solid #d9a72b; }
+        .ig .cube-cell.highlight .cube-num,
+        .ig .cube-cell.highlight .cube-name { color: #f1e6c8; }
+
+        .ig .ruling {
+          background: repeating-linear-gradient(45deg, #f1e6c8 0 16px, #e8d9b3 16px 32px);
+          padding: 40px 50px;
+          border-top: 4px double #1f1812; border-bottom: 4px double #1f1812;
+          margin-top: 40px; position: relative;
+        }
+        .ig .ruling-stamp {
+          background: #f1e6c8; border: 4px solid #1f1812; max-width: 720px; margin: 0 auto;
+          padding: 28px 36px; text-align: center; position: relative;
+          box-shadow: 0 0 0 8px #f1e6c8, 0 0 0 10px #1f1812;
+        }
+        .ig .stamp-tag {
+          font-family: 'Special Elite', monospace; font-size: 12px; color: #b53030;
+          letter-spacing: 0.4em; text-transform: uppercase; margin-bottom: 6px;
+        }
+        .ig .stamp-tag::before, .ig .stamp-tag::after {
+          content: '✦'; margin: 0 10px; color: #d9a72b;
+        }
+        .ig .ruling h2 {
+          font-family: 'Bungee Inline', cursive; font-size: 44px; line-height: 1;
+          color: #1c2f54; text-shadow: 3px 3px 0 #d9a72b;
+          margin: 8px 0 14px; letter-spacing: 0.02em;
+        }
+        .ig .ruling-body {
+          font-family: 'Special Elite', monospace; font-size: 15px; line-height: 1.7;
+          color: #1f1812; margin: 0;
+        }
+        .ig .ruling-body strong { background: #d9a72b; padding: 0 6px; }
+        .ig .official-stamp {
+          position: absolute; top: 20px; right: -10px; width: 130px; height: 130px;
+          transform: rotate(14deg); z-index: 6;
+        }
+
+        .ig .footer {
+          background: #1c2f54; color: #f1e6c8; padding: 24px 40px;
+          display: grid; grid-template-columns: 1fr auto 1fr; align-items: center;
+          gap: 20px; border-top: 4px solid #1f1812; position: relative;
+        }
+        .ig .footer-left, .ig .footer-right {
+          font-family: 'Special Elite', monospace; font-size: 11px;
+          letter-spacing: 0.2em; text-transform: uppercase; opacity: 0.8;
+        }
+        .ig .footer-right { text-align: right; }
+        .ig .footer-center {
+          font-family: 'Alfa Slab One', serif; font-size: 16px; color: #d9a72b;
+          letter-spacing: 0.15em; text-align: center;
+        }
+        .ig .footer-center span {
+          display: block; font-family: 'Special Elite', monospace; font-size: 10px;
+          letter-spacing: 0.4em; color: #f1e6c8; opacity: 0.7; margin-top: 4px;
+        }
+      </style>
+
+      <div class="ig">
+        <div class="grain"></div>
+        <div class="stains"></div>
+
+        <div class="header">
+          <div class="scoreboard-frame">
+            <div class="bulbs"></div>
+            <div class="program-tag"><span>OFFICIAL BALLPARK PROGRAM · VOL. IX · 25¢</span></div>
+            <h1 class="main-title">THE GREAT<br />HOT DOG DEBATE</h1>
+            <div class="subtitle">A Mostly-Serious Inquiry into America's Bun-Based Question</div>
+            <div class="est-tag">— SETTLED · PROBABLY · FINALLY —</div>
+
+            <div class="pennant-row">
+              <svg class="pennant" viewBox="0 0 130 50" xmlns="http://www.w3.org/2000/svg">
+                <path d="M 5 8 L 5 42 L 122 30 L 122 20 Z" fill="#b53030" stroke="#1f1812" stroke-width="2"/>
+                <text x="20" y="32" font-family="Bowlby One, sans-serif" font-size="14" fill="#f1e6c8" letter-spacing="2">SANDWICH</text>
+                <circle cx="5" cy="8" r="3" fill="#1f1812"/>
+                <circle cx="5" cy="42" r="3" fill="#1f1812"/>
+              </svg>
+              <svg width="50" height="50" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="25" cy="25" r="22" fill="#f1e6c8" stroke="#1f1812" stroke-width="2"/>
+                <path d="M 8 12 Q 25 25 8 38" fill="none" stroke="#b53030" stroke-width="1.5" stroke-dasharray="2,2"/>
+                <path d="M 42 12 Q 25 25 42 38" fill="none" stroke="#b53030" stroke-width="1.5" stroke-dasharray="2,2"/>
+              </svg>
+              <svg class="pennant" viewBox="0 0 130 50" xmlns="http://www.w3.org/2000/svg" style="transform: scaleX(-1);">
+                <path d="M 5 8 L 5 42 L 122 30 L 122 20 Z" fill="#1c2f54" stroke="#1f1812" stroke-width="2"/>
+                <text x="14" y="32" font-family="Bowlby One, sans-serif" font-size="14" fill="#f1e6c8" letter-spacing="2" transform="scale(-1,1) translate(-130,0)">NOT-A-DOG</text>
+                <circle cx="5" cy="8" r="3" fill="#1f1812"/>
+                <circle cx="5" cy="42" r="3" fill="#1f1812"/>
+              </svg>
+            </div>
+            <div class="bulbs bottom"></div>
+          </div>
+        </div>
+
+        <div class="matchup">
+          <div class="team-card home">
+            <div class="team-label">— HOME TEAM —</div>
+            <div class="team-name">SANDWICH<br />SLUGGERS</div>
+          </div>
+          <div class="vs-circle">VS</div>
+          <div class="team-card away">
+            <div class="team-label">— VISITORS —</div>
+            <div class="team-name">HOT DOG<br />HOLDOUTS</div>
+          </div>
+        </div>
+
+        <div class="intro">
+          <p class="intro-text">
+            Step right up, folks. The bleachers are full, the mustard is warm, and a question
+            older than the seventh-inning stretch is about to be settled on the field of
+            reason. <em>Is a hot dog a sandwich?</em> Three innings of evidence below.
+          </p>
+        </div>
+
+        <div class="flowchart-section">
+          <div class="section-banner">
+            <h2>★ Play Ball: The Three Inning Argument ★</h2>
+          </div>
+
+          <div class="question-box">
+            <div class="step-number">1</div>
+            <h3>WHAT EVEN IS A SANDWICH?</h3>
+            <div class="small">— Inning One · The Definition —</div>
+          </div>
+
+          <div class="branches">
+
+            <div class="branch branch-yes">
+              <div class="branch-label">YES, IT IS</div>
+
+              <div class="branch-card">
+                <h4>Bread + filling = sandwich</h4>
+                <p>
+                  Merriam-Webster defines a sandwich as two or more slices of bread
+                  with a filling in between. A hot dog has bread.
+                </p>
+                <span class="source">Source · Merriam-Webster</span>
+              </div>
+
+              <div class="branch-card">
+                <h4>The USDA agrees</h4>
+                <p>
+                  The U.S. Department of Agriculture officially classifies a hot dog as
+                  a sandwich for regulatory purposes.
+                </p>
+                <span class="source">Source · USDA FSIS Guidelines</span>
+              </div>
+
+              <div class="branch-card">
+                <h4>Earl of Sandwich logic</h4>
+                <p>
+                  The Earl wanted to eat with one hand while playing cards.
+                  It is entirely possible to eat a hotdog with one hand.
+                </p>
+                <span class="source">Source · 1762, give or take</span>
+              </div>
+            </div>
+
+            <div class="branch branch-no">
+              <div class="branch-label">NO, IT IS NOT</div>
+
+              <div class="branch-card">
+                <h4>The bun is HINGED</h4>
+                <p>
+                  A real sandwich has two separate pieces of bread. A hot dog bun is
+                  one piece, folded.
+                </p>
+                <span class="source">Source · Structural Bread Theory</span>
+              </div>
+
+              <div class="branch-card">
+                <h4>National Hot Dog Council ruling</h4>
+                <p>
+                  In 2015, the National Hot Dog and Sausage Council issued a formal
+                  statement: a hot dog is its own category, "an exclamation of joy,
+                  a song of summer." Not a sandwich.
+                </p>
+                <span class="source">Source · NHDSC, July 2015</span>
+              </div>
+
+              <div class="branch-card">
+                <h4>Linguistic common sense</h4>
+                <p>
+                  Nobody at the ballpark says "I'd like a hot dog sandwich, please."
+                  If a word does its own work, the word stays.
+                </p>
+                <span class="source">Source · Common Usage</span>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="cube-rule">
+            <h3>★ INNING TWO: THE CUBE RULE ★</h3>
+            <p class="cube-explainer">
+              A popular internet framework classifies foods by where the starch sits
+              relative to the filling. By this rule, a hot dog is not a sandwich at all.
+              It is, technically, a <strong style="color: #d9a72b;">taco.</strong>
+              Sit with that for a moment.
+            </p>
+            <div class="cube-grid">
+              <div class="cube-cell"><span class="cube-num">1</span><span class="cube-name">Toast</span></div>
+              <div class="cube-cell"><span class="cube-num">2</span><span class="cube-name">Sandwich</span></div>
+              <div class="cube-cell highlight"><span class="cube-num">3</span><span class="cube-name">Taco · Hot Dog</span></div>
+              <div class="cube-cell"><span class="cube-num">4</span><span class="cube-name">Sushi</span></div>
+              <div class="cube-cell"><span class="cube-num">5</span><span class="cube-name">Quiche</span></div>
+              <div class="cube-cell"><span class="cube-num">6</span><span class="cube-name">Calzone</span></div>
+              <div class="cube-cell"><span class="cube-num">7</span><span class="cube-name">Pop-Tart</span></div>
+              <div class="cube-cell"><span class="cube-num">8</span><span class="cube-name">Stuffed Pepper</span></div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="ruling">
+          <svg class="official-stamp" viewBox="0 0 130 130" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="65" cy="65" r="58" fill="none" stroke="#b53030" stroke-width="3"/>
+            <circle cx="65" cy="65" r="48" fill="none" stroke="#b53030" stroke-width="1"/>
+            <path id="topcurve" d="M 20 65 A 45 45 0 0 1 110 65" fill="none"/>
+            <path id="botcurve" d="M 20 65 A 45 45 0 0 0 110 65" fill="none"/>
+            <text font-family="Special Elite, monospace" font-size="10" fill="#b53030" letter-spacing="2">
+              <textPath href="#topcurve" startOffset="50%" text-anchor="middle">OFFICIAL · RULING</textPath>
+            </text>
+            <text font-family="Special Elite, monospace" font-size="10" fill="#b53030" letter-spacing="2">
+              <textPath href="#botcurve" startOffset="50%" text-anchor="middle">EST. 2026 · BALLPARK</textPath>
+            </text>
+            <text x="65" y="60" text-anchor="middle" font-family="Bowlby One, sans-serif" font-size="14" fill="#b53030">NOT</text>
+            <text x="65" y="78" text-anchor="middle" font-family="Bowlby One, sans-serif" font-size="14" fill="#b53030">A SANDWICH</text>
+          </svg>
+
+          <div class="ruling-stamp">
+            <div class="stamp-tag">— BOTTOM OF THE NINTH —</div>
+            <h2>FINAL RULING</h2>
+            <p class="ruling-body">
+              After three full innings of arguments, the umpire calls it on the field:
+              a hot dog is, by the common sense of the bleachers and the official word
+              of the National Hot Dog and Sausage Council, <strong>not a sandwich.</strong>
+              It is, however, definitely <strong>a taco.</strong> The federal government may
+              appeal at any time.
+            </p>
+          </div>
+        </div>
+
+        <div class="footer">
+          <div class="bulbs"></div>
+          <div class="footer-left">Section 7 · Row B · Seat 12</div>
+          <div class="footer-center">
+            ★ THE BALLPARK INQUIRER ★
+            <span>A Public Service Announcement in Three Acts</span>
+          </div>
+          <div class="footer-right">Crowd Cheers · Mustard Flows</div>
+        </div>
+      </div>
+
+    </div>
+  </foreignObject>
+</svg>
